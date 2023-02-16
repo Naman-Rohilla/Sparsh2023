@@ -4,13 +4,16 @@ export default function Home() {
       <div
         style={{
           backgroundColor: "black",
-          height: "100%",
+          height: "100vh",
           width: "100%",
           color: "white",
-          paddingTop: "100px"
+          paddingTop: "100px",
+          zIndex: 2,
         }}
       >
-        Hi I am home page
+        {/* <img src="./main.gif" height="100%" width="100%" style={{
+
+        }}></img> */}
       </div>
     </>
   );
