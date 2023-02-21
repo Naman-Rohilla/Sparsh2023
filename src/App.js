@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 // import Sponsors from "./pages/aboutUs";
-import { Routes, Route } from "react-router-dom";
+import { Router, Route, Routes } from "react-router-dom";
 import NavBar from "./Components/navbar/navbar";
 import Footer from "./Components/footer/footer";
 import Home from "./pages/home";

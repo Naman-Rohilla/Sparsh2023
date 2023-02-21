@@ -2,63 +2,19 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import "./navbar.css";
+import MenuIcon from "@mui/icons-material/Menu";
+import Drawer from "@mui/material/Drawer";
 
 export default function NavBar() {
+  const [state, setState] = React.useState(false);
   return (
     <>
-      <div
-        style={{
-          height: "100px",
-          width: "100%",
-          zIndex: 1,
-          position: "absolute",
-        }}
-      >
-        <div
-          style={{
-            height: "100px",
-            width: "100%",
-            zIndex: 2,
-            // backgroundColor: "transparent",
-            position: "absolute",
-            color: "white",
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
-          <div
-            style={{
-              height: "100%",
-              width: "200px",
-              display: "flex",
-              zIndex: 2,
-              // justifyContent: "center",
-              paddingLeft: "20px",
-              alignItems: "center",
-              // backgroundColor: "green"
-            }}
-          >
-            <div
-              style={{
-                padding: "10px",
-              }}
-            >
-              Logo
-            </div>
-          </div>
-          <div
-            style={{
-              height: "100%",
-              display: "grid",
-              paddingRight: "20px",
-              gridTemplateColumns: "repeat(4, 1fr)",
-              gap: "30px 20px",
-              // backgroundColor: "green",
-              // paddingTop: "50px"
-              alignContent: "space-evenly",
-              fontSize: "2px",
-            }}
-          >
+      <div id="main">
+        <div className="left-container">
+          <div className="left-container-child">Logo</div>
+        </div>
+        <div className="right-container">
+          <div className="right-container-child">
             <Link style={{ textDecoration: "none" }} to="/">
               <Button
                 variant="text"
@@ -124,9 +80,84 @@ export default function NavBar() {
               </Button>
             </Link>
           </div>
+          <div className="right-container-hamburger">
+            <MenuIcon onClick={() => setState(true)} />
+          </div>
+
+          <Drawer anchor={"right"} open={state} onClose={() => setState(false)}>
+            <div id="drawer">
+              <div className="drawer-header">sparsh</div>
+              <div className="drawer-links">
+                <Link style={{ textDecoration: "none" }} to="/">
+                  <Button
+                    variant="text"
+                    sx={{
+                      ":hover": {
+                        bgcolor: "white",
+                        color: "black",
+                      },
+                      color: "white",
+                      fontSize: "1rem",
+                      // under
+                    }}
+                  >
+                    Home
+                  </Button>
+                </Link>
+                <Link style={{ textDecoration: "none" }} to="/about">
+                  <Button
+                    variant="text"
+                    sx={{
+                      ":hover": {
+                        bgcolor: "white",
+                        color: "black",
+                      },
+                      color: "white",
+                      fontSize: "1rem",
+                      // under
+                    }}
+                  >
+                    About
+                  </Button>
+                </Link>
+                <Link style={{ textDecoration: "none" }}>
+                  <Button
+                    variant="text"
+                    sx={{
+                      ":hover": {
+                        bgcolor: "white",
+                        color: "black",
+                      },
+                      color: "white",
+                      fontSize: "1rem",
+                      // under
+                    }}
+                  >
+                    Contact
+                  </Button>
+                </Link>
+                <Link style={{ textDecoration: "none" }} to="/sponsors">
+                  <Button
+                    variant="text"
+                    sx={{
+                      ":hover": {
+                        bgcolor: "white",
+                        color: "black",
+                      },
+                      color: "white",
+                      fontSize: "1rem",
+                      // under
+                    }}
+                  >
+                    Sponsors
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </Drawer>
         </div>
-        {/*  */}
       </div>
     </>
   );
 }
+

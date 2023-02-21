@@ -1,0 +1,23 @@
+#main-landing {
+  background: black;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  padding-top: 100px;
+  z-index: 2;
+}
+
+.landing-gif {
+    height: 100vh;
+  width: 100%;
+}
+
+@media screen and (max-width: 720px) { 
+    #main-landing {
+        height: 50vh;
+    }
+    .landing-gif {
+        height: 200px;
+        width: 100%;
+    }
+}
