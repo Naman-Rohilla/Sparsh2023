@@ -213,3 +213,19 @@ export default function SliderText(sliderArray) {
 
 //         {/* <span style={{}}>Hellow</span> */}
 //       </div> */}
+
+
+
+
+
+
+
+
+
+
+// display:
+//                           sA.id < mainIndex
+//                             ? "none"
+//                             : sA.id == mainIndex
+//                             ? ""
+//                             : "none",

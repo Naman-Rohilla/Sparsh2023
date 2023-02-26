@@ -7,7 +7,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
 import "./slider.css";
 
-
 const sliderArray = [
   {
     id: -2,
@@ -73,10 +72,11 @@ const sliderArray = [
   },
 ];
 
-export default function Slider() {
+export default function SliderMobile() {
   const [bindLength, setbindLength] = React.useState(4);
   const [mainIndex, setmainIndex] = React.useState(2);
   const [open, setOpen] = React.useState(false);
+
   const text =
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ";
 
@@ -322,11 +322,20 @@ export default function Slider() {
                   <motion.div
                     key={sA.id}
                     initial={{
-                      opacity:
+                      display:
                         sA.id < mainIndex
-                          ? 1.5 / (mainIndex - sA.id + 1)
-                          : 1.5 / (sA.id - mainIndex + 1),
-                      
+                          ? "none"
+                          : sA.id == mainIndex
+                          ? ""
+                          : "none",
+                      marginRight:
+                        sA.id < mainIndex ? -(80 * (mainIndex - sA.id)) : "0px",
+                      marginLeft:
+                        sA.id > mainIndex ? -(80 * (sA.id - mainIndex)) : "0px",
+                      zIndex:
+                        sA.id < mainIndex
+                          ? sA.id - (bindLength - 4)
+                          : bindLength - (sA.id - mainIndex) - (bindLength - 4),
                     }}
                     animate={
                       mainIndex == sA.id
@@ -337,20 +346,33 @@ export default function Slider() {
                             zIndex: 10,
                           }
                         : {
-                            opacity:
+                            display:
                               sA.id < mainIndex
-                                ? 0.3 / (mainIndex - sA.id + 1)
-                                : 0.3 / (sA.id - mainIndex + 1),
-                            
+                                ? "none"
+                                : sA.id == mainIndex
+                                ? ""
+                                : "none",
+                            marginRight:
+                              sA.id < mainIndex
+                                ? -(80 * (mainIndex - sA.id))
+                                : "",
+                            marginLeft:
+                              sA.id > mainIndex
+                                ? -(80 * (sA.id - mainIndex))
+                                : "",
+                            zIndex:
+                              sA.id < mainIndex
+                                ? sA.id - (bindLength - 4)
+                                : bindLength -
+                                  (sA.id - mainIndex) -
+                                  (bindLength - 4),
                           }
                     }
                     transition={{
                       duration: 0.2,
                     }}
                     style={{
-                      width: sA.id < mainIndex
-                      ? "120px"
-                      : sA.id == mainIndex ? "330px" : "120px",
+                      width: "330px",
                       display: "flex",
                       justifyContent: "center",
                       paddingTop: "50px",

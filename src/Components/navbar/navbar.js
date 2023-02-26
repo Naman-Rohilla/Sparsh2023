@@ -7,6 +7,7 @@ import Drawer from "@mui/material/Drawer";
 
 export default function NavBar() {
   const [state, setState] = React.useState(false);
+  const [activeUrl, setactiveUrl] = React.useState(window.location.pathname);
   return (
     <>
       <div id="main">
@@ -15,70 +16,98 @@ export default function NavBar() {
         </div>
         <div className="right-container">
           <div className="right-container-child">
-            <Link style={{ textDecoration: "none" }} to="/">
-              <Button
-                variant="text"
-                sx={{
-                  ":hover": {
-                    bgcolor: "white",
-                    color: "black",
-                  },
-                  color: "white",
-                  fontSize: "1rem",
-                  // under
-                }}
-              >
+            {activeUrl == "/" ? (
+              <div className="nav-item-active">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
                 Home
-              </Button>
-            </Link>
-            <Link style={{ textDecoration: "none" }} to="/about">
-              <Button
-                variant="text"
-                sx={{
-                  ":hover": {
-                    bgcolor: "white",
-                    color: "black",
-                  },
-                  color: "white",
-                  fontSize: "1rem",
-                  // under
-                }}
+              </div>
+            ) : (
+              <Link
+                onClick={() => setactiveUrl("/")}
+                className="nav-item"
+                to="/"
               >
-                About
-              </Button>
-            </Link>
-            <Link style={{ textDecoration: "none" }}>
-              <Button
-                variant="text"
-                sx={{
-                  ":hover": {
-                    bgcolor: "white",
-                    color: "black",
-                  },
-                  color: "white",
-                  fontSize: "1rem",
-                  // under
-                }}
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Home
+              </Link>
+            )}
+            {activeUrl == "/about" ? (
+              <div className="nav-item-active">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                About Us
+              </div>
+            ) : (
+              <Link
+                onClick={() => setactiveUrl("/about")}
+                to="/about"
+                className="nav-item"
               >
-                Contact
-              </Button>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                About Us
+              </Link>
+            )}
+            
+            <Link onClick={() => setactiveUrl("/")} to="/" className="nav-item">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Teams
             </Link>
-            <Link style={{ textDecoration: "none" }} to="/sponsors">
-              <Button
-                variant="text"
-                sx={{
-                  ":hover": {
-                    bgcolor: "white",
-                    color: "black",
-                  },
-                  color: "white",
-                  fontSize: "1rem",
-                  // under
-                }}
-              >
+            {activeUrl == "/sponsors" ? (
+              <div className="nav-item-active">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
                 Sponsors
-              </Button>
-            </Link>
+              </div>
+            ) : (
+              <Link
+                onClick={() => setactiveUrl("/sponsors")}
+                to="/sponsors"
+                className="nav-item"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Sponsors
+              </Link>
+            )}
+            {activeUrl == "/sign-in" ? (
+              <div className="nav-item-active">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Sign In
+              </div>
+            ) : (
+              <Link
+                onClick={() => setactiveUrl("/sign-in")}
+                to="/sign-in"
+                className="nav-item"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Sign In
+              </Link>
+            )}
           </div>
           <div className="right-container-hamburger">
             <MenuIcon onClick={() => setState(true)} />
@@ -88,70 +117,80 @@ export default function NavBar() {
             <div id="drawer">
               <div className="drawer-header">sparsh</div>
               <div className="drawer-links">
-                <Link style={{ textDecoration: "none" }} to="/">
-                  <Button
-                    variant="text"
-                    sx={{
-                      ":hover": {
-                        bgcolor: "white",
-                        color: "black",
-                      },
-                      color: "white",
-                      fontSize: "1rem",
-                      // under
-                    }}
-                  >
+                {activeUrl == "/" ? (
+                  <div className="nav-item-active">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                     Home
-                  </Button>
-                </Link>
-                <Link style={{ textDecoration: "none" }} to="/about">
-                  <Button
-                    variant="text"
-                    sx={{
-                      ":hover": {
-                        bgcolor: "white",
-                        color: "black",
-                      },
-                      color: "white",
-                      fontSize: "1rem",
-                      // under
-                    }}
+                  </div>
+                ) : (
+                  <Link
+                    onClick={() => setactiveUrl("/")}
+                    className="nav-item"
+                    to="/"
                   >
-                    About
-                  </Button>
-                </Link>
-                <Link style={{ textDecoration: "none" }}>
-                  <Button
-                    variant="text"
-                    sx={{
-                      ":hover": {
-                        bgcolor: "white",
-                        color: "black",
-                      },
-                      color: "white",
-                      fontSize: "1rem",
-                      // under
-                    }}
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Home
+                  </Link>
+                )}
+                {activeUrl == "/about" ? (
+                  <div className="nav-item-active">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    About Us
+                  </div>
+                ) : (
+                  <Link
+                    onClick={() => setactiveUrl("/about")}
+                    to="/about"
+                    className="nav-item"
                   >
-                    Contact
-                  </Button>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    About Us
+                  </Link>
+                )}
+                <Link
+                  onClick={() => setactiveUrl("/")}
+                  to="/"
+                  className="nav-item"
+                >
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Campus Ambassador
                 </Link>
-                <Link style={{ textDecoration: "none" }} to="/sponsors">
-                  <Button
-                    variant="text"
-                    sx={{
-                      ":hover": {
-                        bgcolor: "white",
-                        color: "black",
-                      },
-                      color: "white",
-                      fontSize: "1rem",
-                      // under
-                    }}
-                  >
+                {activeUrl == "/sponsors" ? (
+                  <div className="nav-item-active">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                     Sponsors
-                  </Button>
-                </Link>
+                  </div>
+                ) : (
+                  <Link
+                    onClick={() => setactiveUrl("/sponsors")}
+                    to="/sponsors"
+                    className="nav-item"
+                  >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Sponsors
+                  </Link>
+                )}
               </div>
             </div>
           </Drawer>
@@ -160,4 +199,3 @@ export default function NavBar() {
     </>
   );
 }
-

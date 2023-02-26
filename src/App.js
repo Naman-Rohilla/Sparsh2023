@@ -7,6 +7,7 @@ import Footer from "./Components/footer/footer";
 import Home from "./pages/home";
 import AboutUs from "./pages/aboutUs";
 import Sponsors from "./Components/sponsors/sponsors";
+import SignIn from "./pages/signIn";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/sponsors" element={<Sponsors />} />
+        <Route path="/sign-in" element={<SignIn />} />
       </Routes>
       <Footer />
     </>

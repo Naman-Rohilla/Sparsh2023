@@ -6,7 +6,7 @@ export default function SliderAnimationText(data) {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.01, delayChildren: 0.1 * i },
+      transition: { staggerChildren: 0.09, delayChildren: 0.1 * i },
     }),
   };
 
@@ -30,18 +30,20 @@ export default function SliderAnimationText(data) {
       },
     },
   };
-  let word = data.text.split(" ");
-  word[word.length - 1] = word[word.length - 1] + "...";
+  const text =
+  "Lorem Ipsum is simply dummy text of";
+  let word = text.split(" ");
   console.log(word, "word");
   return (
     <>
       <motion.div
-        // variants={container}
+        variants={container}
         initial="hidden"
         animate="visible"
         style={{
           // width: "450px",
-          paddingTop: "10px",
+          // paddingTop: "10px",
+          // display: "flex",
           fontSize: "1.1rem",
           textAlign: "justify",
         }}
@@ -50,7 +52,7 @@ export default function SliderAnimationText(data) {
           <motion.span
             key={index}
             style={{ marginRight: "5px" }}
-            // variants={child}
+            variants={child}
           >
             {txt}{" "}
           </motion.span>
