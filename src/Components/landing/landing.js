@@ -44,19 +44,14 @@ export default function Landing() {
     <>
       <div id="main-landing">
         <div className="landing-gif">
-          <img src="./home_flicker.gif" height="100%" width="100%"></img>
+          <img
+            src="./home_flicker_compressed_final.gif"
+            height="100%"
+            width="100%"
+          ></img>
         </div>
         <div className="right-landing-container">
-          <div
-            style={{
-              paddingBottom: "40px",
-              fontSize: "20px",
-              width: "50%",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
+          <div className="right-landing-typewriter">
             <Typewriter
               options={{
                 autoStart: true,
@@ -73,16 +68,57 @@ export default function Landing() {
               }}
             />
 
-            <div
-              style={{
-                backgroundColor: "white",
-                padding: "5px 10px 5px 10px",
-                color: "black",
-                fontSize: "14px",
-                marginTop: "20px",
-              }}
-            >
-              Register Here
+            <div className="right-landing-register">
+              <button class="custom-btn btn-3">
+                <span>Register Here</span>
+              </button>
+              {/* <div
+                style={{
+                  height: "30px",
+                  width: "40px",
+                  // backgroundColor: "red",
+                  // transform: "translateX(15px)",
+                  borderLeft: "2px solid #fbcfe8",
+                  borderBottom: "2px solid #fbcfe8",
+                  borderTop: "2px solid #fbcfe8",
+                }}
+              ></div>
+              <div
+                style={{
+                  height: "30px",
+                  width: "40px",
+                  borderBottom: "2px solid #fbcfe8",
+                  // backgroundColor: "#fbcfe8",
+                  transform: "skewX(45deg)",
+                  borderTop: "2px solid #fbcfe8",
+                  // borderBottom: "2px solid #fbcfe8"
+                }}
+              ></div>
+              <div
+                style={{
+                  height: "30px",
+                  width: "40px",
+                  // backgroundColor: "#fbcfe8",
+                  borderTop: "2px solid #fbcfe8",
+                  // borderBottom: "2px solid #fbcfe8",
+                  transform: "skewX(45deg)",
+                  marginLeft: "10px"
+                }}
+              ></div>
+              <div
+                style={{
+                  height: "30px",
+                  width: "40px",
+                  // backgroundColor: "#fbcfe8",
+                  // transform: "translateX(-15px)",
+                  position: "absolute",
+                  insetInlineEnd: 0,
+                  borderRight: "2px solid #fbcfe8",
+                  borderBottom: "2px solid #fbcfe8",
+                  borderTop: "2px solid #fbcfe8",
+                  
+                }}
+              ></div> */}
             </div>
           </div>
           <ul id="countdown">
