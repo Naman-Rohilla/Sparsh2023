@@ -65,6 +65,23 @@ export default function Landing() {
                 }}
               />
             </div>
+            <div className="right-landing-typewriter-class">
+              <Typewriter
+                options={{
+                  autoStart: true,
+                  loop: true,
+                }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString("Welcome to Gujarat's best cultural Fest")
+                    .pauseFor(1000)
+                    .deleteAll()
+                    .typeString("You can Register Here!")
+                    .pauseFor(2500)
+                    .start();
+                }}
+              />
+            </div>
 
             <div className="right-landing-register">
               <button class="custom-btn btn-3">
