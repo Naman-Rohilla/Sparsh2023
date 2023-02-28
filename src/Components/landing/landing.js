@@ -75,7 +75,7 @@ export default function Landing() {
     <>
       <div id="main-landing">
         <div className="landing-gif">
-          <img src="./arura_home_final.gif" height="100%" width="100%"></img>
+          <img src="./arura_home_final_compressed_1.gif" height="100%" width="100%"></img>
         </div>
         <div className="right-landing-container">
           <div className="right-landing-typewriter">
@@ -151,7 +151,7 @@ export default function Landing() {
             </div>
           </div>
           <Countdown
-            date={1677612696727 + 1000 * 60 * 60 * 24 * 2}
+            date={1677612696727 + 1000 * 60 * 60 * 24 * 36}
             renderer={renderer}
           />
         </div>
