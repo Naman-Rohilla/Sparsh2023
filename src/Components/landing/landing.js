@@ -44,29 +44,27 @@ export default function Landing() {
     <>
       <div id="main-landing">
         <div className="landing-gif">
-          <img
-            src="./home_flicker_compressed_final.gif"
-            height="100%"
-            width="100%"
-          ></img>
+          <img src="./arura_home_final.gif" height="100%" width="100%"></img>
         </div>
         <div className="right-landing-container">
           <div className="right-landing-typewriter">
-            <Typewriter
-              options={{
-                autoStart: true,
-                loop: true,
-              }}
-              onInit={(typewriter) => {
-                typewriter
-                  .typeString("Welcome to Gujarat's best cultural Fest")
-                  .pauseFor(1000)
-                  .deleteAll()
-                  .typeString("You can Register Here!")
-                  .pauseFor(2500)
-                  .start();
-              }}
-            />
+            <div className="right-landing-typewriter-class">
+              <Typewriter
+                options={{
+                  autoStart: true,
+                  loop: true,
+                }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString("Welcome to Gujarat's best cultural Fest")
+                    .pauseFor(1000)
+                    .deleteAll()
+                    .typeString("You can Register Here!")
+                    .pauseFor(2500)
+                    .start();
+                }}
+              />
+            </div>
 
             <div className="right-landing-register">
               <button class="custom-btn btn-3">
@@ -142,10 +140,44 @@ export default function Landing() {
         </div>
       </div>
       <div id="main-landing-2">
-        <div className="landing-2-left">
-          <img src="./fantasy.png" className="landing-2-left-img"></img>
-        </div>
-        <div className="landing-2-right">
+        <motion.div
+          initial="hidden"
+          variants={{
+            hidden: {
+              opacity: 0,
+              // x: 50,
+            },
+            visible: {
+              opacity: 1,
+              // x: 0,
+            },
+          }}
+          transition={{
+            duration: 2,
+          }}
+          whileInView="visible"
+          className="landing-2-left"
+        >
+          <img src="./shirley.png" className="landing-2-left-img"></img>
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          variants={{
+            hidden: {
+              opacity: 0,
+              // x: -50,
+            },
+            visible: {
+              opacity: 1,
+              // x: 0,
+            },
+          }}
+          transition={{
+            duration: 2,
+          }}
+          whileInView="visible"
+          className="landing-2-right"
+        >
           <span className="landing-2-heading">Heading</span>
           <span className="landing-2-content">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -153,88 +185,10 @@ export default function Landing() {
             ever since the 1500s, when an unknown printer
           </span>
           <span className="landing-2-line"></span>
-          <span className="landing-2-button"></span>
-        </div>
+          <span className="landing-2-button">shirley Setia</span>
+        </motion.div>
       </div>
-      <div id="main-landing-3">
-        <div className="landing-3-left">
-          <span className="landing-3-heading">Heading</span>
-          <span className="landing-3-content">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-          </span>
-          <span className="landing-3-line"></span>
-          <span className="landing-3-button"></span>
-        </div>
-        <div className="landing-3-right">
-          <img src="./fantasy.png" className="landing-3-left-img"></img>
-        </div>
-      </div>
-      <div id="main-landing-4">
-        <div className="landing-4-slider">
-          {sliderArray1
-            .filter((sA) => {
-              if (sA.id == sliderIndex1) {
-                return sA;
-              }
-            })
-            .map((sA) => (
-              <motion.div
-                key={sA.id}
-                initial="hidden"
-                animate={{
-                  opacity: [0, 1],
-                  y: [-20, 0],
-                }}
-                transition={{
-                  duration: "1",
-                  times: [0, 1],
-                }}
-                className="landing-4-slider-items"
-              >
-                <div className="landing-4-slider-heading">{sA.heading}</div>
-                <div className="landing-4-slider-subheading">
-                  {sA.subheading}
-                </div>
-                <div className="landing-4-slider-content">{sA.data}</div>
-              </motion.div>
-            ))}
-
-          <PlayArrowOutlinedIcon
-            onClick={() => {
-              if (sliderIndex1 == 3) {
-                return;
-              }
-              setsliderIndex1(sliderIndex1 + 1);
-            }}
-            className="right-slider-button"
-          />
-          <PlayArrowOutlinedIcon
-            className="left-slider-button "
-            onClick={() => {
-              if (sliderIndex1 == 0) {
-                return;
-              }
-              setsliderIndex1(sliderIndex1 - 1);
-            }}
-          />
-        </div>
-      </div>
-      <div id="main-landing-5">
-        <video
-          width="90%"
-          height="50%"
-          className="landing-5-video"
-          autoplay="autoplay"
-          muted
-          loop
-        >
-          <source src="/Videos/demo.mp4" type="video/mp4"></source>
-        </video>
-      </div>
-      {matches ? <SliderMobile /> : <Slider />}
+      
     </>
   );
 }

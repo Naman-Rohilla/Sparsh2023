@@ -349,8 +349,8 @@ export default function Slider() {
                     }}
                     style={{
                       width: sA.id < mainIndex
-                      ? "120px"
-                      : sA.id == mainIndex ? "330px" : "120px",
+                      ? "150px"
+                      : sA.id == mainIndex ? "330px" : "150px",
                       display: "flex",
                       justifyContent: "center",
                       paddingTop: "50px",
