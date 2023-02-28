@@ -7,7 +7,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
 import "./slider.css";
 
-
 const sliderArray = [
   {
     id: -2,
@@ -21,53 +20,119 @@ const sliderArray = [
   },
   {
     id: 0,
-    img: "i am image 0",
+    img: "./1.png",
     hidden: false,
     heading: "Head 1",
   },
   {
     id: 1,
-    img: "i am image 1",
+    img: "./8_.png",
     hidden: false,
     heading: "Head 1",
   },
   {
     id: 2,
-    img: "i am image 2",
+    img: "./3_.png",
     hidden: false,
     heading: "Head 2",
   },
   {
     id: 3,
-    img: "i am image 3",
+    img: "./4.png",
     hidden: false,
     heading: "Head 3",
   },
   {
     id: 4,
-    img: "i am image 4",
+    img: "./5.png",
     hidden: false,
     heading: "Head 4",
   },
   {
     id: 5,
-    img: "i am image 5",
+    img: "./6.png",
     hidden: false,
     heading: "Head 5",
   },
   {
     id: 6,
-    img: "i am image 6",
+    img: "./7.png",
     hidden: false,
     heading: "Head 6",
   },
   {
     id: 7,
+    img: "./8.png",
+    hidden: false,
+    heading: "Head 1",
+  },
+  {
+    id: 8,
+    img: "./2.png",
+    hidden: false,
+    heading: "Head 1",
+  },
+  {
+    id: 9,
+    img: "./10.png",
+    hidden: false,
+    heading: "Head 2",
+  },
+  {
+    id: 10,
+    img: "./11.png",
+    hidden: false,
+    heading: "Head 3",
+  },
+  {
+    id: 11,
+    img: "./12.png",
+    hidden: false,
+    heading: "Head 4",
+  },
+  {
+    id: 12,
+    img: "./13.png",
+    hidden: false,
+    heading: "Head 5",
+  },
+  {
+    id: 13,
+    img: "./14.png",
+    hidden: false,
+    heading: "Head 6",
+  },
+  {
+    id: 14,
+    img: "./15.png",
+    hidden: false,
+    heading: "Head 1",
+  },
+  {
+    id: 15,
+    img: "./16.png",
+    hidden: false,
+    heading: "Head 1",
+  },
+  {
+    id: 16,
+    img: "./17.png",
+    hidden: false,
+    heading: "Head 2",
+  },
+  {
+    id: 17,
+    img: "./18.png",
+    hidden: false,
+    heading: "Head 3",
+  },
+  {
+    id: 18,
     img: "i am image 7",
     hidden: true,
   },
   {
-    id: 8,
+    id: 19,
     img: "i am image",
     hidden: true,
   },
@@ -310,7 +375,7 @@ export default function Slider() {
                 justifyContent: "center",
                 position: "relative",
               }}
-              onClick={() => setOpen(true)}
+              // onClick={() => setOpen(true)}
             >
               {sliderArray
                 ?.filter((sA) => {
@@ -326,7 +391,6 @@ export default function Slider() {
                         sA.id < mainIndex
                           ? 1.5 / (mainIndex - sA.id + 1)
                           : 1.5 / (sA.id - mainIndex + 1),
-                      
                     }}
                     animate={
                       mainIndex == sA.id
@@ -341,19 +405,22 @@ export default function Slider() {
                               sA.id < mainIndex
                                 ? 0.3 / (mainIndex - sA.id + 1)
                                 : 0.3 / (sA.id - mainIndex + 1),
-                            
                           }
                     }
                     transition={{
                       duration: 0.2,
                     }}
                     style={{
-                      width: sA.id < mainIndex
-                      ? "150px"
-                      : sA.id == mainIndex ? "330px" : "150px",
+                      width:
+                        sA.id < mainIndex
+                          ? "150px"
+                          : sA.id == mainIndex
+                          ? "330px"
+                          : "150px",
                       display: "flex",
                       justifyContent: "center",
                       paddingTop: "50px",
+                      // backgroundColor: "transparent"
                     }}
                   >
                     <div
@@ -373,18 +440,21 @@ export default function Slider() {
                               }px black`
                             : `0px ${(bindLength - sA.id) * 2}px 10px black`,
                         position: "relative",
+                        backgroundColor: "white",
                       }}
                     >
                       <img
-                        height="100%"
-                        width="100%"
+                        
                         style={{
                           position: "absolute",
                           objectFit: "cover",
-                          zIndex: -1,
-                          opacity: 0.5,
+                          backgroundColor: "white",
+                          opacity: 1,
+                          height: "100%",
+                          width: "100%",
+                          objectFit: "cover"
                         }}
-                        src="./fantasy.avif"
+                        src={sA.img}
                       ></img>
                     </div>
                   </motion.div>
@@ -431,7 +501,7 @@ export default function Slider() {
               </div>
               <div
                 onClick={() => {
-                  if (mainIndex == 6 || mainIndex > 6) {
+                  if (mainIndex == 17 || mainIndex > 17) {
                     return;
                   }
                   setbindLength(bindLength + 1);
