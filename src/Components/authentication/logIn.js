@@ -4,26 +4,31 @@ import TextField, { TextFieldProps } from "@mui/material/TextField";
 import { alpha, styled } from "@mui/material/styles";
 import { AnimatePresence, motion } from "framer-motion";
 import { width } from "@mui/system";
-
 const CssTextField = styled(TextField)({
   marginBottom: "20px",
-  width: "70%",
-  color: "#db2777",
+  width: "30%",
+  color: "#65FFA3",
+  "& .MuiInputBase-root": {
+    color: "white",
+  },
+  "& .MuiFormLabel-root": {
+    color: "white",
+  },
   "& label.Mui-focused": {
-    color: "#fe019a",
+    color: "#65FFA3",
   },
   "& .MuiInput-underline:after": {
-    borderBottomColor: "#fe019a",
+    borderBottomColor: "#65FFA3",
   },
   "& .MuiOutlinedInput-root": {
     "& fieldset": {
-      borderColor: "red",
+      borderColor: "#65FFA3",
     },
     "&:hover fieldset": {
-      borderColor: "yellow",
+      borderColor: "#65FFA3",
     },
     "&.Mui-focused fieldset": {
-      borderColor: "green",
+      borderColor: "#65FFA3",
     },
   },
 });
@@ -31,6 +36,8 @@ const CssTextField = styled(TextField)({
 export default function LogIn() {
   const [email, setemail] = React.useState("");
   const [password, setpassword] = React.useState("");
+  const [fullName, setfullName] = React.useState("");
+  const [pageStatus, setpageStatus] = React.useState("login");
 
   function handleChange() {
     console.log(email);
@@ -66,26 +73,76 @@ export default function LogIn() {
         className="login-container"
       >
         <div className="login-container-left">
-          
-          <span className="header">Header</span>
-          <CssTextField
-            id="standard-basic"
-            label="Email"
-            value={email}
-            onChange={(e) => setemail(e.target.value)}
-            type="text"
-            // autoComplete="current-password"
-            variant="standard"
-          />
-          <CssTextField
-            id="standard-password-input"
-            label="Password"
-            type="password"
-            value={password}
-            onChange={(e) => setpassword(e.target.value)}
-            // autoComplete="current-password"
-            variant="standard"
-          />
+          <span className="header">
+            {pageStatus == "login" ? (
+              <span className="login-button">Login</span>
+            ) : (
+              <span
+                className="login-button-unactive"
+                onClick={() => setpageStatus("login")}
+              >
+                Login
+              </span>
+            )}
+            {pageStatus == "register" ? (
+              <span className="register-button">Register</span>
+            ) : (
+              <span
+                className="register-button-unactive"
+                onClick={() => setpageStatus("register")}
+              >
+                Register
+              </span>
+            )}
+          </span>
+          {pageStatus == "login" ? (
+            <>
+              <CssTextField
+                id="custom-css-outlined-input"
+                label="Email"
+                value={email}
+                onChange={(e) => setemail(e.target.value)}
+                type="text"
+                // autoComplete="current-password"
+              />
+              <CssTextField
+                id="custom-css-outlined-input"
+                label="Password"
+                type="password"
+                value={password}
+                onChange={(e) => setpassword(e.target.value)}
+                // autoComplete="current-password"
+              />
+            </>
+          ) : (
+            <>
+              <CssTextField
+                id="custom-css-outlined-input"
+                label="Full-Name"
+                value={fullName}
+                onChange={(e) => setfullName(e.target.value)}
+                type="text"
+                // autoComplete="current-password"
+              />
+              <CssTextField
+                id="custom-css-outlined-input"
+                label="Email"
+                value={email}
+                onChange={(e) => setemail(e.target.value)}
+                type="text"
+                // autoComplete="current-password"
+              />
+
+              <CssTextField
+                id="custom-css-outlined-input"
+                label="Password"
+                type="password"
+                value={password}
+                onChange={(e) => setpassword(e.target.value)}
+                // autoComplete="current-password"
+              />
+            </>
+          )}
           <div onClick={() => handleChange()} className="sign-in-button">
             <motion.div
               initial={{
@@ -104,7 +161,7 @@ export default function LogIn() {
               style={{
                 height: "30px",
                 width: "100px",
-                backgroundColor: "#be185d",
+                backgroundColor: "#16a34a",
                 transform: "skewX(10deg)",
                 transform: "skewY(-5deg)",
                 position: "absolute",
@@ -129,7 +186,7 @@ export default function LogIn() {
               style={{
                 height: "30px",
                 width: "100px",
-                backgroundColor: "#db2777",
+                backgroundColor: "#65FFA3",
                 zIndex: "100",
                 opacity: 0.7,
                 // transform: "skewX(10deg)",
@@ -158,23 +215,30 @@ export default function LogIn() {
                 zIndex: 100,
                 paddingTop: "2px",
                 fontSize: "16px",
-                color: "white",
+                color: "black",
               }}
             >
-              Sign In
+              {pageStatus == "login" ? "Sign In" : "Register"}
             </motion.div>
           </div>
         </div>
-        <div className="login-container-right">
-          <img
-            style={{
-              position: "absolute",
-              width: "40%",
-              height: "60%",
-            }}
-            src="./main_1.gif"
-          ></img>
-        </div>
+        <img
+          style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+          }}
+          src="./login02.jpg"
+        ></img>
+        <div
+          style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            backgroundColor: "black",
+            opacity: 0.6,
+          }}
+        ></div>
       </motion.div>
     </div>
   );

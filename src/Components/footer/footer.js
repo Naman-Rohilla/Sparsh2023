@@ -14,11 +14,15 @@ export default function Footer() {
           variants={{
             hidden: {
               opacity: 0,
-              x: 120,
+              x: -120,
+              position: "absolute",
+              default: "easeIn"
             },
             visible: {
               opacity: 1,
               x: 0,
+              position: "relative",
+              default: "easeIn"
             },
           }}
           whileInView="visible"

@@ -9,7 +9,7 @@
 }
 
 .landing-gif {
-  height: 90%;
+  height: 70%;
   padding-top: 10px;
   width: 50%;
   position: relative;
@@ -21,18 +21,28 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   /* background: yellow; */
 }
 
 .right-landing-container .right-landing-typewriter {
   padding-bottom: 40px;
-  font-size: 20px;
+
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.right-landing-container
+  .right-landing-typewriter
+  .right-landing-typewriter-class {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 250;
+  font-size: 40px;
+  height: 150px;
+  padding-top: 100px;
 }
 
 .right-landing-container .right-landing-register {
@@ -56,24 +66,20 @@
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-  box-shadow: inset 0 0 100px #fff,      /* inner white */
-  inset 20px 0 100px #be185d,   /* inner left magenta short */
-  inset -20px 0 10px #be185d,  /* inner right cyan short */
-  inset 20px 0 20px #f0f,  /* inner left magenta broad */
-  inset -20px 0 10px #be185d, /* inner right cyan broad */
-  0 0 200px #fff;           /* outer white */
+  box-shadow: inset 0 0 100px black,
+    /* inner white */ inset 20px 0 100px #65ffa3,
+    /* inner left magenta short */ inset -20px 0 10px #65ffa3,
+    /* inner right cyan short */ inset 20px 0 20px #f0f,
+    /* inner left magenta broad */ inset -20px 0 10px #65ffa3,
+    /* inner right cyan broad */ 0 0 200px white; /* outer white */
 
   outline: none;
-  color: #be185d
+  color: #65ffa3;
 }
 
 .right-landing-container .right-landing-register .btn-3 {
   background: rgb(0, 172, 238);
-  background: linear-gradient(
-    0deg,
-    rgba(0, 172, 238, 1) 0%,
-    #be185d 100%
-  );
+  background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, #65ffa3 100%);
   width: 130px;
   height: 40px;
   line-height: 42px;
@@ -93,7 +99,8 @@
   content: "";
   right: 0;
   top: 0;
-  background: #be185d;
+
+  background: linear-gradient(93.35deg, #65ffa3 0%, #a1d6ff 100%);
   transition: all 0.3s ease;
 }
 .btn-3:before {
@@ -115,7 +122,7 @@
   width: 100%;
 }
 .btn-3 span:hover {
-  color: #be185d;
+  color: #65ffa3;
 }
 .btn-3 span:before,
 .btn-3 span:after {
@@ -123,7 +130,8 @@
   content: "";
   left: 0;
   bottom: 0;
-  background: #be185d;
+
+  background: linear-gradient(93.35deg, #65ffa3 0%, #a1d6ff 100%);
   transition: all 0.3s ease;
 }
 .btn-3 span:before {
@@ -174,7 +182,7 @@ li {
 
 @media screen and (max-width: 720px) {
   #main-landing {
-    height: 50vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
   }
@@ -184,6 +192,16 @@ li {
     width: 100%;
     /* background: yellow; */
   }
+  .right-landing-container
+  .right-landing-typewriter
+  .right-landing-typewriter-class {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 250;
+  font-size: 30px;
+  height: 150px;
+  padding-top: 100px;
+}
   .landing-gif {
     height: 200px;
     width: 100%;
@@ -191,7 +209,7 @@ li {
 }
 
 #main-landing-2 {
-  background-color: black;
+  background: black;
   height: 70%;
   width: 100%;
   display: flex;
@@ -207,33 +225,54 @@ li {
   width: 60%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
 
   color: white;
   position: relative;
 }
 
+#main-landing-2 .landing-2-left .landing-2-left-img {
+  height: 90%;
+  width: 80%;
+}
+
 #main-landing-2 .landing-2-right .landing-2-heading {
-  font-size: 50px;
-  padding: 0px 100px 0px 100px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 250;
+  font-size: 96px;
+  padding: 80px 100px 0px 100px;
 }
 
 #main-landing-2 .landing-2-right .landing-2-content {
   padding: 40px 100px 0px 100px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
 }
 #main-landing-2 .landing-2-right .landing-2-line {
   margin: 40px 100px 0px 100px;
   height: 5px;
   width: 200px;
-  background-color: pink;
+
+  background: linear-gradient(93.35deg, #65ffa3 0%, #a1d6ff 100%);
   border-radius: 2px;
 }
 #main-landing-2 .landing-2-right .landing-2-button {
   position: absolute;
-  top: 80%;
+  top: 75%;
   height: 60px;
   width: 200px;
-  background-color: pink;
+  color: #14532d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  background: linear-gradient(93.35deg, #65ffa3 0%, #a1d6ff 100%);
   border-radius: 2px;
   transform: translateX(-100px);
 }
@@ -261,12 +300,13 @@ li {
   #main-landing-2 .landing-2-right .landing-2-heading {
     font-size: 20px;
     padding: 20px 40px 0px 40px;
+
     /* padding: 0px 100px 0px 100px; */
   }
 
   #main-landing-2 .landing-2-right .landing-2-content {
     /* padding: 40px 100px 0px 100px; */
-    font-size: 10px;
+    font-size: 8px;
     /* width: 100px; */
     padding: 20px 40px 0px 40px;
   }
@@ -274,7 +314,8 @@ li {
     margin: 20px 40px 0px 40px;
     height: 5px;
     width: 50px;
-    background-color: pink;
+
+    background: linear-gradient(93.35deg, #65ffa3 0%, #a1d6ff 100%);
     border-radius: 2px;
   }
   #main-landing-2 .landing-2-right .landing-2-button {
@@ -282,14 +323,15 @@ li {
     top: 80%;
     height: 30px;
     width: 100px;
-    background-color: pink;
+
+    background: linear-gradient(93.35deg, #65ffa3 0%, #a1d6ff 100%);
     border-radius: 2px;
     transform: translateX(-50px);
   }
 }
 
 #main-landing-3 {
-  background-color: black;
+  background: black;
   height: 70%;
   width: 100%;
   display: flex;
@@ -306,18 +348,26 @@ li {
 }
 
 #main-landing-3 .landing-3-left .landing-3-heading {
-  font-size: 50px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 250;
+  font-size: 96px;
   padding: 0px 100px 0px 100px;
 }
 
 #main-landing-3 .landing-3-left .landing-3-content {
   padding: 40px 100px 0px 100px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
 }
 #main-landing-3 .landing-3-left .landing-3-line {
   margin: 40px 100px 0px 100px;
   height: 5px;
   width: 200px;
-  background-color: pink;
+
+  background: linear-gradient(93.35deg, #65ffa3 0%, #a1d6ff 100%);
   border-radius: 2px;
 }
 #main-landing-3 .landing-3-left .landing-3-button {
@@ -326,7 +376,15 @@ li {
   right: 0%;
   height: 60px;
   width: 200px;
-  background: pink;
+  color: #14532d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  background: linear-gradient(93.35deg, #65ffa3 0%, #a1d6ff 100%);
   border-radius: 2px;
   transform: translateX(100px);
 }
@@ -374,7 +432,8 @@ li {
     margin: 20px 40px 0px 40px;
     height: 5px;
     width: 50px;
-    background-color: pink;
+
+    background: linear-gradient(93.35deg, #65ffa3 0%, #a1d6ff 100%);
     border-radius: 2px;
   }
   #main-landing-3 .landing-3-left .landing-3-button {
@@ -383,7 +442,8 @@ li {
     right: 0%;
     height: 30px;
     width: 100px;
-    background: pink;
+    z-index: 100;
+    background: linear-gradient(93.35deg, #65ffa3 0%, #a1d6ff 100%);
     border-radius: 2px;
     transform: translateX(50px);
   }
@@ -392,7 +452,7 @@ li {
 #main-landing-4 {
   height: 70vh;
   width: 100%;
-  background-color: black;
+  background: black;
 }
 
 #main-landing-4 .landing-4-slider {
@@ -453,16 +513,16 @@ li {
 
 @media screen and (max-width: 720px) {
   #main-landing-4 {
-    height: 80%;
+    height: 200px;
     width: 100%;
-    background-color: black;
+    background: black;
     padding: 10px 0px 10px 0px;
   }
 
   #main-landing-4 .landing-4-slider {
     height: 100%;
     width: 100%;
-    background-color: black;
+    background: black;
     position: relative;
     color: white;
     display: flex;
@@ -519,7 +579,7 @@ li {
 #main-landing-5 {
   height: 100vh;
   width: 100%;
-  background-color: black;
+  background: black;
   z-index: 0;
   position: absolute;
   opacity: 0.2;
@@ -531,4 +591,24 @@ li {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+
+@media screen and (max-width: 720px) {
+  #main-landing-5 {
+    height: 100vh;
+    width: 100%;
+    background: black;
+    z-index: 0;
+    position: absolute;
+    opacity: 0.2;
+  }
+  
+  #main-landing-5 .landing-5-video {
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
