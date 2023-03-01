@@ -70,7 +70,7 @@ export default function Landing() {
     }
   };
 
-  const matches = useMediaQuery("(max-width: 720px)");
+  const matches = useMediaQuery("(max-width: 1100px)");
   return (
     <>
       <div id="main-landing">
