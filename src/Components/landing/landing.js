@@ -74,8 +74,24 @@ export default function Landing() {
   return (
     <>
       <div id="main-landing">
-        <div className="landing-gif">
-          <img src="./arura_home_final_compressed_1.gif" height="100%" width="100%"></img>
+        <div
+          style={{
+            position: "absolute",
+            zIndex: 0,
+            opacity: 0.3,
+            height: "100vh",
+            width: "100%",
+            objectFit: "cover",
+          }}
+        >
+          <img
+            src="./home_sparsh.png"
+            style={{
+              objectFit: "cover",
+            }}
+            height="100%"
+            width="100%"
+          ></img>
         </div>
         <div className="right-landing-container">
           <div className="right-landing-typewriter">
@@ -87,10 +103,10 @@ export default function Landing() {
                 }}
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString("Welcome to Gujarat's best cultural Fest")
+                    .typeString("Welcome to Gujarat's Biggest Cultural Fest")
                     .pauseFor(1000)
                     .deleteAll()
-                    .typeString("You can Register Here!")
+                    .typeString("You can Sign Up here!")
                     .pauseFor(2500)
                     .start();
                 }}
@@ -99,7 +115,7 @@ export default function Landing() {
 
             <div className="right-landing-register">
               <button class="custom-btn btn-3">
-                <span>Register Here</span>
+                <span>Sign Up</span>
               </button>
               {/* <div
                 style={{
@@ -199,7 +215,7 @@ export default function Landing() {
           whileInView="visible"
           className="landing-2-right"
         >
-          <span className="landing-2-heading">Heading</span>
+          <span className="landing-2-heading">Heart of Sparsh 2022</span>
           <span className="landing-2-content">
             Shirley Setia, an artist of Indian heritage, is a versatile
             performer, excelling in her roles as a singer, actress, and social
@@ -237,16 +253,16 @@ export default function Landing() {
           whileInView="visible"
           className="landing-3-left"
         >
-          <span className="landing-3-heading">Heading</span>
+          <span className="landing-3-heading">9XM</span>
           <span className="landing-3-content">
             Krishna Kumar Kunnath, better known by his stage name KK, had
             established himself as a premier Indian backup vocalist known for
             his vast repertoire. In 2016, during Gujarat's prestigious annual
             cultural fest, Sparsh, he visited SVNIT and set the stage on fire
-            and enthralled the crowd with his mellifluous tunes.
+            and enthralled the crowd with his mellifluous tunes.
           </span>
           <span className="landing-3-line"></span>
-          <span className="landing-3-button"></span>
+          <span className="landing-3-button">KK</span>
         </motion.div>
         <motion.div
           initial="hidden"
@@ -270,7 +286,7 @@ export default function Landing() {
           whileInView="visible"
           className="landing-3-right"
         >
-          <img src="./fantasy.png" className="landing-3-left-img"></img>
+          <img src="./kk.png" className="landing-3-left-img"></img>
         </motion.div>
       </div>
       <motion.div
@@ -312,20 +328,22 @@ export default function Landing() {
                 }}
                 className="landing-4-slider-items"
               >
-                
                 <div className="landing-4-slider-heading">{sA.heading}</div>
                 {/* <div className="landing-4-slider-img">
                   {sA.img}
                 </div> */}
                 <div className="landing-4-slider-content">{sA.data}</div>
-                <img style={{
-                  position: "absolute",
-                  height: "100%",
-                  width: "100%",
-                  zIndex: 0,
-                  opacity: 0.2,
-                  objectFit: "cover"
-                }} src={sA.img}></img>
+                <img
+                  style={{
+                    position: "absolute",
+                    height: "100%",
+                    width: "100%",
+                    zIndex: 0,
+                    opacity: 0.5,
+                    objectFit: "cover",
+                  }}
+                  src={sA.img}
+                ></img>
               </motion.div>
             ))}
 

@@ -68,7 +68,7 @@ export default function LogIn() {
           width: "0px",
         }}
         transition={{
-          duration: 0.5,
+          duration: 0.3,
         }}
         className="login-container"
       >
