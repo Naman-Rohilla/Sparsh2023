@@ -9,12 +9,14 @@ import Slider from "../about/slider";
 import SliderMobile from "../about/sliderMobile";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Countdown from "react-countdown";
+import { Link } from "react-router-dom";
+import { DotLoader } from "react-spinners";
 
 const sliderArray1 = [
   {
     id: 0,
     heading: "Singing",
-    img: "./9_singing.png",
+    img: "./8_singing_.png",
     data: "Get ready for an unforgettable musical experience that you won't want to miss! Sparsh is proud to present an electrifying event that will leave you breathless with excitement. Our talented singers are ready to take the stage and deliver an unforgettable performance that will have you tapping your feet and swaying to the beat.",
   },
   {
@@ -39,6 +41,7 @@ const sliderArray1 = [
 
 export default function Landing() {
   const [sliderIndex1, setsliderIndex1] = React.useState(0);
+  const [loading, setloading] = React.useState(true);
 
   console.log(Date.now(), "date");
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
@@ -73,6 +76,23 @@ export default function Landing() {
   const matches = useMediaQuery("(max-width: 1100px)");
   return (
     <>
+      {loading && (
+        <div
+          style={{
+            backgroundColor: "black",
+            height: "100vh",
+            position: "fixed",
+            width: "100%",
+            zIndex: 200,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <DotLoader color="white" />
+        </div>
+      )}
+
       <div id="main-landing">
         <div
           style={{
@@ -88,6 +108,9 @@ export default function Landing() {
             src="./home_sparsh.png"
             style={{
               objectFit: "cover",
+            }}
+            onLoad={() => {
+              setloading(false);
             }}
             height="100%"
             width="100%"
@@ -115,7 +138,7 @@ export default function Landing() {
 
             <div className="right-landing-register">
               <button class="custom-btn btn-3">
-                <span>Sign Up</span>
+                <span>Sign In</span>
               </button>
               {/* <div
                 style={{
@@ -385,6 +408,30 @@ export default function Landing() {
         whileInView="visible"
         id="main-landing-5"
       >
+        <motion.div
+          initial="hidden"
+          variants={{
+            hidden: {
+              default: "easeIn",
+              x: -50,
+              opacity: 0,
+            },
+            visible: {
+              default: "easeIn",
+              x: 0,
+              opacity: 1,
+            },
+          }}
+          transition={{
+            duration: 1,
+          }}
+          whileInView="visible"
+          className="video-heading"
+          style={{}}
+        >
+          <span>Glimpses of</span>
+          <span className="video-heading-child">Sparsh 2K22</span>
+        </motion.div>
         <video
           width="90%"
           height="100%"

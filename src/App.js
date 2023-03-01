@@ -8,6 +8,8 @@ import Home from "./pages/home";
 import AboutUs from "./pages/aboutUs";
 import Sponsors from "./Components/sponsors/sponsors";
 import SignIn from "./pages/signIn";
+// import Register from "./Components/register/register";
+// import Reg1 from "./Components/reg1/reg1";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/sign-in" element={<SignIn />} />
+        {/* <Route path="/register" element={<Register />} />
+        <Route path="/reg1" element={<Reg1 />} /> */}
       </Routes>
       <Footer />
     </>

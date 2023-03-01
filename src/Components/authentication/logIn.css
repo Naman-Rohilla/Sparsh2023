@@ -46,6 +46,14 @@
   position: relative;
 }
 
+@media screen and (max-width: 720px) {
+  .login-container .login-container-left .header {
+
+    width: 80%;
+  
+  }
+}
+
 .login-container .login-container-left .header .login-button {
   background: white;
   padding: 6px 14px 6px 14px;

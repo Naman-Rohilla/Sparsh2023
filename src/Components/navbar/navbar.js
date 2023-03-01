@@ -8,6 +8,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import GroupsIcon from "@mui/icons-material/Groups";
 import SchoolIcon from "@mui/icons-material/School";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
+import PersonIcon from '@mui/icons-material/Person';
 
 export default function NavBar() {
   const [state, setState] = React.useState(false);
@@ -190,6 +191,33 @@ export default function NavBar() {
                       }}
                     />
                     Sponsors
+                  </Link>
+                )}
+                {activeUrl == "/sign-in" ? (
+                  <div className="nav-item-active">
+                    {" "}
+                    <AccountBalanceIcon
+                      sx={{
+                        paddingRight: "10px",
+                      }}
+                    />
+                    Sign In
+                  </div>
+                ) : (
+                  <Link
+                    onClick={() => {
+                      setState(false);
+                      setactiveUrl("/sign-in");
+                    }}
+                    to="/sign-in"
+                    className="nav-item"
+                  >
+                    <PersonIcon
+                      sx={{
+                        paddingRight: "10px",
+                      }}
+                    />
+                    Sign In
                   </Link>
                 )}
               </div>

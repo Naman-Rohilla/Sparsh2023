@@ -31,7 +31,9 @@ export default function Footer() {
           }}
           className="footer-left-container"
         >
-          <span className="sparsh">Sparsh</span>
+          <span className="sparsh">
+            <img src="./Sparsh_Theme_Logo.png" height="100%" width="100%"></img>
+          </span>
         </motion.div>
         <div className="footer-right-container">
           <div className="footer-right-container-child">
