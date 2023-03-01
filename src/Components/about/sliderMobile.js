@@ -439,7 +439,7 @@ export default function SliderMobile() {
                       duration: 0.2,
                     }}
                     style={{
-                      width: "330px",
+                      width: "90%",
                       display: "flex",
                       justifyContent: "center",
                       paddingTop: "50px",
@@ -456,7 +456,7 @@ export default function SliderMobile() {
                             : sA.id < mainIndex
                             ? `${100 - (bindLength - sA.id) * 15}%`
                             : `${100 - (sA.id - (bindLength - 4)) * 15}%`,
-                        width: "330px",
+                        width: "100%",
                         boxShadow:
                           sA.id <= mainIndex
                             ? `0px ${(sA.id - (bindLength - 4)) * 2}px ${
@@ -473,7 +473,7 @@ export default function SliderMobile() {
                           position: "absolute",
                           objectFit: "cover",
                           zIndex: -1,
-                          opacity: 0.5,
+                          opacity: 1,
                         }}
                         src={sA.img}
                       ></img>
@@ -514,7 +514,7 @@ export default function SliderMobile() {
               >
                 <ArrowCircleLeftIcon
                   sx={{
-                    fontSize: "1.5rem",
+                    fontSize: "2rem",
                     color: "white",
                     ":hover": {
                       color: "#e4e4e7",
@@ -533,7 +533,7 @@ export default function SliderMobile() {
               >
                 <ArrowCircleRightIcon
                   sx={{
-                    fontSize: "1.5rem",
+                    fontSize: "2rem",
                     color: "white",
                     ":hover": {
                       color: "#e4e4e7",

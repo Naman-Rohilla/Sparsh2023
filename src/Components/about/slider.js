@@ -494,7 +494,7 @@ export default function Slider() {
               >
                 <ArrowCircleLeftIcon
                   sx={{
-                    fontSize: "1.5rem",
+                    fontSize: "2.5rem",
                     color: "white",
                     ":hover": {
                       color: "#e4e4e7",
@@ -513,7 +513,7 @@ export default function Slider() {
               >
                 <ArrowCircleRightIcon
                   sx={{
-                    fontSize: "1.5rem",
+                    fontSize: "2.5rem",
                     color: "white",
                     ":hover": {
                       color: "#e4e4e7",

@@ -109,7 +109,7 @@ export default function Sponsors() {
             style={{
               height: "55px",
               width: "200px",
-              backgroundColor: "#f472b6",
+              backgroundColor: "#15803d",
               transform: "skewX(10deg)",
               transform: "skewY(-5deg)",
               position: "absolute",
@@ -134,7 +134,7 @@ export default function Sponsors() {
             style={{
               height: "55px",
               width: "190px",
-              backgroundColor: "#ec4899",
+              backgroundColor: "#65FFA3",
               zIndex: "100",
               opacity: 0.7,
               // transform: "skewX(10deg)",
@@ -261,7 +261,7 @@ export default function Sponsors() {
             style={{
               height: "55px",
               width: "200px",
-              backgroundColor: "#f472b6",
+              backgroundColor: "#15803d",
               transform: "skewX(10deg)",
               transform: "skewY(-5deg)",
               position: "absolute",
@@ -286,7 +286,7 @@ export default function Sponsors() {
             style={{
               height: "55px",
               width: "210px",
-              backgroundColor: "#ec4899",
+              backgroundColor: "#65FFA3",
               zIndex: "100",
               opacity: 0.7,
               // transform: "skewX(10deg)",
@@ -317,7 +317,7 @@ export default function Sponsors() {
               fontSize: "1.5rem",
             }}
           >
-           Previous Sponsors
+            Previous Sponsors
           </motion.div>
         </div>
         <div
