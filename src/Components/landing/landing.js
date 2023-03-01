@@ -304,11 +304,11 @@ export default function Landing() {
                 initial="hidden"
                 animate={{
                   opacity: [0, 1],
-                  y: [-20, 0],
+                  // y: [-20, 0],
                 }}
                 transition={{
                   duration: "1",
-                  times: [0, 1],
+                  // times: [0, 1],
                 }}
                 className="landing-4-slider-items"
               >
