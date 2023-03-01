@@ -415,11 +415,13 @@ export default function Slider() {
                         sA.id < mainIndex
                           ? "150px"
                           : sA.id == mainIndex
-                          ? "330px"
+                          ? "50%"
                           : "150px",
                       display: "flex",
                       justifyContent: "center",
-                      paddingTop: "50px",
+                      // paddingTop: "50px",
+                      height: "80vh",
+                      alignItems: "center",
                       // backgroundColor: "transparent"
                     }}
                   >
@@ -427,12 +429,12 @@ export default function Slider() {
                       style={{
                         visibility: sA.hidden ? "hidden" : "",
                         height:
-                          sA.id < mainIndex
-                            ? `${450 - (bindLength - sA.id) * 15}px`
-                            : sA.id == mainIndex
-                            ? 450
-                            : `${450 - (sA.id - (bindLength - 4)) * 15}px`,
-                        width: "330px",
+                          sA.id == mainIndex
+                            ? `${90}%`
+                            : sA.id < mainIndex
+                            ? `${100 - (bindLength - sA.id) * 15}%`
+                            : `${100 - (sA.id - (bindLength - 4)) * 15}%`,
+                        width: "100%",
                         boxShadow:
                           sA.id <= mainIndex
                             ? `0px ${(sA.id - (bindLength - 4)) * 2}px ${
@@ -444,7 +446,6 @@ export default function Slider() {
                       }}
                     >
                       <img
-                        
                         style={{
                           position: "absolute",
                           objectFit: "cover",
@@ -452,7 +453,7 @@ export default function Slider() {
                           opacity: 1,
                           height: "100%",
                           width: "100%",
-                          objectFit: "cover"
+                          objectFit: "cover",
                         }}
                         src={sA.img}
                       ></img>
@@ -473,8 +474,10 @@ export default function Slider() {
                 zIndex: 2,
                 display: "flex",
                 width: "100%",
-                paddingTop: "20px",
+                // paddingTop: "20px",
                 justifyContent: "center",
+                transform: "translateY(-20px)",
+                zIndex: 100,
               }}
             >
               <div

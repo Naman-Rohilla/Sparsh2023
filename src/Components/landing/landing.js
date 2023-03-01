@@ -369,7 +369,7 @@ export default function Landing() {
       >
         <video
           width="90%"
-          height="50%"
+          height="100%"
           className="landing-5-video"
           autoplay="autoplay"
           muted

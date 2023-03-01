@@ -20,53 +20,119 @@ const sliderArray = [
   },
   {
     id: 0,
-    img: "i am image 0",
+    img: "./1.png",
     hidden: false,
     heading: "Head 1",
   },
   {
     id: 1,
-    img: "i am image 1",
+    img: "./8_.png",
     hidden: false,
     heading: "Head 1",
   },
   {
     id: 2,
-    img: "i am image 2",
+    img: "./3_.png",
     hidden: false,
     heading: "Head 2",
   },
   {
     id: 3,
-    img: "i am image 3",
+    img: "./4.png",
     hidden: false,
     heading: "Head 3",
   },
   {
     id: 4,
-    img: "i am image 4",
+    img: "./5.png",
     hidden: false,
     heading: "Head 4",
   },
   {
     id: 5,
-    img: "i am image 5",
+    img: "./6.png",
     hidden: false,
     heading: "Head 5",
   },
   {
     id: 6,
-    img: "i am image 6",
+    img: "./7.png",
     hidden: false,
     heading: "Head 6",
   },
   {
     id: 7,
+    img: "./8.png",
+    hidden: false,
+    heading: "Head 1",
+  },
+  {
+    id: 8,
+    img: "./2.png",
+    hidden: false,
+    heading: "Head 1",
+  },
+  {
+    id: 9,
+    img: "./10.png",
+    hidden: false,
+    heading: "Head 2",
+  },
+  {
+    id: 10,
+    img: "./11.png",
+    hidden: false,
+    heading: "Head 3",
+  },
+  {
+    id: 11,
+    img: "./12.png",
+    hidden: false,
+    heading: "Head 4",
+  },
+  {
+    id: 12,
+    img: "./13.png",
+    hidden: false,
+    heading: "Head 5",
+  },
+  {
+    id: 13,
+    img: "./14.png",
+    hidden: false,
+    heading: "Head 6",
+  },
+  {
+    id: 14,
+    img: "./15.png",
+    hidden: false,
+    heading: "Head 1",
+  },
+  {
+    id: 15,
+    img: "./16.png",
+    hidden: false,
+    heading: "Head 1",
+  },
+  {
+    id: 16,
+    img: "./17.png",
+    hidden: false,
+    heading: "Head 2",
+  },
+  {
+    id: 17,
+    img: "./18.png",
+    hidden: false,
+    heading: "Head 3",
+  },
+  {
+    id: 18,
     img: "i am image 7",
     hidden: true,
   },
   {
-    id: 8,
+    id: 19,
     img: "i am image",
     hidden: true,
   },
@@ -309,6 +375,7 @@ export default function SliderMobile() {
                 alignItems: "center",
                 justifyContent: "center",
                 position: "relative",
+             
               }}
               onClick={() => setOpen(true)}
             >
@@ -376,17 +443,19 @@ export default function SliderMobile() {
                       display: "flex",
                       justifyContent: "center",
                       paddingTop: "50px",
+                      height: "80vh",
+                      alignItems: "center",
                     }}
                   >
                     <div
                       style={{
                         visibility: sA.hidden ? "hidden" : "",
                         height:
-                          sA.id < mainIndex
-                            ? `${450 - (bindLength - sA.id) * 15}px`
-                            : sA.id == mainIndex
-                            ? 450
-                            : `${450 - (sA.id - (bindLength - 4)) * 15}px`,
+                          sA.id == mainIndex
+                            ? `${80}%`
+                            : sA.id < mainIndex
+                            ? `${100 - (bindLength - sA.id) * 15}%`
+                            : `${100 - (sA.id - (bindLength - 4)) * 15}%`,
                         width: "330px",
                         boxShadow:
                           sA.id <= mainIndex
@@ -406,7 +475,7 @@ export default function SliderMobile() {
                           zIndex: -1,
                           opacity: 0.5,
                         }}
-                        src="./fantasy.avif"
+                        src={sA.img}
                       ></img>
                     </div>
                   </motion.div>
@@ -427,6 +496,8 @@ export default function SliderMobile() {
                 width: "100%",
                 paddingTop: "20px",
                 justifyContent: "center",
+                transform: "translateY(-40px)",
+                zIndex: 100,
               }}
             >
               <div
@@ -453,7 +524,7 @@ export default function SliderMobile() {
               </div>
               <div
                 onClick={() => {
-                  if (mainIndex == 6 || mainIndex > 6) {
+                  if (mainIndex == 17 || mainIndex > 17) {
                     return;
                   }
                   setbindLength(bindLength + 1);
