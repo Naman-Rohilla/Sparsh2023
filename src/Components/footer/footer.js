@@ -99,10 +99,34 @@ export default function Footer(data) {
           </div>
           <div className="footer-right-container-child2">
             <div className="footer-right-container-child2-childrens">
-              <FacebookIcon />
-              <TwitterIcon />
-              <InstagramIcon />
-              <YouTubeIcon />
+              <Link
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
+                to="https://instagram.com/sparsh.nitsurat?igshid=YmMyMTA2M2Y="
+              >
+                <InstagramIcon />
+              </Link>
+              <Link
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
+                to="https://www.facebook.com/Sparsh.NITsurat/?mibextid=ZbWKwL"
+              >
+                <FacebookIcon />
+              </Link>
+              <Link
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
+                to="https://youtu.be/_LtDjW8Hmlk"
+              >
+                <YouTubeIcon />
+              </Link>
+              
             </div>
           </div>
         </div>

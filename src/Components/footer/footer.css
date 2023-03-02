@@ -71,7 +71,7 @@
   .footer-right-container-child2-childrens {
   padding-top: 25px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   color: #ff5f01;
 }
@@ -121,7 +121,7 @@
   .footer-right-container-child2-childrens {
   padding-top: 15px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   color: #ff5f01;
 }
