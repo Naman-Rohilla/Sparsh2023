@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import SouthIcon from "@mui/icons-material/South";
 import sparshPdf from "../../pdf/sparsh.pdf";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { DotLoader } from "react-spinners";
+import React from "react";
 
 const sliderArray = [
   {
@@ -229,8 +231,33 @@ const sliderArray = [
 
 export default function Sponsors() {
   const matches = useMediaQuery("(max-width: 720px)");
+  const [loading, setloading] = React.useState(true);
+  const [count, setcount] = React.useState(0);
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setloading(false);
+    }, 5000);
+  }, []);
+
   return (
     <>
+      {loading && (
+        <div
+          style={{
+            backgroundColor: "black",
+            height: "100vh",
+            position: "fixed",
+            width: "100%",
+            zIndex: 200,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <DotLoader color="white" />
+        </div>
+      )}
       {/* <div
         style={{
           // height: "200px",
@@ -367,7 +394,7 @@ export default function Sponsors() {
         >
           {sliderArray?.map((sA) => (
             <>
-              <motion.div className="slide2">
+              <motion.div key={sA.id} className="slide2">
                 {/* <div></div> */}
                 <div
                   style={{
@@ -378,7 +405,18 @@ export default function Sponsors() {
                     width: "100%",
                   }}
                 >
-                  <img src={sA.img} height="100%" width="100%"></img>
+                  <img
+                    onLoad={() => {
+                      setcount(count + 1);
+                      console.log(count, "Count");
+                      if (count >= 10) {
+                        setloading(false);
+                      }
+                    }}
+                    src={sA.img}
+                    height="100%"
+                    width="100%"
+                  ></img>
                 </div>
               </motion.div>
             </>
@@ -413,7 +451,11 @@ export default function Sponsors() {
         </div>
         {matches ? (
           <>
-            <a href={sparshPdf} download="sparsh" className="download-button-mobile">
+            <a
+              href={sparshPdf}
+              download="sparsh"
+              className="download-button-mobile"
+            >
               <div className="download-button-left">Bouchure</div>
               <div className="download-button-right">
                 <SouthIcon

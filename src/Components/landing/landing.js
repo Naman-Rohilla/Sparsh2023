@@ -129,7 +129,7 @@ export default function Landing(data) {
                     .typeString("Welcome to Gujarat's Biggest Cultural Fest")
                     .pauseFor(1000)
                     .deleteAll()
-                    .typeString("You can Sign Up here!")
+                    .typeString("You can Register here for Event!")
                     .pauseFor(2500)
                     .start();
                 }}

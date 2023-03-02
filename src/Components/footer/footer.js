@@ -4,8 +4,9 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
-export default function Footer() {
+export default function Footer(data) {
   return (
     <>
       <div id="main-footer">
@@ -16,13 +17,13 @@ export default function Footer() {
               opacity: 0,
               x: -120,
               position: "absolute",
-              default: "easeIn"
+              default: "easeIn",
             },
             visible: {
               opacity: 1,
               x: 0,
               position: "relative",
-              default: "easeIn"
+              default: "easeIn",
             },
           }}
           whileInView="visible"
@@ -38,10 +39,62 @@ export default function Footer() {
         <div className="footer-right-container">
           <div className="footer-right-container-child">
             <div className="footer-right-container-child-childrens">
-              <span>About us</span>
-              <span>Campus Ambassador</span>
-              <span>Our Sponsors</span>
-              <span>Contact US</span>
+              <span>
+                <Link
+                  style={{
+                    textDecoration: "none",
+                    color: "white",
+                  }}
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    data.setactiveUrl("/CampusAmbassador");
+                  }}
+                  to="/CampusAmbassador"
+                >
+                  Campus Ambassador
+                </Link>
+              </span>
+              <span>
+                <Link
+                  style={{
+                    textDecoration: "none",
+                    color: "white",
+                  }}
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    data.setactiveUrl("/teams");
+                  }}
+                  to="/teams"
+                >
+                  Teams
+                </Link>
+              </span>
+              <span>
+                <Link
+                  style={{
+                    textDecoration: "none",
+                    color: "white",
+                  }}
+                  to="https://www.sparshsvnit.in/"
+                >
+                  Sparsh2K22
+                </Link>
+              </span>
+              <span>
+                <Link
+                  style={{
+                    textDecoration: "none",
+                    color: "white",
+                  }}
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    data.setactiveUrl("/events");
+                  }}
+                  to="/events"
+                >
+                  Events
+                </Link>
+              </span>
             </div>
           </div>
           <div className="footer-right-container-child2">

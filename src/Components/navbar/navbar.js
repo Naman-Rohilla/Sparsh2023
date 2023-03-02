@@ -17,7 +17,16 @@ export default function NavBar(data) {
     <>
       <div id="main">
         <div className="left-container">
-          <div className="left-container-child">Logo</div>
+          <Link
+            onClick={() => data.setactiveUrl("/")}
+            to="/"
+            className="left-container-child"
+          >
+            <img
+              className="left-container-child-nav-logo"
+              src="./sparsh_logo_top.png"
+            ></img>
+          </Link>
         </div>
         <div className="right-container">
           <div className="right-container-child">
@@ -97,7 +106,6 @@ export default function NavBar(data) {
               <Link
                 onClick={() => data.setactiveUrl("/CampusAmbassador")}
                 to="/CampusAmbassador"
-                
                 className="nav-item"
               >
                 <span></span>

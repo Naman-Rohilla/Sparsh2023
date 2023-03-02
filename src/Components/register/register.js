@@ -3,6 +3,32 @@ import "./register.css";
 export default function Register() {
   return (
     <>
+    <div
+        style={{
+          backgroundColor: "black",
+          position: "fixed",
+          width: "100%",
+          height: "100vh",
+          opacity: 0.95,
+          zIndex: 90,
+        }}
+      ></div>
+      <div
+        style={{
+          backgroundColor: "transparent",
+          position: "fixed",
+          width: "100%",
+          height: "100vh",
+          zIndex: 95,
+          color: "white",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          fontSize: "40px",
+        }}
+      >
+        RELEASING SOON
+      </div>
       <div id="main-register">
         <form name="Form" id="part-1">
           <fieldset className="fieldset">
