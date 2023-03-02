@@ -47,7 +47,7 @@ function App() {
             variants={{
               hidden: {
                 default: "easeIn",
-                x: -50,
+                // x: -50,
                 // opacity: 0,
               },
               visible: {
