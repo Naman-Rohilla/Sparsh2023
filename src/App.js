@@ -12,22 +12,27 @@ import SignIn from "./pages/signIn";
 import Register from "./Components/register/register";
 import Ca from "./Components/campusAmbassador/Ca";
 import EventsPage from "./pages/eventsPage";
-import Container from "./Components/teamsPage/Container";
+import TeamPage from "./pages/teamPage";
+// import Parallax from "./Components/intro/Components/Parallax";
 
 function App() {
   const [activeUrl, setactiveUrl] = React.useState(window.location.pathname);
   return (
     <>
       <NavBar activeUrl={activeUrl} setactiveUrl={setactiveUrl} />
+      {/* <Parallax /> */}
       <Routes>
-        <Route path="/" element={<Home activeUrl={activeUrl} setactiveUrl={setactiveUrl} />} />
+        <Route
+          path="/"
+          element={<Home activeUrl={activeUrl} setactiveUrl={setactiveUrl} />}
+        />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/CampusAmbassador" element={<Ca />} />
-        <Route path="/teams" element={<Container />} />
+        <Route path="/teams" element={<TeamPage />} />
       </Routes>
       <Footer />
     </>

@@ -4,6 +4,10 @@ body {
   overflow-x: hidden;
 }
 
+.register-ca {
+  background: radial-gradient(circle at top left, blue -30%, black 30%);
+}
+
 .register-main {
   background: radial-gradient(circle at top left, blue -30%, black 30%);
 }

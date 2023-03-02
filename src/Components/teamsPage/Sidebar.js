@@ -21,8 +21,7 @@ const arrayList = [
 
 const Sidebar = () => {
   const [open, setopen] = React.useState(false);
-  const [slideIndex, setslideIndex] = React.useState(0);
-  const [activeUrl, setactiveUrl] = React.useState(false)
+ 
 
 
   return (

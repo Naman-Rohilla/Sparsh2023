@@ -11,25 +11,8 @@ import ProfileCard from "./ProfileCard.js";
 
 function Row(props) {
   const [index, setindex] = useState(props.i);
+  const [active, setactive] = useState(true);
   const matches = useMediaQuery("(max-width: 720px)");
-
-  useEffect(() => {
-    setTimeout(() => {
-      if (matches) {
-        if (props.array.length - 1 == index) {
-          return setindex(0);
-        } else {
-          setindex(index + 1);
-        }
-      } else {
-        if (props.array.length - index <= 4) {
-          return setindex(0);
-        } else {
-          setindex(index + 1);
-        }
-      }
-    }, 2000);
-  });
 
   return (
     <div className="row">
@@ -39,6 +22,7 @@ function Row(props) {
             className="LeftArrow"
             sx={{
               fontSize: "40px",
+              zIndex: 1,
               marginTop: "110px",
               color: "white",
               cursor: "pointer",
@@ -48,6 +32,7 @@ function Row(props) {
                 return;
               }
               setindex(index - 1);
+              setactive(false);
             }}
           />
 
@@ -60,26 +45,15 @@ function Row(props) {
             .map((ca) => (
               <motion.div
                 key={ca.id}
-                variants={{
-                  hidden: { opacity: 0 },
-                  visible: {
-                    opacity: 1,
-                    transition: {
-                      duration: 1,
-                      type: "spring",
-                      stiffness: 20,
-                    },
-                  },
-                }}
-                initial="hidden"
-                exit={{
-                  // height: "0%",
+                initial={{
                   opacity: 0,
-                  transition: {
-                    duration: 0.4,
-                  },
                 }}
-                whileInView="visible"
+                animate={{
+                  opacity: 1,
+                }}
+                transition={{
+                  duration: 2,
+                }}
               >
                 <ProfileCard
                   name={ca.name}
@@ -97,12 +71,14 @@ function Row(props) {
               marginTop: "110px",
               color: "white",
               cursor: "pointer",
+              zIndex: 1,
             }}
             onClick={() => {
               if (index == props.e - 1) {
                 return;
               }
               setindex(index + 1);
+              setactive(false);
             }}
           />
         </>
@@ -116,6 +92,7 @@ function Row(props) {
                 marginTop: "110px",
                 color: "white",
                 cursor: "pointer",
+                zIndex: 1,
               }}
               onClick={() => {
                 if (index == props.i) {
@@ -177,6 +154,7 @@ function Row(props) {
                 marginTop: "110px",
                 color: "white",
                 cursor: "pointer",
+                zIndex: 1,
               }}
               onClick={() => {
                 if (index == props.e - 1) {

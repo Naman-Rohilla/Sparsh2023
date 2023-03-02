@@ -103,6 +103,28 @@ const Container = () => {
   return (
     <div id="main-teams">
       <>
+      <img
+            style={{
+              position: "fixed",
+              width: "100%",
+              height: "100%",
+              zIndex: 0,
+            }}
+            // onLoad={() => {
+            //   setloading(false);
+            // }}
+            src="./login02.jpg"
+          ></img>
+          <div
+            style={{
+              position: "fixed",
+              width: "100%",
+              height: "100%",
+              backgroundColor: "#1e1e1e",
+              opacity: 0.95,
+              zIndex: 0,
+            }}
+          ></div>
         <div className="parent__container">
 
           <div className="cas__container">
@@ -179,7 +201,7 @@ const Container = () => {
           <Row
             array={Jcas}
             i={0}
-            e={1}
+            e={4}
           />
 
           {/* <div className="Conveners">
@@ -646,13 +668,13 @@ const Container = () => {
           <Row
             array={WebAdvisors}
             i={0}
-            e={2}
+            e={5}
           />
 
           <Row
             array={WebHeads}
             i={0}
-            e={2}
+            e={5}
           />
 
           <Row

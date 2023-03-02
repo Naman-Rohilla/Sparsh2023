@@ -128,7 +128,7 @@ export default function NavBar(data) {
                 Teams
               </Link>
             )}
-            {data.activeUrl == "/sign-in" ? (
+            {/* {data.activeUrl == "/sign-in" ? (
               <div className="nav-item-active">
                 <span></span>
                 <span></span>
@@ -148,7 +148,7 @@ export default function NavBar(data) {
                 <span></span>
                 Sign In
               </Link>
-            )}
+            )} */}
           </div>
           <div className="right-container-hamburger">
             <MenuIcon onClick={() => setState(true)} />
@@ -301,7 +301,7 @@ export default function NavBar(data) {
                     Sponsors
                   </Link>
                 )}
-                {data.activeUrl == "/sign-in" ? (
+                {/* {data.activeUrl == "/sign-in" ? (
                   <div className="nav-item-active">
                     {" "}
                     <AccountBalanceIcon
@@ -327,7 +327,7 @@ export default function NavBar(data) {
                     />
                     Sign In
                   </Link>
-                )}
+                )} */}
               </div>
             </div>
           </Drawer>

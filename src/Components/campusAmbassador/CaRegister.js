@@ -6,7 +6,7 @@ const CaRegister = () => {
     // submit the values
   }
   return (
-    <form action="https://sparsh-auth-production.up.railway.app/api/campus_ambassador/register" method="post" enctype="multipart/form-data">
+    <form className="register-ca" action="https://sparsh-auth-production.up.railway.app/api/campus_ambassador/register" method="post" enctype="multipart/form-data">
       <div className="heading_reg heading_small">REGISTRATION</div>
       <div className="heading_reg">FORM</div>
 

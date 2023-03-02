@@ -14,12 +14,17 @@
   padding-top: 25px;
   background-color: rgba(0, 0, 0, 0.751);
   height: 180vh;
-  width: 25vw;
+  
 }
 
 .nav__links {
   list-style: none;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  width: 100%;
 }
 
 
@@ -38,12 +43,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&display=swap');
 
-*{
-	box-sizing: border-box;
-	font-family: 'monsterrat';
-	margin: 0;
-	padding: 0;
-}
+
 .neon-button{
 	color: #03E9F4;
 	display: inline-block;
@@ -56,6 +56,7 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: 0.5s;
+	width: 400px;
 }
 
 

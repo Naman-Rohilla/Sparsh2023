@@ -251,7 +251,7 @@ export default function Landing(data) {
           whileInView="visible"
           className="landing-2-right"
         >
-          <span className="landing-2-heading">Heart of Sparsh 2022</span>
+          <span className="landing-2-heading">Heart of Sparsh 2K22</span>
           <span className="landing-2-content">
             Shirley Setia, an artist of Indian heritage, is a versatile
             performer, excelling in her roles as a singer, actress, and social
@@ -263,7 +263,7 @@ export default function Landing(data) {
             Gujarat, Sparsh, where she graced the stage as a performer in 2022.
           </span>
           <span className="landing-2-line"></span>
-          <span className="landing-2-button">shirley Setia</span>
+          <span className="landing-2-button">Shirley Setia</span>
         </motion.div>
       </div>
       <div id="main-landing-3">
@@ -375,7 +375,7 @@ export default function Landing(data) {
                     height: "100%",
                     width: "100%",
                     zIndex: 0,
-                    opacity: 0.5,
+                    opacity: 0.4,
                     objectFit: "cover",
                   }}
                   src={sA.img}
@@ -442,8 +442,21 @@ export default function Landing(data) {
           className="video-heading"
           style={{}}
         >
-          <span>Glimpses of</span>
-          <span className="video-heading-child">Sparsh 2K22</span>
+          <span
+            style={{
+              fontFamily: "Syre",
+            }}
+          >
+            Glimpses of
+          </span>
+          <span
+            style={{
+              fontFamily: "Syre",
+            }}
+            className="video-heading-child"
+          >
+            Sparsh 2K22
+          </span>
         </motion.div>
         <video
           width="90%"
