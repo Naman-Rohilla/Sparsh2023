@@ -1,0 +1,13 @@
+.day3_events{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+.day3{
+    width: 100%;
+    background-color: transparent;
+}

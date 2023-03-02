@@ -1,9 +1,9 @@
 import Landing from "../Components/landing/landing";
 
-export default function Home() {
+export default function Home(data) {
   return (
     <>
-      <Landing />
+      <Landing data={data} />
     </>
   );
 }

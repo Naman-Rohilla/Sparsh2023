@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&display=swap");
+
+.PERKS-MAIN {
+  background-color: #000000;
+  background: radial-gradient(circle at bottom left, blue -30%, black 30%),
+    radial-gradient(circle at top right, blue -30%, black 30%);
+}
+.perks-svg {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.perks {
+  font-family: inter;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: rgba(255, 255, 255, 0.7);
+  column-gap: 2rem;
+  row-gap: 6rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.img-prop {
+  display: block;
+  border-radius: 50%;
+}
+.txt {
+  padding-top: 1rem;
+  font-size: 1.4rem;
+}
+.img-border {
+  background-image: linear-gradient(135deg, #001aff, #0af314);
+  border-radius: 50%;
+}
+.img-prop {
+  padding: 0.5rem 0.5rem;
+}
+@media (max-width: 70rem) {
+  .perks {
+    grid-template-columns: 1fr;
+  }
+}

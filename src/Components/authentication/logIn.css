@@ -77,21 +77,21 @@
   cursor: pointer;
 }
 
-.login-container .login-container-left .header .register-button {
+.login-container .login-container-left .header .SignUp-button {
   background: white;
   padding: 6px 14px 6px 14px;
   color: black;
   margin-left: 10px;
 }
 
-.login-container .login-container-left .header .register-button-unactive {
+.login-container .login-container-left .header .SignUp-button-unactive {
   /* background: white; */
   padding: 6px 14px 6px 14px;
   color: white;
   margin-left: 10px;
   cursor: pointer;
 }
-.login-container .login-container-left .header .register-button-unactive:hover {
+.login-container .login-container-left .header .SignUp-button-unactive:hover {
   background: white;
   padding: 6px 14px 6px 14px;
   color: black;

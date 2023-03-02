@@ -1,0 +1,23 @@
+.day_no{
+    padding: 26px 9px;
+    box-sizing: border-box;
+    margin-left: 8.8%;
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    color: white;
+    /* border-left: 5px solid orange; */
+    height: 20px;
+}
+
+.neon_line{
+    height: 3.5px;
+    width: 73px;
+    background: linear-gradient(220.94deg, #3D80FF 20%, #903BF5 50%);
+    border: 0px solid;
+    margin-right: 7px;
+    position: absolute;
+    z-index: 10;
+    margin-bottom: -46px;
+    margin-left: 1px;
+}

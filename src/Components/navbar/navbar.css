@@ -3,7 +3,7 @@
   width: 100%;
   /* background: blue; */
   z-index: 100;
-  position: absolute;
+  position: fixed;
   display: flex;
 }
 

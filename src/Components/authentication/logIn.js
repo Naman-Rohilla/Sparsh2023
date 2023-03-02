@@ -106,14 +106,14 @@ export default function LogIn() {
                   Login
                 </span>
               )}
-              {pageStatus == "register" ? (
-                <span className="register-button">Register</span>
+              {pageStatus == "SignUp" ? (
+                <span className="SignUp-button">SignUp</span>
               ) : (
                 <span
-                  className="register-button-unactive"
-                  onClick={() => setpageStatus("register")}
+                  className="SignUp-button-unactive"
+                  onClick={() => setpageStatus("SignUp")}
                 >
-                  Register
+                  Sign Up
                 </span>
               )}
             </span>
@@ -240,7 +240,7 @@ export default function LogIn() {
                   color: "black",
                 }}
               >
-                {pageStatus == "login" ? "Sign In" : "Register"}
+                {pageStatus == "login" ? "Sign In" : "SignUp"}
               </motion.div>
             </div>
           </div>

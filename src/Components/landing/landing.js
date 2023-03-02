@@ -39,11 +39,11 @@ const sliderArray1 = [
   },
 ];
 
-export default function Landing() {
+export default function Landing(data) {
   const [sliderIndex1, setsliderIndex1] = React.useState(0);
   const [loading, setloading] = React.useState(true);
 
-  console.log(Date.now(), "date");
+  console.log(data, "date");
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
       // Render a completed state
@@ -136,10 +136,23 @@ export default function Landing() {
               />
             </div>
 
-            <div className="right-landing-register">
-              <button class="custom-btn btn-3">
-                <span>Sign In</span>
-              </button>
+            <div>
+              <Link
+                className="right-landing-register"
+                style={{
+                  textDecoration: "none",
+                }}
+                to="/register"
+              >
+                <button
+                  onClick={() => {
+                    data.data.setactiveUrl("/register");
+                  }}
+                  class="custom-btn btn-3"
+                >
+                  <span>Register for Event</span>
+                </button>
+              </Link>
               {/* <div
                 style={{
                   height: "30px",
