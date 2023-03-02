@@ -190,23 +190,7 @@ const Events = () => {
 
   return (
     <div>
-      <div
-        style={{
-          position: "fixed",
-          height: "100vh",
-          width: "100%",
-          background: "black",
-          zIndex: 90,
-          display: "flex",
-          justifyContent: "center",
-          fontSize: "xx-large",
-          alignItems: "center",
-          opacity: 0.9,
-          color: "white"
-        }}
-      >
-        RELEASING SOON
-      </div>
+      
       <div
         style={{
           display: "flex",

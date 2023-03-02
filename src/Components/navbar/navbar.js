@@ -91,19 +91,20 @@ export default function NavBar(data) {
                 <span></span>
                 <span></span>
                 <span></span>
-                CA
+                Campus Ambassador
               </div>
             ) : (
               <Link
                 onClick={() => data.setactiveUrl("/CampusAmbassador")}
                 to="/CampusAmbassador"
+                
                 className="nav-item"
               >
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
-                CA
+                Campus Ambassador
               </Link>
             )}
             {data.activeUrl == "/teams" ? (

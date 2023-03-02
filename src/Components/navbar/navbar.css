@@ -9,7 +9,7 @@
 
 .left-container {
   height: 100%;
-  width: 40%;
+  width: 20%;
   /* background: yellow; */
   display: flex;
   align-items: center;
@@ -25,7 +25,7 @@
 
 .right-container {
   height: 100%;
-  width: 60%;
+  width: 80%;
   /* background: yellow; */
   display: flex;
   justify-content: flex-end;
