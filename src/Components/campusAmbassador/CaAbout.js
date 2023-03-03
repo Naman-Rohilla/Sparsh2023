@@ -19,7 +19,7 @@ const CaAbout = () => {
     };
   }, []);
 
-  const isMobile = width <= 786;
+  const isMobile = width <= 1000;
 
   const content1 =
     "Our program provides you with an exciting opportunity to represent our organization on your campus, while gaining valuable leadership and networking skills.";

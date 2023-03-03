@@ -335,7 +335,7 @@
   align-items: center;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1000px) {
   .right-container .right-container-child {
     display: none;
     /* gap: 10px 10px; */

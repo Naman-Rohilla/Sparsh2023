@@ -20,7 +20,7 @@ const CaPerks = () => {
     };
   }, []);
 
-  const isMobile = width <= 786;
+  const isMobile = width <= 1000;
   return (
     <div class="PERKS-MAIN">
       <div

@@ -17,7 +17,7 @@ const CaHome = () => {
     };
   }, []);
 
-  const isMobile = width <= 786;
+  const isMobile = width <= 1000;
   // console.log(width);
   return (
     <>
