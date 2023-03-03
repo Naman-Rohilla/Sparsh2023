@@ -121,7 +121,7 @@ const Container = () => {
               width: "100%",
               height: "100%",
               backgroundColor: "#1e1e1e",
-              opacity: 0.95,
+              opacity: 0.8,
               zIndex: 0,
             }}
           ></div>
