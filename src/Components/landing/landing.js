@@ -340,7 +340,7 @@ export default function Landing(data) {
               whileInView="visible"
               className="landing-3-left"
             >
-              <span className="landing-3-heading">9XM</span>
+              <span className="landing-3-heading">Remembering the</span>
               <span className="landing-3-content">
                 Krishna Kumar Kunnath, better known by his stage name KK, had
                 established himself as a premier Indian backup vocalist known

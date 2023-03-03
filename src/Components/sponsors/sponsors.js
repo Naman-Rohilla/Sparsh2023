@@ -237,7 +237,7 @@ export default function Sponsors() {
   React.useEffect(() => {
     setTimeout(() => {
       setloading(false);
-    }, 5000);
+    }, 10000);
   }, []);
 
   return (
@@ -409,7 +409,7 @@ export default function Sponsors() {
                     onLoad={() => {
                       setcount(count + 1);
                       console.log(count, "Count");
-                      if (count >= 10) {
+                      if (count >= 20) {
                         setloading(false);
                       }
                     }}
