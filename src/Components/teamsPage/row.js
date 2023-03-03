@@ -141,7 +141,7 @@ function Row(props) {
               zIndex: 1,
             }}
             onClick={() => {
-              if (index == props.array.length - 1) {
+              if (index == props.array.length - 2) {
                 return;
               }
               setindex(index + 1);
