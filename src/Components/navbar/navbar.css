@@ -321,7 +321,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 10px;
+  /* padding-top: 10px; */
   color: white;
 }
 
@@ -355,8 +355,8 @@
 }
 
 #drawer .drawer-header {
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 1px;
+  padding-bottom: 1px;
   background: #064e3b;
 }
 

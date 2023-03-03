@@ -24,7 +24,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setstartOnce(false);
-    }, 6000);
+    }, 5000);
   }, []);
 
   return (
@@ -69,7 +69,7 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<Home activeUrl={activeUrl} setactiveUrl={setactiveUrl} />}
+          element={<Home activeUrl={activeUrl} setactiveUrl={setactiveUrl} startOnce={startOnce} />}
         />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/sponsors" element={<Sponsors />} />

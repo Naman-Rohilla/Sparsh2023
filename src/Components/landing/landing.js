@@ -12,6 +12,8 @@ import Countdown from "react-countdown";
 import { Link } from "react-router-dom";
 import { DotLoader } from "react-spinners";
 
+import Parallax from "../intro/Components/Parallax";
+
 const sliderArray1 = [
   {
     id: 0,
@@ -72,6 +74,18 @@ export default function Landing(data) {
       );
     }
   };
+  const mainRef = React.useRef(null);
+
+  // React.useEffect(() => {
+  //   setTimeout(() => {
+  //     window.scrollTo({
+  //       top: mainRef.current.offsetTop,
+  //       left: 0,
+  //       behavior: "smooth",
+  //       // transition: "1s"
+  //     })
+  //   }, 10000)
+  // }, [])
 
   const matches = useMediaQuery("(max-width: 1100px)");
   return (
@@ -92,8 +106,49 @@ export default function Landing(data) {
           <DotLoader color="white" />
         </div>
       )}
-
-      <div id="main-landing">
+      {data.data.startOnce == false && (
+        <>
+          <div
+            style={{
+              position: "absolute",
+              top: "88vh",
+              left: "50vw",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "flex-end",
+              // backgroundColor: "red",
+              color: "white",
+              zIndex: 1,
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              class="bi bi-chevron-double-down svg"
+              viewBox="0 0 16 16"
+              onClick={() => {
+                window.scrollTo({
+                  top: mainRef.current.offsetTop,
+                  left: 0,
+                  behavior: "smooth",
+                  transition: "2s"
+                });
+              }}
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+              />
+            </svg>
+          </div>
+          <Parallax startOnce={data.data.startOnce} />
+        </>
+      )}
+      <div ref={mainRef} id="main-landing">
         <div
           style={{
             position: "absolute",

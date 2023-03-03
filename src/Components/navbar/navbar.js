@@ -18,7 +18,10 @@ export default function NavBar(data) {
       <div id="main">
         <div className="left-container">
           <Link
-            onClick={() => data.setactiveUrl("/")}
+            onClick={() => {
+              data.setactiveUrl("/");
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
             to="/"
             className="left-container-child"
           >
@@ -40,7 +43,10 @@ export default function NavBar(data) {
               </div>
             ) : (
               <Link
-                onClick={() => data.setactiveUrl("/")}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  data.setactiveUrl("/");
+                }}
                 className="nav-item"
                 to="/"
               >
@@ -62,7 +68,10 @@ export default function NavBar(data) {
               </div>
             ) : (
               <Link
-                onClick={() => data.setactiveUrl("/events")}
+                onClick={() => {
+                  data.setactiveUrl("/events");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
                 to="/events"
                 className="nav-item"
               >
@@ -83,7 +92,10 @@ export default function NavBar(data) {
               </div>
             ) : (
               <Link
-                onClick={() => data.setactiveUrl("/sponsors")}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  data.setactiveUrl("/sponsors");
+                }}
                 to="/sponsors"
                 className="nav-item"
               >
@@ -104,7 +116,10 @@ export default function NavBar(data) {
               </div>
             ) : (
               <Link
-                onClick={() => data.setactiveUrl("/CampusAmbassador")}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  data.setactiveUrl("/CampusAmbassador");
+                }}
                 to="/CampusAmbassador"
                 className="nav-item"
               >
@@ -125,7 +140,10 @@ export default function NavBar(data) {
               </div>
             ) : (
               <Link
-                onClick={() => data.setactiveUrl("/teams")}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  data.setactiveUrl("/teams");
+                }}
                 to="/teams"
                 className="nav-item"
               >
@@ -171,7 +189,16 @@ export default function NavBar(data) {
             onClose={() => setState(false)}
           >
             <div id="drawer">
-              <div className="drawer-header">Logo</div>
+              <div className="drawer-header">
+                <img
+                  style={{
+                    height: "50px",
+                    width: "200px",
+                    objectFit: "contain",
+                  }}
+                  src="./sparsh_logo_top.png"
+                ></img>
+              </div>
               <div className="drawer-links">
                 {data.activeUrl == "/" ? (
                   <div className="nav-item-active">
@@ -188,6 +215,7 @@ export default function NavBar(data) {
                     onClick={() => {
                       setState(false);
                       data.setactiveUrl("/");
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                     className="nav-item"
                     to="/"
@@ -215,6 +243,7 @@ export default function NavBar(data) {
                     onClick={() => {
                       setState(false);
                       data.setactiveUrl("/events");
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                     to="/events"
                     className="nav-item"
@@ -242,6 +271,7 @@ export default function NavBar(data) {
                     onClick={() => {
                       setState(false);
                       data.setactiveUrl("/teams");
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                     to="/teams"
                     className="nav-item"
@@ -270,6 +300,7 @@ export default function NavBar(data) {
                     onClick={() => {
                       setState(false);
                       data.setactiveUrl("/CampusAmbassador");
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                     to="/CampusAmbassador"
                     className="nav-item"
@@ -297,6 +328,7 @@ export default function NavBar(data) {
                     onClick={() => {
                       setState(false);
                       data.setactiveUrl("/sponsors");
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                     to="/sponsors"
                     className="nav-item"

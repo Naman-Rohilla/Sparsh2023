@@ -242,7 +242,7 @@ li {
 }
 
 #main-landing-2 .landing-2-left .landing-2-left-img {
-  height: 90%;
+  height: 100%;
   width: 80%;
 }
 
@@ -286,6 +286,8 @@ li {
   border-radius: 2px;
   transform: translateX(-100px);
 }
+
+
 
 @media screen and (max-width: 720px) {
   #main-landing-2 {
@@ -342,7 +344,7 @@ li {
 
 #main-landing-3 {
   background: black;
-  height: 70%;
+  height: 100%;
   width: 100%;
   display: flex;
   padding-top: 40px;
