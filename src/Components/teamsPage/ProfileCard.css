@@ -219,10 +219,11 @@
 
 .our-team .picture img {
   width: 85%;
-  height: auto;
+  height: 100%;
   border-radius: 50%;
   transform: scale(1);
   transition: all 0.9s ease 0s;
+  background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2F1fid.com%2Fdefault-profile-pictures%2F&psig=AOvVaw0stkNC7mzUuH__xQEdPkWT&ust=1677913563132000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLCYuKKZv_0CFQAAAAAdAAAAABAD')
 }
 
 .our-team:hover .picture img {

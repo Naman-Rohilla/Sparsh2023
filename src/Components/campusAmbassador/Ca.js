@@ -7,7 +7,7 @@ import CaRegister from "./CaRegister";
 const Ca = () => {
   return (
     <>
-    <div
+      {/* <div
         style={{
           backgroundColor: "black",
           position: "fixed",
@@ -32,22 +32,21 @@ const Ca = () => {
         }}
       >
         RELEASING SOON
+      </div> */}
+      <div
+        style={{
+          height: "100%",
+          width: "100%",
+          // paddingTop: "100px",
+          // overflowX:"hidden";
+          position: "relative",
+        }}
+      >
+        <CaHome />
+        <CaAbout />
+        <CaPerks />
+        <CaRegister />
       </div>
-    <div
-      style={{
-        height: "100%",
-        width: "100%",
-        // paddingTop: "100px",
-        // overflowX:"hidden";
-        position: "relative"
-      }}
-    >
-      
-      <CaHome />
-      <CaAbout />
-      <CaPerks />
-      <CaRegister />
-    </div>
     </>
   );
 };

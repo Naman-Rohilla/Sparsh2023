@@ -442,21 +442,7 @@ export default function Landing(data) {
           className="video-heading"
           style={{}}
         >
-          <span
-            style={{
-              fontFamily: "Syre",
-            }}
-          >
-            Glimpses of
-          </span>
-          <span
-            style={{
-              fontFamily: "Syre",
-            }}
-            className="video-heading-child"
-          >
-            Sparsh 2K22
-          </span>
+          <span className="video-heading-child">Glimpses of Sparsh 2K22</span>
         </motion.div>
         <video
           width="90%"
