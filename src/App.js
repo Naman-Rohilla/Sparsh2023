@@ -20,6 +20,7 @@ import { motion } from "framer-motion";
 function App() {
   const [activeUrl, setactiveUrl] = React.useState(window.location.pathname);
   const [startOnce, setstartOnce] = React.useState(true);
+  const [loading, setloading] = React.useState(true);
 
   useEffect(() => {
     setTimeout(() => {
@@ -59,6 +60,9 @@ function App() {
             transition={{
               duration: 1,
             }}
+            onLoad={() => {
+              setloading(false);
+            }}
             src="./Loading_Sparsh.gif"
           ></motion.img>
         </motion.div>
@@ -74,6 +78,8 @@ function App() {
               activeUrl={activeUrl}
               setactiveUrl={setactiveUrl}
               startOnce={startOnce}
+              loading={loading}
+              setloading={setloading}
             />
           }
         />

@@ -43,7 +43,7 @@ const sliderArray1 = [
 
 export default function Landing(data) {
   const [sliderIndex1, setsliderIndex1] = React.useState(0);
-  const [loading, setloading] = React.useState(true);
+  
 
   console.log(data, "date");
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
@@ -78,14 +78,14 @@ export default function Landing(data) {
 
   React.useEffect(() => {
     setTimeout(() => {
-      setloading(false);
+      data.data.setloading(false);
     }, 5000);
   }, []);
 
   const matches = useMediaQuery("(max-width: 1100px)");
   return (
     <>
-      {loading && (
+      {data.data.loading && (
         <div
           style={{
             backgroundColor: "black",
@@ -157,9 +157,7 @@ export default function Landing(data) {
                 style={{
                   objectFit: "cover",
                 }}
-                onLoad={() => {
-                  setloading(false);
-                }}
+                
                 height="100%"
                 width="100%"
               ></img>

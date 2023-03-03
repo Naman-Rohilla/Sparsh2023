@@ -5,6 +5,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import EmailIcon from '@mui/icons-material/Email';
 
 export default function Footer(data) {
   return (
@@ -130,6 +131,15 @@ export default function Footer(data) {
               >
                 <YouTubeIcon />
               </Link>
+              <a
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                }}
+                href="mailto: sparsh@svnit.ac.in"
+              >
+                <EmailIcon />
+              </a>
             </div>
           </div>
         </div>
