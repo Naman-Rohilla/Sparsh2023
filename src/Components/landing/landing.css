@@ -200,15 +200,15 @@ li {
     height: 100%;
 
     padding-bottom: 100px;
-    width: 100%;
+    width: 90%;
     /* background: yellow; */
   }
   .right-landing-container
     .right-landing-typewriter
     .right-landing-typewriter-class {
-    font-family: "Montserrat";
+    font-family: "Syne", sans-serif;
     font-style: normal;
-    font-weight: 250;
+    font-weight: 500;
     font-size: 30px;
     height: 150px;
     padding-top: 100px;
@@ -644,7 +644,7 @@ li {
   position: absolute;
   color: white;
   /* font-family: mono; */
-  padding: 10px 0px 0px 30px;
+  padding: 10px 0px 0px 0px;
   font-size: 25px;
   width: 100%;
   display: flex;
@@ -689,10 +689,10 @@ li {
     flex-direction: row;
     display: flex;
     justify-content: center;
-    padding: 10px 0px 0px 10px;
+    padding: 10px 0px 0px 0px;
     opacity: 0.5;
   }
   #main-landing-5 .video-heading .video-heading-child {
-    padding-left: 6px;
+    padding-left: 0px;
   }
 }
