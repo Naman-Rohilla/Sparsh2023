@@ -3,9 +3,24 @@ import AboutCard from "./AboutCard";
 import img1 from "./assets/img1.jpg";
 import img2 from "./assets/img2.jpg";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { useState, useEffect } from "react";
+import styles from "./styles";
 
 const CaAbout = () => {
-  const matches = useMediaQuery("(max-width: 720px)");
+  const [width, setWidth] = useState(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 786;
+
   const content1 =
     "Our program provides you with an exciting opportunity to represent our organization on your campus, while gaining valuable leadership and networking skills.";
   const content2 =
@@ -15,8 +30,6 @@ const CaAbout = () => {
       class="about-us"
       style={{
         backgroundColor: "black",
-        backgroundImage:
-          "radial-gradient(circle at bottom right, blue -30%, black, transparent)",
       }}
     >
       <div
@@ -25,19 +38,20 @@ const CaAbout = () => {
           flexDirection: "row",
         }}
       >
-        {matches ? (
-          <></>
-        ) : (
-          <>
-            {" "}
-            <span className="nonfilled">ABOUT</span>
-            <span className="filled">ABOUT</span>
-            <span className="nonfilled">ABOUT</span>
-          </>
+        {!isMobile && (
+          <span style={{ ...styles.about_heading, opacity: 0.5 }}>ABOUT</span>
+        )}
+        <span style={{ ...styles.about_heading, fontSize: isMobile ? 40 : 64 }}>
+          ABOUT
+        </span>
+        {!isMobile && (
+          <span style={{ ...styles.about_heading, opacity: 0.5 }}>ABOUT</span>
         )}
       </div>
-      <AboutCard mode={true} content={content1} img={img2} />
-      <AboutCard mode={false} content={content2} img={img1} />
+      <div styles={{ marginTop: "10%" }}>
+        <AboutCard content={content1} reverse={false} img={img2} />
+        <AboutCard content={content2} reverse={true} img={img1} />
+      </div>
     </div>
   );
 };

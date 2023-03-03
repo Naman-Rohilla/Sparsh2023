@@ -11,6 +11,7 @@
   height: 4rem;
   padding: 5px;
 }
+
 .lowerText {
   display: flex;
   justify-content: space-between;
@@ -29,27 +30,27 @@
 
   color: rgba(255, 255, 255, 0.5);
 }
-.line{
-    border: 2px solid;
+
+.line {
+  border: 2px solid;
   border-image: linear-gradient(45deg, #5be896, #1e8dda) 1;
-  width:25%;
-  margin-top:40px
+  width: 25%;
+  margin-top: 40px
 }
-.campus{
-    font-size: 8vw;
+
+.svg {
+  width: 40px;
+  height: 40px;
+  transition: width 1s, height 1s;
 }
-.svg{
-    width:40px;
-    height:40px;
-    transition: width 1s,height 1s;
+
+.svg:hover {
+  width: 80px;
+  height: 80px;
 }
-.svg:hover{
-    width:80px;
-    height:80px;
-}
-.ambassador{
-    font-size: 8vw;
-}
+
+
+
 /* .center img{
     position: relative;
 }
@@ -76,14 +77,16 @@
 
 }
 
-.cahome p {
+/* .cahome p {
   margin: 0;
-}
+} */
+
 .center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 /* aboutus,perks css */
 
 /* body {
@@ -96,10 +99,12 @@
   text-justify: inter-word;
   text-align: justify;
 }
+
 .heading {
-    width: 100%;
-    transform: translateX(0);
+  width: 100%;
+  transform: translateX(0);
 }
+
 .grid {
   /* justify-items: center; */
   display: grid;
@@ -108,15 +113,18 @@
   padding: 3rem 10rem;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
 .box {
   background-color: #939393;
   border-radius: 2rem;
   padding: 1.5rem 0rem;
 }
+
 .box img {
   border-radius: 2rem;
   width: 60%;
 }
+
 .title {
   font-size: 1.5rem;
   font-family: sans-serif;
@@ -128,22 +136,23 @@
   .txt-para {
     padding: 1rem 2rem;
   }
+
   .grid {
     grid-template-columns: 1fr;
     padding: 1rem;
   }
+
   .box img {
     width: 40%;
   }
+
   .images,
   .lowerText {
     display: flex;
     flex-direction: column;
   }
-  .txt {
-    font-size: 3rem;
-  }
 }
+
 /* .box:nth-child(1) {grid-area: LETTER;}
 .box:nth-child(2) {grid-area: FREE-PRONITES-PASS;}
 .box:nth-child(3) {grid-area: CERTIFICATES;}
@@ -155,13 +164,16 @@
   .txt-para {
     padding: 1rem 2rem;
   }
+
   .grid {
     grid-template-columns: 1fr;
     padding: 1rem;
   }
+
   .box img {
     width: 40%;
   }
+
   .cols {
     grid-template-columns: 1fr;
     padding: 0;

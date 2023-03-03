@@ -29,41 +29,6 @@ function App() {
 
   return (
     <>
-      {startOnce == true && (
-        <motion.div
-          style={{
-            backgroundColor: "black",
-            height: "100vh",
-            position: "fixed",
-            width: "100%",
-            zIndex: 200,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <motion.img
-            initial="hidden"
-            variants={{
-              hidden: {
-                default: "easeIn",
-                // x: -50,
-                // opacity: 0,
-              },
-              visible: {
-                default: "easeIn",
-                x: 0,
-                // opacity: 1,
-              },
-            }}
-            transition={{
-              duration: 1,
-            }}
-            src="./Loading_Sparsh.gif"
-          ></motion.img>
-        </motion.div>
-      )}
-
       <NavBar activeUrl={activeUrl} setactiveUrl={setactiveUrl} />
       {/* <Parallax /> */}
       <Routes>
