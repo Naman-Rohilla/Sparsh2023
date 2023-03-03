@@ -273,7 +273,8 @@ export default function Sponsors() {
       </div> */}
       <div
         style={{
-          height: "400px",
+          height: "100vh",
+         
           width: "100%",
           backgroundColor: "black",
           paddingTop: "140px",
@@ -302,6 +303,7 @@ export default function Sponsors() {
             // height: "10px",
             // zIndex: 100,
             display: "flex",
+          
             justifyContent: "center",
             marginBottom: "60px",
           }}
