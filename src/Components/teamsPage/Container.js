@@ -4,33 +4,58 @@ import React, { useState, useEffect } from "react";
 
 import "./Container.css";
 import { motion } from "framer-motion";
-import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 import ProfileCard from "./ProfileCard.js";
 import {
-  CAS, Jcas, Conveners
-  , InfraAdvisors, InfraHeads, InfraCoHeads
-  , FinanceAdvisors, FinanceHeads
-  , WebAdvisors, WebHeads, WebCoHeads
-  , PublicityAdvisors, PublicityHeads, PublicityCoHeads
-  , SponsorshipAdvisors, SponsorshipHeads, SponsorshipCoHeads
-  , PRAdvisors, PRHeads, PRCoHeads
-  , HospitalityAdvisors, HospitalityHeads, HospitalityCoHeads
-  , DisciplineAdvisors, DisciplineHeads, DisciplineCoHeads
-  , AdminAdvisors, AdminHeads, AdminCoHeads
-  , DesignAdvisors, DesignHeads, DesignCoHeads
-  , ThinkTankAdvisors, ThinkTankHeads, ThinkTankCoHeads
-  , MediaCellAdvisors, MediaCellHeads, MediaCellCoHeads
-  , CinematographyAdvisors, CinematographyHeads, CinematographyCoHeads
+  CAS,
+  Jcas,
+  Conveners,
+  InfraAdvisors,
+  InfraHeads,
+  InfraCoHeads,
+  FinanceAdvisors,
+  FinanceHeads,
+  WebAdvisors,
+  WebHeads,
+  WebCoHeads,
+  PublicityAdvisors,
+  PublicityHeads,
+  PublicityCoHeads,
+  SponsorshipAdvisors,
+  SponsorshipHeads,
+  SponsorshipCoHeads,
+  PRAdvisors,
+  PRHeads,
+  PRCoHeads,
+  HospitalityAdvisors,
+  HospitalityHeads,
+  HospitalityCoHeads,
+  DisciplineAdvisors,
+  DisciplineHeads,
+  DisciplineCoHeads,
+  AdminAdvisors,
+  AdminHeads,
+  AdminCoHeads,
+  DesignAdvisors,
+  DesignHeads,
+  DesignCoHeads,
+  ThinkTankAdvisors,
+  ThinkTankHeads,
+  ThinkTankCoHeads,
+  MediaCellAdvisors,
+  MediaCellHeads,
+  MediaCellCoHeads,
+  CinematographyAdvisors,
+  CinematographyHeads,
+  CinematographyCoHeads,
 } from "./TeamMember";
 import { coordinator } from "./coordinatornames";
 import { LeftArrow, RightArrow } from "./utilities";
 import Row from "./row";
 import RowC from "./rowcoordinator";
 // import Navbar from "./navbar"
-
 
 // const cardArray = [
 //   {
@@ -94,48 +119,21 @@ const Container = () => {
   // const [webHeadIndex, setwebHeadIndex] = useState(40);
   // const [webCoHeadIndex, setwebCoHeadIndex] = useState(45);
 
-
-
-
-
-
-
   return (
     <div id="main-teams">
       <>
-      <img
-            style={{
-              position: "fixed",
-              width: "100%",
-              height: "100%",
-              zIndex: 0,
-            }}
-            // onLoad={() => {
-            //   setloading(false);
-            // }}
-            src="./login02.jpg"
-          ></img>
-          <div
-            style={{
-              position: "fixed",
-              width: "100%",
-              height: "100%",
-              backgroundColor: "#1e1e1e",
-              opacity: 0.95,
-              zIndex: 0,
-            }}
-          ></div>
         <div className="parent__container">
-
           <div className="cas__container">
             <ProfileCard
               name="Ayushman Rajpurohit"
               position="Cultural Affairs Secretary(CAS)"
-              imgSrc="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+              imgSrc="images/Ayushman CAS.jpg"
               classSpecial="profile__card cardSpecial"
             />
           </div>
-          <h1 id="joints" className="heading">Core</h1>
+          <h1 id="joints" className="heading">
+            Core
+          </h1>
 
           {/* <div className="jcas">
 
@@ -198,11 +196,7 @@ const Container = () => {
             }} />
           </div> */}
 
-          <Row
-            array={Jcas}
-            i={0}
-            e={4}
-          />
+          <Row array={Jcas} i={0} e={4} />
 
           {/* <div className="Conveners">
             <KeyboardArrowLeftIcon className="LeftArrow" sx={{
@@ -264,222 +258,19 @@ const Container = () => {
             }} />
           </div> */}
 
-          <Row
-            array={Conveners}
-            i={0}
-            e={6}
-          />
+          <Row array={Conveners} i={0} e={6} />
 
-          <h1 id="Infra" className="heading">INFRA AND IN HOUSE MANAGERIAL</h1>
+          <h1 id="Finance" className="heading">
+            FINANCE
+          </h1>
 
-          {/* <div className="Infra">
-            <KeyboardArrowLeftIcon className="LeftArrow" sx={{
-              fontSize: "100px",
-              marginTop: "110px",
-              color: "white"
-            }} onClick={() => {
-              if (infraAdvisorIndex == 13) {
-                return
-              }
-              setinfraAdvisorIndex(infraAdvisorIndex - 1)
-            }} />
-            {InfraAdvisors.filter(ca => {
-              if (ca.id == infraAdvisorIndex || ca.id == infraAdvisorIndex + 1 || ca.id == infraAdvisorIndex + 2) {
+          <Row array={FinanceAdvisors} i={0} e={1} />
 
-                return ca
-              }
-            }).map(ca => (
-              <motion.div
-                key={ca.id}
-                variants={{
-                  hidden: { opacity: 0, },
-                  visible: {
-                    opacity: 1,
-                    transition: {
-                      duration: 1,
-                      type: "spring",
-                      stiffness: 20,
-                    },
-                  },
-                }}
-                initial="hidden"
-                exit={{
-                  // height: "0%",
-                  opacity: 0,
-                  transition: {
-                    duration: 0.4,
-                  },
-                }}
-                whileInView="visible"
-              >
-                <ProfileCard
-                  name={ca.name}
-                  position={ca.position}
-                  imgSrc={ca.img}
-                  classSpecial={ca.classSpecial}
-                />
-              </motion.div>
-            ))}
+          <Row array={FinanceHeads} i={0} e={1} />
 
-            <KeyboardArrowRightIcon className="RightArrow" sx={{
-              fontSize: "100px",
-              marginTop: "110px",
-              color: "white"
-            }} onClick={() => {
-              if (infraAdvisorIndex == 15) {
-                return
-              }
-              setinfraAdvisorIndex(infraAdvisorIndex + 1)
-            }} />
-          </div> */}
-
-          {/* <div className="InfraHead">
-            <KeyboardArrowLeftIcon className="LeftArrow" sx={{
-              fontSize: "100px",
-              marginTop: "110px",
-              color: "white"
-            }} onClick={() => {
-              if (infraHeadIndex == 18) {
-                return
-              }
-              setinfraHeadIndex(infraHeadIndex - 1)
-            }} />
-            {InfraHeads.filter(ca => {
-              if (ca.id == infraHeadIndex || ca.id == infraHeadIndex + 1 || ca.id == infraHeadIndex + 2) {
-                return ca
-              }
-            }).map((ca) => (
-              <motion.div
-                key={ca.id}
-                variants={{
-                  hidden: { opacity: 0, },
-                  visible: {
-                    opacity: 1,
-                    transition: {
-                      duration: 1,
-                      type: "spring",
-                      stiffness: 20,
-                    },
-                  },
-                }}
-                initial="hidden"
-                exit={{
-                  // height: "0%",
-                  opacity: 0,
-                  transition: {
-                    duration: 0.4,
-                  },
-                }}
-                whileInView="visible"
-              >
-                <ProfileCard
-                  name={ca.name}
-                  position={ca.position}
-                  imgSrc={ca.img}
-                  classSpecial={ca.classSpecial}
-                />
-              </motion.div>
-            ))}
-
-          
-
-
-
-
-            <KeyboardArrowRightIcon className="RightArrow" sx={{
-              fontSize: "100px",
-              marginTop: "110px",
-              color: "white"
-            }} onClick={() => {
-              if (infraHeadIndex == 20) {
-                // setinfraHeadIndex(infraHeadIndex -2)
-                console.log(infraHeadIndex);
-                return
-              }
-              setinfraHeadIndex(infraHeadIndex + 1)
-            }} />
-          </div> */}
-
-          {/* <div className="InfraCoheads">
-            <KeyboardArrowLeftIcon className="LeftArrow" sx={{
-              fontSize: "100px",
-              marginTop: "110px",
-              color: "white"
-            }} onClick={() => {
-              if (infraCoheadIndex == 23) {
-                return
-              }
-              setinfraCoheadIndex(infraCoheadIndex - 1)
-            }} />
-            {InfraCoHeads.filter(ca => {
-              if (ca.id == infraCoheadIndex || ca.id == infraCoheadIndex + 1 || ca.id == infraCoheadIndex + 2) {
-
-                return ca
-              }
-            }).map(ca => (
-              <motion.div
-                key={ca.id}
-                variants={{
-                  hidden: { opacity: 0, },
-                  visible: {
-                    opacity: 1,
-                    transition: {
-                      duration: 1,
-                      type: "spring",
-                      stiffness: 20,
-                    },
-                  },
-                }}
-                initial="hidden"
-                exit={{
-                  // height: "0%",
-                  opacity: 0,
-                  transition: {
-                    duration: 0.4,
-                  },
-                }}
-                whileInView="visible"
-              >
-                <ProfileCard
-                  name={ca.name}
-                  position={ca.position}
-                  imgSrc={ca.img}
-                  classSpecial={ca.classSpecial}
-                />
-              </motion.div>
-            ))}
-
-            <KeyboardArrowRightIcon className="RightArrow" sx={{
-              fontSize: "100px",
-              marginTop: "110px",
-              color: "white"
-            }} onClick={() => {
-              if (infraCoheadIndex == 32) {
-                return
-              }
-              setinfraCoheadIndex(infraCoheadIndex + 1)
-            }} />
-          </div> */}
-
-          <Row
-            array={InfraAdvisors}
-            i={0}
-            e={2}
-          />
-
-          <Row
-            array={InfraHeads}
-            i={0}
-            e={2}
-          />
-
-          <Row
-            array={InfraCoHeads}
-            i={0}
-            e={9}
-          />
-
-          <h1 id="WebDev" className="heading">WEB DEVELOPMENT</h1>
+          <h1 id="WebDev" className="heading">
+            WEB DEVELOPMENT
+          </h1>
 
           {/* <div className="WebdevAdvisor">
             <KeyboardArrowLeftIcon className="LeftArrow" sx={{
@@ -665,247 +456,130 @@ const Container = () => {
           </div> */}
 
           {/* value of i is the initial value of team member array and value of e is the (last-2) value  */}
-          <Row
-            array={WebAdvisors}
-            i={0}
-            e={5}
-          />
+          <Row array={WebAdvisors} i={0} e={5} />
 
-          <Row
-            array={WebHeads}
-            i={0}
-            e={5}
-          />
+          <Row array={WebHeads} i={0} e={5} />
 
-          <Row
-            array={WebCoHeads}
-            i={0}
-            e={8}
-          />
+          <Row array={WebCoHeads} i={0} e={8} />
 
-          <h1 id="Publicity" className="heading">PUBLICITY</h1>
+          <h1 id="Publicity" className="heading">
+            PUBLICITY
+          </h1>
 
-          <Row
-            array={PublicityAdvisors}
-            i={0}
-            e={1}
-          />
+          <Row array={PublicityAdvisors} i={0} e={1} />
 
-          <Row
-            array={PublicityHeads}
-            i={0}
-            e={3}
-          />
+          <Row array={PublicityHeads} i={0} e={3} />
 
-          <Row
-            array={PublicityCoHeads}
-            i={0}
-            e={8}
-          />
+          <Row array={PublicityCoHeads} i={0} e={8} />
 
-          <h1 id="Finance" className="heading">FINANCE</h1>
+          <h1 id="Infra" className="heading">
+            INFRA AND IN HOUSE MANAGERIAL
+          </h1>
 
-          <Row
-            array={FinanceAdvisors}
-            i={0}
-            e={1}
-          />
+          
 
-          <Row
-            array={FinanceHeads}
-            i={0}
-            e={1}
-          />
+          <Row array={InfraAdvisors} i={0} e={2} />
 
-          <h1 id="Sponsorship" className="heading">SPONSORSHIP</h1>
+          <Row array={InfraHeads} i={0} e={2} />
 
-          <Row
-            array={SponsorshipAdvisors}
-            i={0}
-            e={1}
-          />
+          <Row array={InfraCoHeads} i={0} e={9} />
 
-          <Row
-            array={SponsorshipHeads}
-            i={0}
-            e={2}
-          />
+          
 
-          <Row
-            array={SponsorshipCoHeads}
-            i={0}
-            e={1}
-          />
+          <h1 id="Sponsorship" className="heading">
+            SPONSORSHIP
+          </h1>
 
-          <h1 id="PR" className="heading">PUBLIC RELATION</h1>
+          <Row array={SponsorshipAdvisors} i={0} e={1} />
 
-          <Row
-            array={PRAdvisors}
-            i={0}
-            e={1}
-          />
+          <Row array={SponsorshipHeads} i={0} e={2} />
 
-          <Row
-            array={PRHeads}
-            i={0}
-            e={3}
-          />
+          <Row array={SponsorshipCoHeads} i={0} e={1} />
 
-          <Row
-            array={PRCoHeads}
-            i={0}
-            e={2}
-          />
+          <h1 id="PR" className="heading">
+            PUBLIC RELATION
+          </h1>
 
-          <h1 id="Hospitality" className="heading">HOSPITALITY</h1>
+          <Row array={PRAdvisors} i={0} e={1} />
 
-          <Row
-            array={HospitalityAdvisors}
-            i={0}
-            e={1}
-          />
+          <Row array={PRHeads} i={0} e={3} />
 
-          <Row
-            array={HospitalityHeads}
-            i={0}
-            e={2}
-          />
+          <Row array={PRCoHeads} i={0} e={2} />
 
-          <Row
-            array={HospitalityCoHeads}
-            i={0}
-            e={6}
-          />
+          <h1 id="Hospitality" className="heading">
+            HOSPITALITY
+          </h1>
 
-          <h1 id="Discipline" className="heading">DISCIPLINE</h1>
+          <Row array={HospitalityAdvisors} i={0} e={1} />
 
-          <Row
-            array={DisciplineAdvisors}
-            i={0}
-            e={2}
-          />
+          <Row array={HospitalityHeads} i={0} e={2} />
 
-          <Row
-            array={DisciplineHeads}
-            i={0}
-            e={2}
-          />
+          <Row array={HospitalityCoHeads} i={0} e={6} />
 
-          <Row
-            array={DisciplineCoHeads}
-            i={0}
-            e={7}
-          />
+          <h1 id="Discipline" className="heading">
+            DISCIPLINE
+          </h1>
 
-          <h1 id="Admin" className="heading">ADMIN AND DOCUMENTATION</h1>
+          <Row array={DisciplineAdvisors} i={0} e={2} />
 
-          <Row
-            array={AdminAdvisors}
-            i={0}
-            e={1}
-          />
+          <Row array={DisciplineHeads} i={0} e={2} />
 
-          <Row
-            array={AdminHeads}
-            i={0}
-            e={2}
-          />
+          <Row array={DisciplineCoHeads} i={0} e={7} />
 
-          <Row
-            array={AdminCoHeads}
-            i={0}
-            e={2}
-          />
+          <h1 id="Admin" className="heading">
+            ADMIN AND DOCUMENTATION
+          </h1>
 
-          <h1 id="Design" className="heading">DESIGN</h1>
+          <Row array={AdminAdvisors} i={0} e={1} />
 
-          <Row
-            array={DesignAdvisors}
-            i={0}
-            e={2}
-          />
+          <Row array={AdminHeads} i={0} e={2} />
 
-          <Row
-            array={DesignHeads}
-            i={0}
-            e={1}
-          />
+          <Row array={AdminCoHeads} i={0} e={2} />
 
-          <Row
-            array={DesignCoHeads}
-            i={0}
-            e={1}
-          />
+          <h1 id="Design" className="heading">
+            DESIGN
+          </h1>
 
-          <h1 id="ThinkTank" className="heading">THINK TANK</h1>
+          <Row array={DesignAdvisors} i={0} e={2} />
 
-          <Row
-            array={ThinkTankAdvisors}
-            i={0}
-            e={1}
-          />
+          <Row array={DesignHeads} i={0} e={1} />
 
-          <Row
-            array={ThinkTankHeads}
-            i={0}
-            e={4}
-          />
+          <Row array={DesignCoHeads} i={0} e={1} />
 
-          <Row
-            array={ThinkTankCoHeads}
-            i={0}
-            e={4}
-          />
+          <h1 id="ThinkTank" className="heading">
+            THINK TANK
+          </h1>
 
-          <h1 id="MediaCell" className="heading">MEDIA CELL</h1>
+          <Row array={ThinkTankAdvisors} i={0} e={1} />
 
-          <Row
-            array={MediaCellAdvisors}
-            i={0}
-            e={1}
-          />
+          <Row array={ThinkTankHeads} i={0} e={4} />
 
-          <Row
-            array={MediaCellHeads}
-            i={0}
-            e={2}
-          />
+          <Row array={ThinkTankCoHeads} i={0} e={4} />
 
-          <Row
-            array={MediaCellCoHeads}
-            i={0}
-            e={2}
-          />
+          <h1 id="MediaCell" className="heading">
+            MEDIA CELL
+          </h1>
 
-          <h1 id="Cinematography" className="heading">CINEMATOGRAPHY</h1>
+          <Row array={MediaCellAdvisors} i={0} e={1} />
 
-          <Row
-            array={CinematographyAdvisors}
-            i={0}
-            e={1}
-          />
+          <Row array={MediaCellHeads} i={0} e={2} />
 
-          <Row
-            array={CinematographyHeads}
-            i={0}
-            e={2}
-          />
+          <Row array={MediaCellCoHeads} i={0} e={2} />
 
-          <Row
-            array={CinematographyCoHeads}
-            i={0}
-            e={1}
-          />
-          <h1 id="Coordinators" className="heading">COORDINATORS</h1>
+          <h1 id="Cinematography" className="heading">
+            CINEMATOGRAPHY
+          </h1>
 
-          <RowC
-            array={coordinator}
-            i={0}
-            e={12}
-          />
+          <Row array={CinematographyAdvisors} i={0} e={1} />
 
+          <Row array={CinematographyHeads} i={0} e={2} />
 
+          <Row array={CinematographyCoHeads} i={0} e={1} />
+          <h1 id="Coordinators" className="heading">
+            COORDINATORS
+          </h1>
 
+          <RowC array={coordinator} i={0} e={12} />
         </div>
       </>
     </div>

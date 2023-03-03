@@ -13,6 +13,16 @@
   }
 }
 
+::-webkit-scrollbar {
+  width: 14px;
+  opacity: 0.3;
+  background: black;
+}
+::-webkit-scrollbar-thumb {
+
+  background: #064e3b;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

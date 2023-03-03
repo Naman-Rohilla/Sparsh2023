@@ -2,13 +2,23 @@ import React from "react";
 
 import "./ProfileCard.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { DotLoader } from "react-spinners";
+// import ProfileCard from "./ProfileCard.js";
 
 const ProfileCard = (props) => {
+  const [Error, setError] = React.useState(false);
   return (
     <div class={props.classSpecial}>
       <div class="our-team">
         <div class="picture">
-          <img class="img-fluid" src={props.imgSrc} alt="image2" />
+          <img
+            class="img-fluid"
+            src={Error ? "./no_profile_.png" : props.imgSrc}
+            onLoad={() => {
+              props.ssetcounter(props.counter + 1);
+            }}
+            onError={() => setError(true)}
+          />
         </div>
         <div class="team-content">
           <h3 class="name">{props.name}</h3>

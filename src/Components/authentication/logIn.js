@@ -95,76 +95,25 @@ export default function LogIn() {
           className="login-container"
         >
           <div className="login-container-left">
-            <span className="header">
-              {pageStatus == "login" ? (
-                <span className="login-button">Login</span>
-              ) : (
-                <span
-                  className="login-button-unactive"
-                  onClick={() => setpageStatus("login")}
-                >
-                  Login
-                </span>
-              )}
-              {pageStatus == "SignUp" ? (
-                <span className="SignUp-button">SignUp</span>
-              ) : (
-                <span
-                  className="SignUp-button-unactive"
-                  onClick={() => setpageStatus("SignUp")}
-                >
-                  Sign Up
-                </span>
-              )}
-            </span>
-            {pageStatus == "login" ? (
-              <>
-                <CssTextField
-                  id="custom-css-outlined-input"
-                  label="Email"
-                  value={email}
-                  onChange={(e) => setemail(e.target.value)}
-                  type="text"
-                  // autoComplete="current-password"
-                />
-                <CssTextField
-                  id="custom-css-outlined-input"
-                  label="Password"
-                  type="password"
-                  value={password}
-                  onChange={(e) => setpassword(e.target.value)}
-                  // autoComplete="current-password"
-                />
-              </>
-            ) : (
-              <>
-                <CssTextField
-                  id="custom-css-outlined-input"
-                  label="Full-Name"
-                  value={fullName}
-                  onChange={(e) => setfullName(e.target.value)}
-                  type="text"
-                  // autoComplete="current-password"
-                />
-                <CssTextField
-                  id="custom-css-outlined-input"
-                  label="Email"
-                  value={email}
-                  onChange={(e) => setemail(e.target.value)}
-                  type="text"
-                  // autoComplete="current-password"
-                />
+            <>
+              <CssTextField
+                id="custom-css-outlined-input"
+                label="Email"
+                value={email}
+                onChange={(e) => setemail(e.target.value)}
+                type="text"
+                // autoComplete="current-password"
+              />
+              <CssTextField
+                id="custom-css-outlined-input"
+                label="Password"
+                type="password"
+                value={password}
+                onChange={(e) => setpassword(e.target.value)}
+                // autoComplete="current-password"
+              />
+            </>
 
-                <CssTextField
-                  id="custom-css-outlined-input"
-                  label="Password"
-                  type="password"
-                  value={password}
-                  onChange={(e) => setpassword(e.target.value)}
-                  // autoComplete="current-password"
-                />
-              </>
-            )}
             <div onClick={() => handleChange()} className="sign-in-button">
               <motion.div
                 initial={{

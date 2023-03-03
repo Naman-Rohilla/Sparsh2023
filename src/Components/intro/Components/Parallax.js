@@ -19,7 +19,7 @@ import {
 
 const layers = [layer1, layer2, layer3, layer4, layer5, layer6];
 
-export default function Parallax() {
+export default function Parallax(data) {
   const storedState = localStorage.getItem("loaded");
   console.log(!!storedState);
   const [loadedImages, setLoadedImages] = useState(0);
@@ -95,6 +95,8 @@ export default function Parallax() {
 
   const isMobile = width <= 768;
 
+  console.log(data, "dat")
+
   return (
     <>
       <img src={bg} style={{ display: "none" }} onLoad={handleLoad} alt="a" />
@@ -134,7 +136,7 @@ export default function Parallax() {
         onLoad={handleLoad}
         alt="a"
       />
-      {loaded && (
+      {(loaded && data.startOnce == false) ? (
         <MouseParallaxContainer
           globalFactorX={0.3}
           globalFactorY={0.3}
@@ -184,6 +186,39 @@ export default function Parallax() {
             </motion.div>
           </MouseParallaxChild>
         </MouseParallaxContainer>
+      ) : (
+        <motion.div
+          style={{
+            backgroundColor: "black",
+            height: "100vh",
+            position: "fixed",
+            width: "100%",
+            zIndex: 200,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <motion.img
+            initial="hidden"
+            variants={{
+              hidden: {
+                default: "easeIn",
+                // x: -50,
+                // opacity: 0,
+              },
+              visible: {
+                default: "easeIn",
+                x: 0,
+                // opacity: 1,
+              },
+            }}
+            transition={{
+              duration: 1,
+            }}
+            src="./Loading_Sparsh.gif"
+          ></motion.img>
+        </motion.div>
       )}
     </>
   );

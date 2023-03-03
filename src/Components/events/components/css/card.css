@@ -1,7 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Lily+Script+One';
 body {
   background: #eee;
-  font-family: 'Lily Script One';
+  
 }
 
 .card {
@@ -13,6 +13,7 @@ body {
   margin: -150px;
   float: left;
   perspective: 500px;
+  font-family: 'Lily Script One';
 }
 
 .content {

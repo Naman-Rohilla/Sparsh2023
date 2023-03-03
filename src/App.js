@@ -20,21 +20,68 @@ import { motion } from "framer-motion";
 function App() {
   const [activeUrl, setactiveUrl] = React.useState(window.location.pathname);
   const [startOnce, setstartOnce] = React.useState(true);
+  const [loading, setloading] = React.useState(true);
 
   useEffect(() => {
     setTimeout(() => {
       setstartOnce(false);
-    }, 6000);
+    }, 5000);
   }, []);
 
   return (
     <>
+
+      {startOnce == true && (
+        <motion.div
+          style={{
+            backgroundColor: "black",
+            height: "100vh",
+            position: "fixed",
+            width: "100%",
+            zIndex: 200,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <motion.img
+            initial="hidden"
+            variants={{
+              hidden: {
+                default: "easeIn",
+                // x: -50,
+                // opacity: 0,
+              },
+              visible: {
+                default: "easeIn",
+                x: 0,
+                // opacity: 1,
+              },
+            }}
+            transition={{
+              duration: 1,
+            }}
+            onLoad={() => {
+              setloading(false);
+            }}
+            src="./Loading_Sparsh.gif"
+          ></motion.img>
+        </motion.div>
+      )}
       <NavBar activeUrl={activeUrl} setactiveUrl={setactiveUrl} />
       {/* <Parallax /> */}
       <Routes>
         <Route
           path="/"
-          element={<Home activeUrl={activeUrl} setactiveUrl={setactiveUrl} />}
+          element={
+            <Home
+              activeUrl={activeUrl}
+              setactiveUrl={setactiveUrl}
+              startOnce={startOnce}
+              loading={loading}
+              setloading={setloading}
+            />
+          }
         />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/sponsors" element={<Sponsors />} />
@@ -44,7 +91,13 @@ function App() {
         <Route path="/CampusAmbassador" element={<Ca />} />
         <Route path="/teams" element={<TeamPage />} />
       </Routes>
-      <Footer activeUrl={activeUrl} setactiveUrl={setactiveUrl} />
+      <div
+        style={{
+          zIndex: 900,
+        }}
+      >
+        <Footer activeUrl={activeUrl} setactiveUrl={setactiveUrl} />
+      </div>
     </>
   );
 }

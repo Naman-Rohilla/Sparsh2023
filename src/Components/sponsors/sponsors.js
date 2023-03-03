@@ -237,7 +237,7 @@ export default function Sponsors() {
   React.useEffect(() => {
     setTimeout(() => {
       setloading(false);
-    }, 5000);
+    }, 10000);
   }, []);
 
   return (
@@ -273,7 +273,8 @@ export default function Sponsors() {
       </div> */}
       <div
         style={{
-          height: "400px",
+          height: "100vh",
+         
           width: "100%",
           backgroundColor: "black",
           paddingTop: "140px",
@@ -302,6 +303,7 @@ export default function Sponsors() {
             // height: "10px",
             // zIndex: 100,
             display: "flex",
+          
             justifyContent: "center",
             marginBottom: "60px",
           }}
@@ -409,7 +411,7 @@ export default function Sponsors() {
                     onLoad={() => {
                       setcount(count + 1);
                       console.log(count, "Count");
-                      if (count >= 10) {
+                      if (count >= 20) {
                         setloading(false);
                       }
                     }}
