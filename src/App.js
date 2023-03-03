@@ -15,6 +15,7 @@ import EventsPage from "./pages/eventsPage";
 import TeamPage from "./pages/teamPage";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { Analytics } from "@vercel/analytics/react";
 // import Parallax from "./Components/intro/Components/Parallax";
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
 
   return (
     <>
-
+      <Analytics mode={"production"} />
       {startOnce == true && (
         <motion.div
           style={{
