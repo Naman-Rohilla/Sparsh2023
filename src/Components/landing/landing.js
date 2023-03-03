@@ -76,16 +76,11 @@ export default function Landing(data) {
   };
   const mainRef = React.useRef(null);
 
-  // React.useEffect(() => {
-  //   setTimeout(() => {
-  //     window.scrollTo({
-  //       top: mainRef.current.offsetTop,
-  //       left: 0,
-  //       behavior: "smooth",
-  //       // transition: "1s"
-  //     })
-  //   }, 10000)
-  // }, [])
+  React.useEffect(() => {
+    setTimeout(() => {
+      setloading(false)
+    }, 5000)
+  }, [])
 
   const matches = useMediaQuery("(max-width: 1100px)");
   return (
