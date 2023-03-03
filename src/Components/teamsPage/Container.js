@@ -260,204 +260,13 @@ const Container = () => {
 
           <Row array={Conveners} i={0} e={6} />
 
-          <h1 id="Infra" className="heading">
-            INFRA AND IN HOUSE MANAGERIAL
+          <h1 id="Finance" className="heading">
+            FINANCE
           </h1>
 
-          {/* <div className="Infra">
-            <KeyboardArrowLeftIcon className="LeftArrow" sx={{
-              fontSize: "100px",
-              marginTop: "110px",
-              color: "white"
-            }} onClick={() => {
-              if (infraAdvisorIndex == 13) {
-                return
-              }
-              setinfraAdvisorIndex(infraAdvisorIndex - 1)
-            }} />
-            {InfraAdvisors.filter(ca => {
-              if (ca.id == infraAdvisorIndex || ca.id == infraAdvisorIndex + 1 || ca.id == infraAdvisorIndex + 2) {
+          <Row array={FinanceAdvisors} i={0} e={1} />
 
-                return ca
-              }
-            }).map(ca => (
-              <motion.div
-                key={ca.id}
-                variants={{
-                  hidden: { opacity: 0, },
-                  visible: {
-                    opacity: 1,
-                    transition: {
-                      duration: 1,
-                      type: "spring",
-                      stiffness: 20,
-                    },
-                  },
-                }}
-                initial="hidden"
-                exit={{
-                  // height: "0%",
-                  opacity: 0,
-                  transition: {
-                    duration: 0.4,
-                  },
-                }}
-                whileInView="visible"
-              >
-                <ProfileCard
-                  name={ca.name}
-                  position={ca.position}
-                  imgSrc={ca.img}
-                  classSpecial={ca.classSpecial}
-                />
-              </motion.div>
-            ))}
-
-            <KeyboardArrowRightIcon className="RightArrow" sx={{
-              fontSize: "100px",
-              marginTop: "110px",
-              color: "white"
-            }} onClick={() => {
-              if (infraAdvisorIndex == 15) {
-                return
-              }
-              setinfraAdvisorIndex(infraAdvisorIndex + 1)
-            }} />
-          </div> */}
-
-          {/* <div className="InfraHead">
-            <KeyboardArrowLeftIcon className="LeftArrow" sx={{
-              fontSize: "100px",
-              marginTop: "110px",
-              color: "white"
-            }} onClick={() => {
-              if (infraHeadIndex == 18) {
-                return
-              }
-              setinfraHeadIndex(infraHeadIndex - 1)
-            }} />
-            {InfraHeads.filter(ca => {
-              if (ca.id == infraHeadIndex || ca.id == infraHeadIndex + 1 || ca.id == infraHeadIndex + 2) {
-                return ca
-              }
-            }).map((ca) => (
-              <motion.div
-                key={ca.id}
-                variants={{
-                  hidden: { opacity: 0, },
-                  visible: {
-                    opacity: 1,
-                    transition: {
-                      duration: 1,
-                      type: "spring",
-                      stiffness: 20,
-                    },
-                  },
-                }}
-                initial="hidden"
-                exit={{
-                  // height: "0%",
-                  opacity: 0,
-                  transition: {
-                    duration: 0.4,
-                  },
-                }}
-                whileInView="visible"
-              >
-                <ProfileCard
-                  name={ca.name}
-                  position={ca.position}
-                  imgSrc={ca.img}
-                  classSpecial={ca.classSpecial}
-                />
-              </motion.div>
-            ))}
-
-          
-
-
-
-
-            <KeyboardArrowRightIcon className="RightArrow" sx={{
-              fontSize: "100px",
-              marginTop: "110px",
-              color: "white"
-            }} onClick={() => {
-              if (infraHeadIndex == 20) {
-                // setinfraHeadIndex(infraHeadIndex -2)
-                console.log(infraHeadIndex);
-                return
-              }
-              setinfraHeadIndex(infraHeadIndex + 1)
-            }} />
-          </div> */}
-
-          {/* <div className="InfraCoheads">
-            <KeyboardArrowLeftIcon className="LeftArrow" sx={{
-              fontSize: "100px",
-              marginTop: "110px",
-              color: "white"
-            }} onClick={() => {
-              if (infraCoheadIndex == 23) {
-                return
-              }
-              setinfraCoheadIndex(infraCoheadIndex - 1)
-            }} />
-            {InfraCoHeads.filter(ca => {
-              if (ca.id == infraCoheadIndex || ca.id == infraCoheadIndex + 1 || ca.id == infraCoheadIndex + 2) {
-
-                return ca
-              }
-            }).map(ca => (
-              <motion.div
-                key={ca.id}
-                variants={{
-                  hidden: { opacity: 0, },
-                  visible: {
-                    opacity: 1,
-                    transition: {
-                      duration: 1,
-                      type: "spring",
-                      stiffness: 20,
-                    },
-                  },
-                }}
-                initial="hidden"
-                exit={{
-                  // height: "0%",
-                  opacity: 0,
-                  transition: {
-                    duration: 0.4,
-                  },
-                }}
-                whileInView="visible"
-              >
-                <ProfileCard
-                  name={ca.name}
-                  position={ca.position}
-                  imgSrc={ca.img}
-                  classSpecial={ca.classSpecial}
-                />
-              </motion.div>
-            ))}
-
-            <KeyboardArrowRightIcon className="RightArrow" sx={{
-              fontSize: "100px",
-              marginTop: "110px",
-              color: "white"
-            }} onClick={() => {
-              if (infraCoheadIndex == 32) {
-                return
-              }
-              setinfraCoheadIndex(infraCoheadIndex + 1)
-            }} />
-          </div> */}
-
-          <Row array={InfraAdvisors} i={0} e={2} />
-
-          <Row array={InfraHeads} i={0} e={2} />
-
-          <Row array={InfraCoHeads} i={0} e={9} />
+          <Row array={FinanceHeads} i={0} e={1} />
 
           <h1 id="WebDev" className="heading">
             WEB DEVELOPMENT
@@ -663,13 +472,19 @@ const Container = () => {
 
           <Row array={PublicityCoHeads} i={0} e={8} />
 
-          <h1 id="Finance" className="heading">
-            FINANCE
+          <h1 id="Infra" className="heading">
+            INFRA AND IN HOUSE MANAGERIAL
           </h1>
 
-          <Row array={FinanceAdvisors} i={0} e={1} />
+          
 
-          <Row array={FinanceHeads} i={0} e={1} />
+          <Row array={InfraAdvisors} i={0} e={2} />
+
+          <Row array={InfraHeads} i={0} e={2} />
+
+          <Row array={InfraCoHeads} i={0} e={9} />
+
+          
 
           <h1 id="Sponsorship" className="heading">
             SPONSORSHIP

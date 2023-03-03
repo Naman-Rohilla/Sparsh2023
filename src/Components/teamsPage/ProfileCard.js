@@ -2,6 +2,8 @@ import React from "react";
 
 import "./ProfileCard.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { DotLoader } from "react-spinners";
+// import ProfileCard from "./ProfileCard.js";
 
 const ProfileCard = (props) => {
   const [Error, setError] = React.useState(false);
@@ -11,11 +13,10 @@ const ProfileCard = (props) => {
         <div class="picture">
           <img
             class="img-fluid"
-            src={
-              Error
-                ? "./no_profile_.png"
-                : props.imgSrc
-            }
+            src={Error ? "./no_profile_.png" : props.imgSrc}
+            onLoad={() => {
+              props.ssetcounter(props.counter + 1);
+            }}
             onError={() => setError(true)}
           />
         </div>

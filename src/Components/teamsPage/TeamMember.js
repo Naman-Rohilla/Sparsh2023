@@ -278,7 +278,7 @@ const InfraCoHeads = [
 const FinanceAdvisors = [
   {
     id: 0,
-    name: "Harshwardhan Swami",
+    name: "Harshverdhan Swami",
     position: "Advisors",
     img: "images/HARSHVERDHAN SWAMI SVNIT.jpg",
     classSpecial: " profile__card cardSpecial",
