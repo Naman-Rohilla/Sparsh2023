@@ -13,6 +13,7 @@ function Row(props) {
   const [index, setindex] = useState(props.i);
   const [active, setactive] = useState(true);
   const matches = useMediaQuery("(max-width: 720px)");
+  const matches2 = useMediaQuery("(max-width: 1000px)");
 
   return (
     <div className="row">
@@ -39,6 +40,72 @@ function Row(props) {
           {props.array
             .filter((ca) => {
               if (ca.id == index) {
+                return ca;
+              }
+            })
+            .map((ca) => (
+              <motion.div
+                key={ca.id}
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                }}
+                transition={{
+                  duration: 2,
+                }}
+              >
+                <ProfileCard
+                  name={ca.name}
+                  position={ca.position}
+                  imgSrc={ca.img}
+                  classSpecial={ca.classSpecial}
+                />
+              </motion.div>
+            ))}
+
+          <KeyboardArrowRightIcon
+            className="RightArrow "
+            sx={{
+              fontSize: "40px",
+              marginTop: "110px",
+              color: "white",
+              cursor: "pointer",
+              zIndex: 1,
+            }}
+            onClick={() => {
+              if (index == props.array.length - 1) {
+                return;
+              }
+              setindex(index + 1);
+              setactive(false);
+            }}
+          />
+        </>
+      ) : matches2 ? (
+        <>
+          <KeyboardArrowLeftIcon
+            className="LeftArrow"
+            sx={{
+              fontSize: "40px",
+              zIndex: 1,
+              marginTop: "110px",
+              color: "white",
+              cursor: "pointer",
+            }}
+            onClick={() => {
+              if (index == props.i) {
+                return;
+              }
+              setindex(index - 1);
+              setactive(false);
+            }}
+          />
+
+          {props.array
+            .filter((ca) => {
+              if (ca.id == index || ca.id == index + 1) {
                 return ca;
               }
             })
@@ -157,7 +224,7 @@ function Row(props) {
                 zIndex: 1,
               }}
               onClick={() => {
-                if (index == (props.array.length - 4)) {
+                if (index == props.array.length - 4) {
                   return;
                 }
                 setindex(index + 1);
