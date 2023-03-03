@@ -127,7 +127,7 @@ const Container = () => {
             <ProfileCard
               name="Ayushman Rajpurohit"
               position="Cultural Affairs Secretary(CAS)"
-              imgSrc="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+              imgSrc="images/Ayushman CAS.jpg"
               classSpecial="profile__card cardSpecial"
             />
           </div>
