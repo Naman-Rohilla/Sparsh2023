@@ -3,38 +3,41 @@ const CAS = [
     id: 0,
     name: "Ayushman Rajpurohit",
     position: "Cultural Affairs Secetary(CAS)",
-    img: "images/",
+    img: "images/Ayushman CAS.jpg",
     classSpecial: " profile__card cardSpecial",
   },
 ];
+
+
+
 
 const Jcas = [
   {
     id: 0,
     name: "Ayushman Tiwari",
     position: "JCAS",
-    img: "images/",
+    img: "images/Ayushman JCAS.jpeg",
     classSpecial: " profile__card cardSpecial",
   },
   {
     id: 1,
     name: "Prashant Paliwal",
     position: "JCAS",
-    img: "images/",
+    img: "images/Prashant Paliwal JCAS.jpg",
     classSpecial: " profile__card cardSpecial",
   },
   {
     id: 2,
     name: "Kanha Bhawani",
     position: "JCAS",
-    img: "images/",
+    img: "images/GHANISTHA SINGHAL SVNIT.jpeg",
     classSpecial: " profile__card cardSpecial",
   },
   {
     id: 3,
     name: "Kuldeep",
     position: "JCAS",
-    img: "images/",
+    img: "images/Kuldeep JCAS.jpg",
     classSpecial: "profile__card cardSpecial",
   },
 ];
@@ -51,7 +54,7 @@ const Conveners = [
     id: 1,
     name: "Ayush Aditya",
     position: "Conveners",
-    img: "images/",
+    img: "images/Ayush Aditya.jpeg",
     classSpecial: " profile__card cardSpecial",
   },
   {
@@ -72,14 +75,14 @@ const Conveners = [
     id: 4,
     name: "Kiran Saini",
     position: "Conveners",
-    img: "images/",
+    img: "images/Kiran Convener.jpeg",
     classSpecial: " profile__card cardSpecial",
   },
   {
     id: 5,
     name: "Rajkumar Meena",
     position: "Conveners",
-    img: "images/",
+    img: "images/RAJKUMAR SVNIT.jpg",
     classSpecial: " profile__card cardSpecial",
   },
   {
@@ -93,7 +96,7 @@ const Conveners = [
     id: 7,
     name: "Rutvik Ghori",
     position: "Conveners",
-    img: "images/",
+    img: "images/Rutvik ghori.jpg",
     classSpecial: " profile__card cardSpecial",
   },
   {
@@ -119,7 +122,7 @@ const InfraAdvisors = [
     id: 1,
     name: "Fatima",
     position: "Advisors",
-    img: "",
+    img: "images/MOHAMMAD FATHIMA SVNIT.jpeg",
     classSpecial: " profile__card cardSpecial",
   },
   {
@@ -140,7 +143,7 @@ const InfraAdvisors = [
     id: 4,
     name: "Vaibhav Gaur",
     position: "Advisors",
-    img: "",
+    img: "images/Vaibhav Gaur.jpeg",
     classSpecial: " profile__card cardSpecial",
   },
 ];
@@ -244,7 +247,7 @@ const InfraCoHeads = [
     id: 8,
     name: "Ijjada Jahnavi",
     position: "CoHeads",
-    img: "",
+    img: "images/Jahnavi .jpg",
     classSpecial: " profile__card cardSpecial",
   },
   {
@@ -334,7 +337,7 @@ const WebAdvisors = [
     id: 1,
     name: "Riya",
     position: "Advisors",
-    img: "images/missing",
+    img: "https://media.licdn.com/dms/image/C5603AQE702Q8YporDQ/profile-displayphoto-shrink_400_400/0/1607866760392?e=1683158400&v=beta&t=R6IVsf-Dj0FYoIZm8kOAZ_Vm7l4StzcpZkoLI88J8kI",
     classSpecial: " profile__card cardSpecial",
   },
   {
@@ -410,7 +413,7 @@ const WebCoHeads = [
     id: 1,
     name: "Harsh Singh",
     position: "CoHeads",
-    img: "images/missing",
+    img: "images/web development_Harsh singh _Co-head.jpg",
     classSpecial: " profile__card cardSpecial",
   },
   {
@@ -453,7 +456,7 @@ const WebCoHeads = [
     id: 7,
     name: "Abhishek Kumar",
     position: "CoHeads",
-    img: "images/",
+    img: "images/Abhishek.jpeg",
     classSpecial: " profile__card cardSpecial",
   },
   {
@@ -467,14 +470,14 @@ const WebCoHeads = [
     id: 9,
     name: "Aditi Sadadiwala",
     position: "CoHeads",
-    img: "images/missing",
+    img: "images/Web_devlopment_Cohead_Aditi Sadadiwala.HEIC",
     classSpecial: " profile__card cardSpecial",
   },
   {
     id: 10,
     name: "Khushi Kher",
     position: "CoHeads",
-    img: "images/missing",
+    img: "images/Web_devlopment_Cohead_Khushi Kher.HEIC",
     classSpecial: " profile__card cardSpecial",
   },
   {
@@ -489,6 +492,26 @@ const WebCoHeads = [
     name: "Moon Patel",
     position: "CoHeads",
     img: "images/Moon Patel.jpg",
+    classSpecial: " profile__card cardSpecial",
+  },{
+    id: 13,
+    name: "Rahul",
+    position: "CoHeads",
+    img: "images/Rahul Baghel.jpg",
+    classSpecial: " profile__card cardSpecial",
+  },
+  {
+    id: 14,
+    name: "Poorvank",
+    position: "CoHeads",
+    img: "images/WebDev_Poorvank_Shah.jpg",
+    classSpecial: " profile__card cardSpecial",
+  },
+  {
+    id: 15,
+    name: "Dhrumi",
+    position: "CoHeads",
+    img: "images/Web_dev_Co-head_Dhrumi.jpg",
     classSpecial: " profile__card cardSpecial",
   },
 ];
@@ -651,7 +674,7 @@ const SponsorshipAdvisors = [
     id: 0,
     name: "Vivek Damani",
     position: "Advisors",
-    img: "images/VIVEK DAMANI SVNIT.HEIC",
+    img: "images/VIVEK_DAMANI_SVNIT.jpg",
     classSpecial: " profile__card cardSpecial",
   },
   {
@@ -1143,7 +1166,7 @@ const AdminAdvisors = [
     id: 0,
     name: "Raj Krushnan",
     position: "Advisors",
-    img: "images/RAJ KRUSHNAN.HEIC",
+    img: "images/RAJ KRUSHNAN.JPG",
     classSpecial: " profile__card cardSpecial",
   },
   {
@@ -1484,7 +1507,7 @@ const MediaCellAdvisors = [
     id: 1,
     name: "Supal",
     position: "Advisors",
-    img: "images/SUPAL PADMASHALI SVNIT U19ME123.heic",
+    img: "images/SUPAL_PADMASHALI_SVNIT_U19ME123.jpg",
     classSpecial: " profile__card cardSpecial",
   },
 ];
