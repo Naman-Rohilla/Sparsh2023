@@ -9,7 +9,10 @@ import { Link } from "react-router-dom";
 export default function Footer(data) {
   return (
     <>
-      <div id="main-footer">
+      <div
+      
+        id="main-footer"
+      >
         <motion.div
           initial="hidden"
           variants={{
@@ -22,6 +25,7 @@ export default function Footer(data) {
             visible: {
               opacity: 1,
               x: 0,
+
               position: "relative",
               default: "easeIn",
             },
@@ -122,11 +126,10 @@ export default function Footer(data) {
                   textDecoration: "none",
                   color: "white",
                 }}
-                to="https://youtu.be/_LtDjW8Hmlk"
+                to="https://drive.google.com/file/d/1iRKXpvSp-hWjbDB9fvGtf9qTrFS3t0xu/view?usp=drivesdk"
               >
                 <YouTubeIcon />
               </Link>
-              
             </div>
           </div>
         </div>

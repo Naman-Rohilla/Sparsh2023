@@ -69,7 +69,13 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<Home activeUrl={activeUrl} setactiveUrl={setactiveUrl} startOnce={startOnce} />}
+          element={
+            <Home
+              activeUrl={activeUrl}
+              setactiveUrl={setactiveUrl}
+              startOnce={startOnce}
+            />
+          }
         />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/sponsors" element={<Sponsors />} />
@@ -79,7 +85,13 @@ function App() {
         <Route path="/CampusAmbassador" element={<Ca />} />
         <Route path="/teams" element={<TeamPage />} />
       </Routes>
-      <Footer activeUrl={activeUrl} setactiveUrl={setactiveUrl} />
+      <div
+        style={{
+          zIndex: 900,
+        }}
+      >
+        <Footer activeUrl={activeUrl} setactiveUrl={setactiveUrl} />
+      </div>
     </>
   );
 }

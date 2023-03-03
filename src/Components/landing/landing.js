@@ -78,9 +78,9 @@ export default function Landing(data) {
 
   React.useEffect(() => {
     setTimeout(() => {
-      setloading(false)
-    }, 5000)
-  }, [])
+      setloading(false);
+    }, 5000);
+  }, []);
 
   const matches = useMediaQuery("(max-width: 1100px)");
   return (
@@ -126,7 +126,7 @@ export default function Landing(data) {
                   top: mainRef.current.offsetTop,
                   left: 0,
                   behavior: "smooth",
-                  transition: "2s"
+                  transition: "2s",
                 });
               }}
             >
@@ -141,69 +141,69 @@ export default function Landing(data) {
             </svg>
           </div>
           <Parallax startOnce={data.data.startOnce} />
-        </>
-      )}
-      <div ref={mainRef} id="main-landing">
-        <div
-          style={{
-            position: "absolute",
-            zIndex: 0,
-            opacity: 0.3,
-            height: "100vh",
-            width: "100%",
-            objectFit: "cover",
-          }}
-        >
-          <img
-            src="./home_sparsh.png"
-            style={{
-              objectFit: "cover",
-            }}
-            onLoad={() => {
-              setloading(false);
-            }}
-            height="100%"
-            width="100%"
-          ></img>
-        </div>
-        <div className="right-landing-container">
-          <div className="right-landing-typewriter">
-            <div className="right-landing-typewriter-class">
-              <Typewriter
-                options={{
-                  autoStart: true,
-                  loop: true,
-                }}
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString("Welcome to Gujarat's Biggest Cultural Fest")
-                    .pauseFor(1000)
-                    .deleteAll()
-                    .typeString("You can Register here for Event!")
-                    .pauseFor(2500)
-                    .start();
-                }}
-              />
-            </div>
-
-            <div>
-              <Link
-                className="right-landing-register"
+          <div ref={mainRef} id="main-landing">
+            <div
+              style={{
+                position: "absolute",
+                zIndex: 0,
+                opacity: 0.3,
+                height: "100vh",
+                width: "100%",
+                objectFit: "cover",
+              }}
+            >
+              <img
+                src="./home_sparsh.png"
                 style={{
-                  textDecoration: "none",
+                  objectFit: "cover",
                 }}
-                to="/register"
-              >
-                <button
-                  onClick={() => {
-                    data.data.setactiveUrl("/register");
-                  }}
-                  class="custom-btn btn-3"
-                >
-                  <span>Register for Event</span>
-                </button>
-              </Link>
-              {/* <div
+                onLoad={() => {
+                  setloading(false);
+                }}
+                height="100%"
+                width="100%"
+              ></img>
+            </div>
+            <div className="right-landing-container">
+              <div className="right-landing-typewriter">
+                <div className="right-landing-typewriter-class">
+                  <Typewriter
+                    options={{
+                      autoStart: true,
+                      loop: true,
+                    }}
+                    onInit={(typewriter) => {
+                      typewriter
+                        .typeString(
+                          "Welcome to Gujarat's Biggest Cultural Fest"
+                        )
+                        .pauseFor(1000)
+                        .deleteAll()
+                        .typeString("You can Register here for Event!")
+                        .pauseFor(2500)
+                        .start();
+                    }}
+                  />
+                </div>
+
+                <div>
+                  <Link
+                    className="right-landing-register"
+                    style={{
+                      textDecoration: "none",
+                    }}
+                    to="/register"
+                  >
+                    <button
+                      onClick={() => {
+                        data.data.setactiveUrl("/register");
+                      }}
+                      class="custom-btn btn-3"
+                    >
+                      <span>Register for Event</span>
+                    </button>
+                  </Link>
+                  {/* <div
                 style={{
                   height: "30px",
                   width: "40px",
@@ -250,262 +250,267 @@ export default function Landing(data) {
                   
                 }}
               ></div> */}
+                </div>
+              </div>
+              <Countdown
+                date={1677612696727 + 1000 * 60 * 60 * 24 * 36}
+                renderer={renderer}
+              />
             </div>
           </div>
-          <Countdown
-            date={1677612696727 + 1000 * 60 * 60 * 24 * 36}
-            renderer={renderer}
-          />
-        </div>
-      </div>
-      <div id="main-landing-2">
-        <motion.div
-          initial="hidden"
-          variants={{
-            hidden: {
-              default: "easeIn",
-              opacity: 0,
-              x: -50,
-            },
-            visible: {
-              default: "easeIn",
-              opacity: 1,
-              x: 0,
-            },
-          }}
-          transition={{
-            duration: 2,
-          }}
-          whileInView="visible"
-          className="landing-2-left"
-        >
-          <img src="./shirley.png" className="landing-2-left-img"></img>
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          variants={{
-            hidden: {
-              default: "easeIn",
-              opacity: 0,
-              x: -50,
-            },
-            visible: {
-              default: "easeIn",
-              opacity: 1,
-              x: 0,
-            },
-          }}
-          transition={{
-            duration: 2,
-          }}
-          whileInView="visible"
-          className="landing-2-right"
-        >
-          <span className="landing-2-heading">Heart of Sparsh 2K22</span>
-          <span className="landing-2-content">
-            Shirley Setia, an artist of Indian heritage, is a versatile
-            performer, excelling in her roles as a singer, actress, and social
-            media influencer. Based in New Zealand, she has made a name for
-            herself as a renowned musician, captivating audiences around the
-            world with her soulful and melodious voice.Shirley Setia's
-            impressive career has led her to showcase her talents on various
-            platforms, including the prestigious annual cultural fest of
-            Gujarat, Sparsh, where she graced the stage as a performer in 2022.
-          </span>
-          <span className="landing-2-line"></span>
-          <span className="landing-2-button">Shirley Setia</span>
-        </motion.div>
-      </div>
-      <div id="main-landing-3">
-        <motion.div
-          initial="hidden"
-          variants={{
-            hidden: {
-              default: "easeIn",
-              opacity: 0,
-              scale: 0.5,
-              zIndex: 2,
-            },
-            visible: {
-              default: "easeIn",
-              opacity: 1,
-              scale: 1,
-              zIndex: 2,
-            },
-          }}
-          transition={{
-            duration: 1,
-          }}
-          whileInView="visible"
-          className="landing-3-left"
-        >
-          <span className="landing-3-heading">9XM</span>
-          <span className="landing-3-content">
-            Krishna Kumar Kunnath, better known by his stage name KK, had
-            established himself as a premier Indian backup vocalist known for
-            his vast repertoire. In 2016, during Gujarat's prestigious annual
-            cultural fest, Sparsh, he visited SVNIT and set the stage on fire
-            and enthralled the crowd with his mellifluous tunes.
-          </span>
-          <span className="landing-3-line"></span>
-          <span className="landing-3-button">KK</span>
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          variants={{
-            hidden: {
-              default: "easeIn",
-              opacity: 0,
-              scale: 0.5,
-              zIndex: 0,
-            },
-            visible: {
-              default: "easeIn",
-              opacity: 1,
-              scale: 1,
-              zIndex: 1,
-            },
-          }}
-          transition={{
-            duration: 1,
-          }}
-          whileInView="visible"
-          className="landing-3-right"
-        >
-          <img src="./kk.png" className="landing-3-left-img"></img>
-        </motion.div>
-      </div>
-      <motion.div
-        initial="hidden"
-        variants={{
-          hidden: {
-            default: "easeIn",
-            opacity: 0,
-          },
-          visible: {
-            default: "easeIn",
-            opacity: 1,
-          },
-        }}
-        transition={{
-          duration: 1,
-        }}
-        whileInView="visible"
-        id="main-landing-4"
-      >
-        <div className="landing-4-slider">
-          {sliderArray1
-            .filter((sA) => {
-              if (sA.id == sliderIndex1) {
-                return sA;
-              }
-            })
-            .map((sA) => (
-              <motion.div
-                key={sA.id}
-                initial="hidden"
-                animate={{
-                  opacity: [0, 1],
-                  // y: [-20, 0],
-                }}
-                transition={{
-                  duration: "1",
-                  // times: [0, 1],
-                }}
-                className="landing-4-slider-items"
-              >
-                <div className="landing-4-slider-heading">{sA.heading}</div>
-                {/* <div className="landing-4-slider-img">
+          <div id="main-landing-2">
+            <motion.div
+              initial="hidden"
+              variants={{
+                hidden: {
+                  default: "easeIn",
+                  opacity: 0,
+                  x: -50,
+                },
+                visible: {
+                  default: "easeIn",
+                  opacity: 1,
+                  x: 0,
+                },
+              }}
+              transition={{
+                duration: 2,
+              }}
+              whileInView="visible"
+              className="landing-2-left"
+            >
+              <img src="./shirley.png" className="landing-2-left-img"></img>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              variants={{
+                hidden: {
+                  default: "easeIn",
+                  opacity: 0,
+                  x: -50,
+                },
+                visible: {
+                  default: "easeIn",
+                  opacity: 1,
+                  x: 0,
+                },
+              }}
+              transition={{
+                duration: 2,
+              }}
+              whileInView="visible"
+              className="landing-2-right"
+            >
+              <span className="landing-2-heading">Heart of Sparsh 2K22</span>
+              <span className="landing-2-content">
+                Shirley Setia, an artist of Indian heritage, is a versatile
+                performer, excelling in her roles as a singer, actress, and
+                social media influencer. Based in New Zealand, she has made a
+                name for herself as a renowned musician, captivating audiences
+                around the world with her soulful and melodious voice.Shirley
+                Setia's impressive career has led her to showcase her talents on
+                various platforms, including the prestigious annual cultural
+                fest of Gujarat, Sparsh, where she graced the stage as a
+                performer in 2022.
+              </span>
+              <span className="landing-2-line"></span>
+              <span className="landing-2-button">Shirley Setia</span>
+            </motion.div>
+          </div>
+          <div id="main-landing-3">
+            <motion.div
+              initial="hidden"
+              variants={{
+                hidden: {
+                  default: "easeIn",
+                  opacity: 0,
+                  scale: 0.5,
+                  zIndex: 2,
+                },
+                visible: {
+                  default: "easeIn",
+                  opacity: 1,
+                  scale: 1,
+                  zIndex: 2,
+                },
+              }}
+              transition={{
+                duration: 1,
+              }}
+              whileInView="visible"
+              className="landing-3-left"
+            >
+              <span className="landing-3-heading">9XM</span>
+              <span className="landing-3-content">
+                Krishna Kumar Kunnath, better known by his stage name KK, had
+                established himself as a premier Indian backup vocalist known
+                for his vast repertoire. In 2016, during Gujarat's prestigious
+                annual cultural fest, Sparsh, he visited SVNIT and set the stage
+                on fire and enthralled the crowd with his mellifluous tunes.
+              </span>
+              <span className="landing-3-line"></span>
+              <span className="landing-3-button">KK</span>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              variants={{
+                hidden: {
+                  default: "easeIn",
+                  opacity: 0,
+                  scale: 0.5,
+                  zIndex: 0,
+                },
+                visible: {
+                  default: "easeIn",
+                  opacity: 1,
+                  scale: 1,
+                  zIndex: 1,
+                },
+              }}
+              transition={{
+                duration: 1,
+              }}
+              whileInView="visible"
+              className="landing-3-right"
+            >
+              <img src="./kk.png" className="landing-3-left-img"></img>
+            </motion.div>
+          </div>
+          <motion.div
+            initial="hidden"
+            variants={{
+              hidden: {
+                default: "easeIn",
+                opacity: 0,
+              },
+              visible: {
+                default: "easeIn",
+                opacity: 1,
+              },
+            }}
+            transition={{
+              duration: 1,
+            }}
+            whileInView="visible"
+            id="main-landing-4"
+          >
+            <div className="landing-4-slider">
+              {sliderArray1
+                .filter((sA) => {
+                  if (sA.id == sliderIndex1) {
+                    return sA;
+                  }
+                })
+                .map((sA) => (
+                  <motion.div
+                    key={sA.id}
+                    initial="hidden"
+                    animate={{
+                      opacity: [0, 1],
+                      // y: [-20, 0],
+                    }}
+                    transition={{
+                      duration: "1",
+                      // times: [0, 1],
+                    }}
+                    className="landing-4-slider-items"
+                  >
+                    <div className="landing-4-slider-heading">{sA.heading}</div>
+                    {/* <div className="landing-4-slider-img">
                   {sA.img}
                 </div> */}
-                <div className="landing-4-slider-content">{sA.data}</div>
-                <img
-                  style={{
-                    position: "absolute",
-                    height: "100%",
-                    width: "100%",
-                    zIndex: 0,
-                    opacity: 0.4,
-                    objectFit: "cover",
-                  }}
-                  src={sA.img}
-                ></img>
-              </motion.div>
-            ))}
+                    <div className="landing-4-slider-content">{sA.data}</div>
+                    <img
+                      style={{
+                        position: "absolute",
+                        height: "100%",
+                        width: "100%",
+                        zIndex: 0,
+                        opacity: 0.4,
+                        objectFit: "cover",
+                      }}
+                      src={sA.img}
+                    ></img>
+                  </motion.div>
+                ))}
 
-          <PlayArrowOutlinedIcon
-            onClick={() => {
-              if (sliderIndex1 == 3) {
-                return;
-              }
-              setsliderIndex1(sliderIndex1 + 1);
+              <PlayArrowOutlinedIcon
+                onClick={() => {
+                  if (sliderIndex1 == 3) {
+                    return;
+                  }
+                  setsliderIndex1(sliderIndex1 + 1);
+                }}
+                className="right-slider-button"
+              />
+              <PlayArrowOutlinedIcon
+                className="left-slider-button "
+                onClick={() => {
+                  if (sliderIndex1 == 0) {
+                    return;
+                  }
+                  setsliderIndex1(sliderIndex1 - 1);
+                }}
+              />
+            </div>
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            variants={{
+              hidden: {
+                opacity: 0,
+                // x: -50,
+              },
+              visible: {
+                opacity: 1,
+                // x: 0,
+              },
             }}
-            className="right-slider-button"
-          />
-          <PlayArrowOutlinedIcon
-            className="left-slider-button "
-            onClick={() => {
-              if (sliderIndex1 == 0) {
-                return;
-              }
-              setsliderIndex1(sliderIndex1 - 1);
+            transition={{
+              duration: 1,
             }}
-          />
-        </div>
-      </motion.div>
-      <motion.div
-        initial="hidden"
-        variants={{
-          hidden: {
-            opacity: 0,
-            // x: -50,
-          },
-          visible: {
-            opacity: 1,
-            // x: 0,
-          },
-        }}
-        transition={{
-          duration: 1,
-        }}
-        whileInView="visible"
-        id="main-landing-5"
-      >
-        <motion.div
-          initial="hidden"
-          variants={{
-            hidden: {
-              default: "easeIn",
-              x: -50,
-              opacity: 0,
-            },
-            visible: {
-              default: "easeIn",
-              x: 0,
-              opacity: 1,
-            },
-          }}
-          transition={{
-            duration: 1,
-          }}
-          whileInView="visible"
-          className="video-heading"
-          style={{}}
-        >
-          <span className="video-heading-child">Glimpses of Sparsh 2K22</span>
-        </motion.div>
-        <video
-          width="90%"
-          height="100%"
-          className="landing-5-video"
-          autoplay="autoplay"
-          muted
-          loop
-        >
-          <source src="/Videos/demo.mp4" type="video/mp4"></source>
-        </video>
-      </motion.div>
-      {matches ? <SliderMobile /> : <Slider />}
+            whileInView="visible"
+            id="main-landing-5"
+          >
+            <motion.div
+              initial="hidden"
+              variants={{
+                hidden: {
+                  default: "easeIn",
+                  x: -50,
+                  opacity: 0,
+                },
+                visible: {
+                  default: "easeIn",
+                  x: 0,
+                  opacity: 1,
+                },
+              }}
+              transition={{
+                duration: 1,
+              }}
+              whileInView="visible"
+              className="video-heading"
+              style={{}}
+            >
+              <span className="video-heading-child">
+                Glimpses of Sparsh 2K22
+              </span>
+            </motion.div>
+            <video
+              width="90%"
+              height="100%"
+              className="landing-5-video"
+              autoplay="autoplay"
+              muted
+              loop
+            >
+              <source src="/Videos/demo.mp4" type="video/mp4"></source>
+            </video>
+          </motion.div>
+          {matches ? <SliderMobile /> : <Slider />}
+        </>
+      )}
     </>
   );
 }

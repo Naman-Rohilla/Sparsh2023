@@ -4,33 +4,58 @@ import React, { useState, useEffect } from "react";
 
 import "./Container.css";
 import { motion } from "framer-motion";
-import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 import ProfileCard from "./ProfileCard.js";
 import {
-  CAS, Jcas, Conveners
-  , InfraAdvisors, InfraHeads, InfraCoHeads
-  , FinanceAdvisors, FinanceHeads
-  , WebAdvisors, WebHeads, WebCoHeads
-  , PublicityAdvisors, PublicityHeads, PublicityCoHeads
-  , SponsorshipAdvisors, SponsorshipHeads, SponsorshipCoHeads
-  , PRAdvisors, PRHeads, PRCoHeads
-  , HospitalityAdvisors, HospitalityHeads, HospitalityCoHeads
-  , DisciplineAdvisors, DisciplineHeads, DisciplineCoHeads
-  , AdminAdvisors, AdminHeads, AdminCoHeads
-  , DesignAdvisors, DesignHeads, DesignCoHeads
-  , ThinkTankAdvisors, ThinkTankHeads, ThinkTankCoHeads
-  , MediaCellAdvisors, MediaCellHeads, MediaCellCoHeads
-  , CinematographyAdvisors, CinematographyHeads, CinematographyCoHeads
+  CAS,
+  Jcas,
+  Conveners,
+  InfraAdvisors,
+  InfraHeads,
+  InfraCoHeads,
+  FinanceAdvisors,
+  FinanceHeads,
+  WebAdvisors,
+  WebHeads,
+  WebCoHeads,
+  PublicityAdvisors,
+  PublicityHeads,
+  PublicityCoHeads,
+  SponsorshipAdvisors,
+  SponsorshipHeads,
+  SponsorshipCoHeads,
+  PRAdvisors,
+  PRHeads,
+  PRCoHeads,
+  HospitalityAdvisors,
+  HospitalityHeads,
+  HospitalityCoHeads,
+  DisciplineAdvisors,
+  DisciplineHeads,
+  DisciplineCoHeads,
+  AdminAdvisors,
+  AdminHeads,
+  AdminCoHeads,
+  DesignAdvisors,
+  DesignHeads,
+  DesignCoHeads,
+  ThinkTankAdvisors,
+  ThinkTankHeads,
+  ThinkTankCoHeads,
+  MediaCellAdvisors,
+  MediaCellHeads,
+  MediaCellCoHeads,
+  CinematographyAdvisors,
+  CinematographyHeads,
+  CinematographyCoHeads,
 } from "./TeamMember";
 import { coordinator } from "./coordinatornames";
 import { LeftArrow, RightArrow } from "./utilities";
 import Row from "./row";
 import RowC from "./rowcoordinator";
 // import Navbar from "./navbar"
-
 
 // const cardArray = [
 //   {
@@ -94,39 +119,10 @@ const Container = () => {
   // const [webHeadIndex, setwebHeadIndex] = useState(40);
   // const [webCoHeadIndex, setwebCoHeadIndex] = useState(45);
 
-
-
-
-
-
-
   return (
     <div id="main-teams">
       <>
-      <img
-            style={{
-              position: "fixed",
-              width: "100%",
-              height: "100%",
-              zIndex: 0,
-            }}
-            // onLoad={() => {
-            //   setloading(false);
-            // }}
-            src="./login02.jpg"
-          ></img>
-          <div
-            style={{
-              position: "fixed",
-              width: "100%",
-              height: "100%",
-              backgroundColor: "#1e1e1e",
-              opacity: 0.8,
-              zIndex: 0,
-            }}
-          ></div>
         <div className="parent__container">
-
           <div className="cas__container">
             <ProfileCard
               name="Ayushman Rajpurohit"
@@ -135,7 +131,9 @@ const Container = () => {
               classSpecial="profile__card cardSpecial"
             />
           </div>
-          <h1 id="joints" className="heading">Core</h1>
+          <h1 id="joints" className="heading">
+            Core
+          </h1>
 
           {/* <div className="jcas">
 
@@ -198,11 +196,7 @@ const Container = () => {
             }} />
           </div> */}
 
-          <Row
-            array={Jcas}
-            i={0}
-            e={4}
-          />
+          <Row array={Jcas} i={0} e={4} />
 
           {/* <div className="Conveners">
             <KeyboardArrowLeftIcon className="LeftArrow" sx={{
@@ -264,13 +258,11 @@ const Container = () => {
             }} />
           </div> */}
 
-          <Row
-            array={Conveners}
-            i={0}
-            e={6}
-          />
+          <Row array={Conveners} i={0} e={6} />
 
-          <h1 id="Infra" className="heading">INFRA AND IN HOUSE MANAGERIAL</h1>
+          <h1 id="Infra" className="heading">
+            INFRA AND IN HOUSE MANAGERIAL
+          </h1>
 
           {/* <div className="Infra">
             <KeyboardArrowLeftIcon className="LeftArrow" sx={{
@@ -461,25 +453,15 @@ const Container = () => {
             }} />
           </div> */}
 
-          <Row
-            array={InfraAdvisors}
-            i={0}
-            e={2}
-          />
+          <Row array={InfraAdvisors} i={0} e={2} />
 
-          <Row
-            array={InfraHeads}
-            i={0}
-            e={2}
-          />
+          <Row array={InfraHeads} i={0} e={2} />
 
-          <Row
-            array={InfraCoHeads}
-            i={0}
-            e={9}
-          />
+          <Row array={InfraCoHeads} i={0} e={9} />
 
-          <h1 id="WebDev" className="heading">WEB DEVELOPMENT</h1>
+          <h1 id="WebDev" className="heading">
+            WEB DEVELOPMENT
+          </h1>
 
           {/* <div className="WebdevAdvisor">
             <KeyboardArrowLeftIcon className="LeftArrow" sx={{
@@ -665,247 +647,124 @@ const Container = () => {
           </div> */}
 
           {/* value of i is the initial value of team member array and value of e is the (last-2) value  */}
-          <Row
-            array={WebAdvisors}
-            i={0}
-            e={5}
-          />
+          <Row array={WebAdvisors} i={0} e={5} />
 
-          <Row
-            array={WebHeads}
-            i={0}
-            e={5}
-          />
+          <Row array={WebHeads} i={0} e={5} />
 
-          <Row
-            array={WebCoHeads}
-            i={0}
-            e={8}
-          />
+          <Row array={WebCoHeads} i={0} e={8} />
 
-          <h1 id="Publicity" className="heading">PUBLICITY</h1>
+          <h1 id="Publicity" className="heading">
+            PUBLICITY
+          </h1>
 
-          <Row
-            array={PublicityAdvisors}
-            i={0}
-            e={1}
-          />
+          <Row array={PublicityAdvisors} i={0} e={1} />
 
-          <Row
-            array={PublicityHeads}
-            i={0}
-            e={3}
-          />
+          <Row array={PublicityHeads} i={0} e={3} />
 
-          <Row
-            array={PublicityCoHeads}
-            i={0}
-            e={8}
-          />
+          <Row array={PublicityCoHeads} i={0} e={8} />
 
-          <h1 id="Finance" className="heading">FINANCE</h1>
+          <h1 id="Finance" className="heading">
+            FINANCE
+          </h1>
 
-          <Row
-            array={FinanceAdvisors}
-            i={0}
-            e={1}
-          />
+          <Row array={FinanceAdvisors} i={0} e={1} />
 
-          <Row
-            array={FinanceHeads}
-            i={0}
-            e={1}
-          />
+          <Row array={FinanceHeads} i={0} e={1} />
 
-          <h1 id="Sponsorship" className="heading">SPONSORSHIP</h1>
+          <h1 id="Sponsorship" className="heading">
+            SPONSORSHIP
+          </h1>
 
-          <Row
-            array={SponsorshipAdvisors}
-            i={0}
-            e={1}
-          />
+          <Row array={SponsorshipAdvisors} i={0} e={1} />
 
-          <Row
-            array={SponsorshipHeads}
-            i={0}
-            e={2}
-          />
+          <Row array={SponsorshipHeads} i={0} e={2} />
 
-          <Row
-            array={SponsorshipCoHeads}
-            i={0}
-            e={1}
-          />
+          <Row array={SponsorshipCoHeads} i={0} e={1} />
 
-          <h1 id="PR" className="heading">PUBLIC RELATION</h1>
+          <h1 id="PR" className="heading">
+            PUBLIC RELATION
+          </h1>
 
-          <Row
-            array={PRAdvisors}
-            i={0}
-            e={1}
-          />
+          <Row array={PRAdvisors} i={0} e={1} />
 
-          <Row
-            array={PRHeads}
-            i={0}
-            e={3}
-          />
+          <Row array={PRHeads} i={0} e={3} />
 
-          <Row
-            array={PRCoHeads}
-            i={0}
-            e={2}
-          />
+          <Row array={PRCoHeads} i={0} e={2} />
 
-          <h1 id="Hospitality" className="heading">HOSPITALITY</h1>
+          <h1 id="Hospitality" className="heading">
+            HOSPITALITY
+          </h1>
 
-          <Row
-            array={HospitalityAdvisors}
-            i={0}
-            e={1}
-          />
+          <Row array={HospitalityAdvisors} i={0} e={1} />
 
-          <Row
-            array={HospitalityHeads}
-            i={0}
-            e={2}
-          />
+          <Row array={HospitalityHeads} i={0} e={2} />
 
-          <Row
-            array={HospitalityCoHeads}
-            i={0}
-            e={6}
-          />
+          <Row array={HospitalityCoHeads} i={0} e={6} />
 
-          <h1 id="Discipline" className="heading">DISCIPLINE</h1>
+          <h1 id="Discipline" className="heading">
+            DISCIPLINE
+          </h1>
 
-          <Row
-            array={DisciplineAdvisors}
-            i={0}
-            e={2}
-          />
+          <Row array={DisciplineAdvisors} i={0} e={2} />
 
-          <Row
-            array={DisciplineHeads}
-            i={0}
-            e={2}
-          />
+          <Row array={DisciplineHeads} i={0} e={2} />
 
-          <Row
-            array={DisciplineCoHeads}
-            i={0}
-            e={7}
-          />
+          <Row array={DisciplineCoHeads} i={0} e={7} />
 
-          <h1 id="Admin" className="heading">ADMIN AND DOCUMENTATION</h1>
+          <h1 id="Admin" className="heading">
+            ADMIN AND DOCUMENTATION
+          </h1>
 
-          <Row
-            array={AdminAdvisors}
-            i={0}
-            e={1}
-          />
+          <Row array={AdminAdvisors} i={0} e={1} />
 
-          <Row
-            array={AdminHeads}
-            i={0}
-            e={2}
-          />
+          <Row array={AdminHeads} i={0} e={2} />
 
-          <Row
-            array={AdminCoHeads}
-            i={0}
-            e={2}
-          />
+          <Row array={AdminCoHeads} i={0} e={2} />
 
-          <h1 id="Design" className="heading">DESIGN</h1>
+          <h1 id="Design" className="heading">
+            DESIGN
+          </h1>
 
-          <Row
-            array={DesignAdvisors}
-            i={0}
-            e={2}
-          />
+          <Row array={DesignAdvisors} i={0} e={2} />
 
-          <Row
-            array={DesignHeads}
-            i={0}
-            e={1}
-          />
+          <Row array={DesignHeads} i={0} e={1} />
 
-          <Row
-            array={DesignCoHeads}
-            i={0}
-            e={1}
-          />
+          <Row array={DesignCoHeads} i={0} e={1} />
 
-          <h1 id="ThinkTank" className="heading">THINK TANK</h1>
+          <h1 id="ThinkTank" className="heading">
+            THINK TANK
+          </h1>
 
-          <Row
-            array={ThinkTankAdvisors}
-            i={0}
-            e={1}
-          />
+          <Row array={ThinkTankAdvisors} i={0} e={1} />
 
-          <Row
-            array={ThinkTankHeads}
-            i={0}
-            e={4}
-          />
+          <Row array={ThinkTankHeads} i={0} e={4} />
 
-          <Row
-            array={ThinkTankCoHeads}
-            i={0}
-            e={4}
-          />
+          <Row array={ThinkTankCoHeads} i={0} e={4} />
 
-          <h1 id="MediaCell" className="heading">MEDIA CELL</h1>
+          <h1 id="MediaCell" className="heading">
+            MEDIA CELL
+          </h1>
 
-          <Row
-            array={MediaCellAdvisors}
-            i={0}
-            e={1}
-          />
+          <Row array={MediaCellAdvisors} i={0} e={1} />
 
-          <Row
-            array={MediaCellHeads}
-            i={0}
-            e={2}
-          />
+          <Row array={MediaCellHeads} i={0} e={2} />
 
-          <Row
-            array={MediaCellCoHeads}
-            i={0}
-            e={2}
-          />
+          <Row array={MediaCellCoHeads} i={0} e={2} />
 
-          <h1 id="Cinematography" className="heading">CINEMATOGRAPHY</h1>
+          <h1 id="Cinematography" className="heading">
+            CINEMATOGRAPHY
+          </h1>
 
-          <Row
-            array={CinematographyAdvisors}
-            i={0}
-            e={1}
-          />
+          <Row array={CinematographyAdvisors} i={0} e={1} />
 
-          <Row
-            array={CinematographyHeads}
-            i={0}
-            e={2}
-          />
+          <Row array={CinematographyHeads} i={0} e={2} />
 
-          <Row
-            array={CinematographyCoHeads}
-            i={0}
-            e={1}
-          />
-          <h1 id="Coordinators" className="heading">COORDINATORS</h1>
+          <Row array={CinematographyCoHeads} i={0} e={1} />
+          <h1 id="Coordinators" className="heading">
+            COORDINATORS
+          </h1>
 
-          <RowC
-            array={coordinator}
-            i={0}
-            e={12}
-          />
-
-
-
+          <RowC array={coordinator} i={0} e={12} />
         </div>
       </>
     </div>
