@@ -1,53 +1,65 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import styles from "./styles";
 
-const AboutCard = ({ mode, content,img }) => {
+const AboutCard = ({ content, img, reverse }) => {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 786;
   return (
-    <div
-      className="center"
-      style={{
-        flexDirection: !mode ? "row" : "row-reverse",
-        color: "white",
-        paddingTop: "30px",
-        paddingLeft: "30px",
-        paddingRight: "30px",
-        paddingBottom: "30px"
-      }}
-    >
+    <div>
       <div
-        className="content"
         style={{
-          width: "50%",
-          padding: "10px",
-          letterSpacing: "2px",
-        }}
-      >
-        {content}
-        <div className="line"></div>
-      </div>
-      <div
-        className="center"
-        style={{
-          width: "50%",
+          ...styles.about_content,
+          flexDirection: isMobile
+            ? "column"
+            : reverse
+            ? "row-reverse"
+            : "reverse",
+          textAlign: isMobile ? "center" : "left",
+          marginTop: 50,
         }}
       >
         <div
           style={{
-            border: "5px solid",
-            borderImage: "linear-gradient(45deg, #5be896, #1e8dda) 1",
-            width:"50%",
+            flexBasis: "30%",
+            letterSpacing: "2px",
           }}
         >
-          <img
-            src={img}
-            alt=""
+          <div style={{ fontSize: "1.2rem" }}>{content}</div>
+          {!isMobile && <div style={styles.neon_divider}></div>}
+        </div>
+        <div style={{}}>
+          <div
             style={{
-              width: "100%",
-              position:"relative",
-              top:"25px",
-              right:"25px",
-              zIndex:1
+              textAlign: "center",
+              margin: isMobile ? "100px auto" : "auto",
+              border: "5px solid",
+              borderImage: "linear-gradient(45deg, #5be896, #1e8dda) 1",
+              width: "50%",
             }}
-          />
+          >
+            <img
+              src={img}
+              alt=""
+              style={{
+                width: "100%",
+                position: "relative",
+                top: "25px",
+                right: "25px",
+                zIndex: 1,
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>

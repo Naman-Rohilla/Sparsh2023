@@ -30,6 +30,7 @@ function App() {
 
   return (
     <>
+
       {startOnce == true && (
         <motion.div
           style={{
@@ -67,7 +68,6 @@ function App() {
           ></motion.img>
         </motion.div>
       )}
-
       <NavBar activeUrl={activeUrl} setactiveUrl={setactiveUrl} />
       {/* <Parallax /> */}
       <Routes>

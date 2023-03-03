@@ -1,98 +1,82 @@
 import React from "react";
 import "./caCss.css";
+import styles from "./styles";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const CaHome = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 786;
+  // console.log(width);
   return (
     <>
-      <div
-        className="cahome"
-        style={{
-          height: "100%",
-          backgroundColor: "black",
-          display: "flex",
-          alignItems: "center",
-          paddingLeft: "2rem",
-          paddingRight: "2rem",
-          paddingTop: "100px",
-          overflowY:"hidden",
-          backgroundImage: "radial-gradient(circle at top left,blue -30%,black, transparent)",
-        }}
-      >
-        {/* <div className="backCircle">
-
-        </div> */}
-        <div style={{ width: "100%", paddingBottom: "3rem",zIndex: 1}}>
-          <p
-            className="txt"
-            style={{
-              fontFamily: "Syne",
-              fontStyle: "normal",
-              fontWeight: 400,
-              fontSize: "4rem",
-              lineHeight: "115px",
-              textAlign: "center",
-              color: "#C0C0C0",
-            }}
-          >
+      <div style={styles.cahero}>
+        <div className="text-block" style={{ paddingBottom: "120px" }}>
+          <p style={{ ...styles.l1, fontSize: isMobile ? 24 : 48 }}>
             Join Our Mission, become our
           </p>
           <p
-            className="campus"
-            style={{
-              fontFamily: "Syne",
-              fontStyle: "normal",
-              fontWeight: 400,
-              lineHeight: "115px",
-              textAlign: "center",
-              background:
-                "linear-gradient(94.76deg, #9E86FF 46.15%, #9FFF7E 90.01%),linear-gradient(0deg, #FFFFFF, #FFFFFF)",
-              webkitBackgroundClip: "text",
-              webkitTextFillColor: "transparent",
-              mozBackgroundClip: "text",
-              mozTextFillColor: "transparent",
-            }}
+            style={
+              isMobile
+                ? { ...styles.l2, fontSize: 48 }
+                : { ...styles.l2, fontSize: 128 }
+            }
           >
             Campus
           </p>
           <p
-            className="ambassador"
-            style={{
-              fontFamily: "Syne",
-              fontStyle: "normal",
-              fontWeight: 800,
-              lineHeight: "115px",
-              textAlign: "center",
-              webkitTextStroke: "2px #FFFFFF",
-            }}
+            style={
+              isMobile
+                ? { ...styles.l3, fontSize: 32 }
+                : { ...styles.l3, fontSize: 96 }
+            }
           >
             Ambassador
           </p>
-          <div className="center" style={{
-                marginTop: "100px",
-                marginBottom: "50px",
-          }}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              class="bi bi-chevron-double-down svg"
-              viewBox="0 0 16 16"
-              style={{
-                alignSelf: "center",
-                fontWeight: "bold",
-                color:"white",
-              }}
-            >
-              <path
-                fill-rule="evenodd"
-                d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-              />
-            </svg>
-          </div>
         </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          class="bi bi-chevron-double-down svg"
+          viewBox="0 0 16 16"
+          style={{
+            alignSelf: "center",
+            fontWeight: "bold",
+            color: "white",
+            height: "50px",
+            paddingTop: "-20",
+          }}
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+          />
+        </svg>
+        <div
+          animate={{ opacity: [0.5, 1, 0.5] }}
+          style={{
+            ...styles.neon.green,
+            filter: isMobile ? "blur(150px)" : "blur(300px)",
+          }}
+        ></div>
+        <div
+          animate={{ opacity: [0.5, 1, 0.5] }}
+          style={{
+            ...styles.neon.blue,
+            filter: isMobile ? "blur(150px)" : "blur(300px)",
+          }}
+        ></div>
       </div>
     </>
   );
