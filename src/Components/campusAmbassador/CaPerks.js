@@ -23,15 +23,34 @@ const CaPerks = () => {
   const isMobile = width <= 786;
   return (
     <div class="PERKS-MAIN">
-      {!isMobile && (
-        <span style={{ ...styles.about_heading, opacity: 0.5 }}>ABOUT</span>
-      )}
-      <span style={{ ...styles.about_heading, fontSize: isMobile ? 40 : 64 }}>
-        ABOUT
-      </span>
-      {!isMobile && (
-        <span style={{ ...styles.about_heading, opacity: 0.5 }}>ABOUT</span>
-      )}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          paddingTop: 100,
+        }}
+      >
+        {!isMobile && (
+          <span style={{ ...styles.about_heading, opacity: 0.5, fontSize: 40 }}>
+            PERKS
+          </span>
+        )}
+        <span
+          style={{
+            ...styles.about_heading,
+            opacity: 0.8,
+            fontSize: isMobile ? 40 : 64,
+          }}
+        >
+          PERKS
+        </span>
+        {!isMobile && (
+          <span style={{ ...styles.about_heading, opacity: 0.5, fontSize: 40 }}>
+            PERKS
+          </span>
+        )}
+      </div>
       <div class="perks">
         <div class="cell">
           <div class="img">
