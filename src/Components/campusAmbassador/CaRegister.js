@@ -148,9 +148,6 @@ const CaRegister = () => {
           </Stack>
         </Stack>
         <Stack direction="row" justifyContent="center">
-
-          <Button sx={{ fontSize: "2rem", px: "2rem" }} variant="contained" onClick={submitHandler}>
-
           <Button sx={{ fontSize: "2rem", px: "2rem" }} onClick={submitHandler} variant="contained">
 
             SUBMIT

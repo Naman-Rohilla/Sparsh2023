@@ -96,7 +96,25 @@ export default function LogIn() {
         >
           <div className="login-container-left">
             <>
-              <CssTextField
+              <label
+                style={{
+                  color: "white",
+                  width: matches ? "80%" : "30%",
+                  marginBottom: "10px",
+                }}
+              >
+                Email
+              </label>
+              <input
+                style={{
+                  placeholderColor: "white",
+                  marginBottom: "20px",
+                  width: matches ? "80%" : "30%",
+                  color: "#65FFA3",
+                  height: "40px",
+                  outline: "none",
+                  color: "black",
+                }}
                 id="custom-css-outlined-input"
                 label="Email"
                 value={email}
@@ -104,7 +122,24 @@ export default function LogIn() {
                 type="text"
                 // autoComplete="current-password"
               />
-              <CssTextField
+              <label
+                style={{
+                  color: "white",
+                  width: matches ? "80%" : "30%",
+                  marginBottom: "10px",
+                }}
+              >
+                Password
+              </label>
+              <input
+                style={{
+                  marginBottom: "20px",
+                  width: matches ? "80%" : "30%",
+                  color: "#65FFA3",
+                  height: "40px",
+                  outline: "none",
+                  color: "black",
+                }}
                 id="custom-css-outlined-input"
                 label="Password"
                 type="password"
