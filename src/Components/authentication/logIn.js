@@ -6,15 +6,16 @@ import { AnimatePresence, motion } from "framer-motion";
 import { width } from "@mui/system";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { DotLoader } from "react-spinners";
-
+import useAuth from "../../hooks/useAuth"
 export default function LogIn() {
   const [email, setemail] = React.useState("");
   const [password, setpassword] = React.useState("");
   const [fullName, setfullName] = React.useState("");
   const [pageStatus, setpageStatus] = React.useState("login");
   const matches = useMediaQuery("(max-width: 720px)");
-  const [loading, setloading] = React.useState(true);
-
+  const [loading,setloading] = React.useState(true);
+  const { user, login, emailLogin, logout, resetPassword, token } =
+  useAuth();
   const CssTextField = styled(TextField)({
     marginBottom: "20px",
     width: matches ? "80%" : "30%",
@@ -44,11 +45,12 @@ export default function LogIn() {
     },
   });
 
-  function handleChange() {
-    console.log(email);
-    console.log(password);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    emailLogin(email,password);
     resetHandle();
-  }
+  };
+ 
 
   function resetHandle() {
     setemail("");
@@ -114,7 +116,7 @@ export default function LogIn() {
               />
             </>
 
-            <div onClick={() => handleChange()} className="sign-in-button">
+            <div onClick={handleSubmit} className="sign-in-button">
               <motion.div
                 initial={{
                   width: "0px",
