@@ -20,7 +20,6 @@ const CaRegister = () => {
   const [contact_info, setcontact_info] = useState(null);
   const [email, setemail] = useState(null);
   const [institute_name, setinstitute_name] = useState(null);
-  // const [institute_name , setinstitute_name] = useState(null);
   const [course, setcourse] = useState(null);
   const [year, setyear] = useState(null);
   const [LinkedIn, setLinkedIn] = useState(null);
@@ -28,8 +27,6 @@ const CaRegister = () => {
   const [Facebook, setFacebook] = useState(null);
   const [College_ID_card, setCollege_ID_card] = useState(null);
   const [Aadhar_card, setAadhar_card] = useState(null);
-
-
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
@@ -44,6 +41,7 @@ const CaRegister = () => {
   const isMobile = width <= 786;
 
   const submitHandler = () => {
+
 
     console.log(name, contact_info, email, institute_name, course, year, LinkedIn, instagram, Facebook, College_ID_card, Aadhar_card);
 
@@ -71,6 +69,17 @@ const CaRegister = () => {
 
 
   };
+  const handleCollegeId = (e)=>{
+    console.log(e.target.files[0]);
+    let input = e.target;
+    setCollege_ID_card(input.files[0])
+  }
+  const handleAadhar = (e)=>{
+    console.log(e.target.files[0]);
+    let input = e.target;
+    setAadhar_card(input.files[0])
+
+  }
   return (
     <ThemeProvider theme={darkTheme}>
       <Paper sx={{ pb: 5 }}>
@@ -117,7 +126,11 @@ const CaRegister = () => {
               component="label"
             >
               UPLOAD COLLEGE ID
+
+              <input type="file" hidden onChange={handleCollegeId} />
+
               <input type="file" onChange={(e) => setCollege_ID_card(e.target.value)} hidden />
+
             </Button>
 
             <Button
@@ -126,12 +139,20 @@ const CaRegister = () => {
               component="label"
             >
               UPLOAD AADHAAR
+
+              <input type="file" hidden onChange={handleAadhar} />
+
               <input type="file" onChange={(e) => setAadhar_card(e.target.value)} hidden />
+
             </Button>
           </Stack>
         </Stack>
         <Stack direction="row" justifyContent="center">
+
+          <Button sx={{ fontSize: "2rem", px: "2rem" }} variant="contained" onClick={submitHandler}>
+
           <Button sx={{ fontSize: "2rem", px: "2rem" }} onClick={submitHandler} variant="contained">
+
             SUBMIT
           </Button>
         </Stack>
