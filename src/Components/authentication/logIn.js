@@ -98,7 +98,25 @@ export default function LogIn() {
         >
           <div className="login-container-left">
             <>
-              <CssTextField
+              <label
+                style={{
+                  color: "white",
+                  width: matches ? "80%" : "30%",
+                  marginBottom: "10px",
+                }}
+              >
+                Email
+              </label>
+              <input
+                style={{
+                  placeholderColor: "white",
+                  marginBottom: "20px",
+                  width: matches ? "80%" : "30%",
+                  color: "#65FFA3",
+                  height: "40px",
+                  outline: "none",
+                  color: "black",
+                }}
                 id="custom-css-outlined-input"
                 label="Email"
                 value={email}
@@ -106,7 +124,24 @@ export default function LogIn() {
                 type="text"
                 // autoComplete="current-password"
               />
-              <CssTextField
+              <label
+                style={{
+                  color: "white",
+                  width: matches ? "80%" : "30%",
+                  marginBottom: "10px",
+                }}
+              >
+                Password
+              </label>
+              <input
+                style={{
+                  marginBottom: "20px",
+                  width: matches ? "80%" : "30%",
+                  color: "#65FFA3",
+                  height: "40px",
+                  outline: "none",
+                  color: "black",
+                }}
                 id="custom-css-outlined-input"
                 label="Password"
                 type="password"
@@ -192,6 +227,84 @@ export default function LogIn() {
                 }}
               >
                 {pageStatus == "login" ? "Sign In" : "SignUp"}
+              </motion.div>
+            </div>
+            <div onClick={login} className="sign-in-button">
+              <motion.div
+                initial={{
+                  width: "0px",
+                  opacity: 0,
+                }}
+                animate={{
+                  width: "110px",
+                  opacity: 1,
+                }}
+                transition={{
+                  duration: 1,
+                  type: "spring",
+                  stiffness: 100,
+                }}
+                style={{
+                  height: "30px",
+                  width: "100px",
+                  backgroundColor: "#16a34a",
+                  transform: "skewX(10deg)",
+                  transform: "skewY(-5deg)",
+                  position: "absolute",
+                  opacity: 0.8,
+                }}
+              ></motion.div>
+              <motion.div
+                initial={{
+                  width: "0px",
+                  opacity: 0,
+                }}
+                animate={{
+                  width: "100px",
+                  opacity: 0.7,
+                }}
+                transition={{
+                  duration: 1,
+                  delay: 0.5,
+                  type: "spring",
+                  stiffness: 100,
+                }}
+                style={{
+                  height: "30px",
+                  width: "100px",
+                  backgroundColor: "#65FFA3",
+                  zIndex: "100",
+                  opacity: 0.7,
+                  // transform: "skewX(10deg)",
+                  transform: "rotateX(90deg)",
+                  transform: "skewX(10deg)",
+                  // transform: "rotateX(-10deg)"
+                  position: "absolute",
+                }}
+              ></motion.div>
+              <motion.div
+                initial={{
+                  // width: "0px",
+                  opacity: 0,
+                }}
+                animate={{
+                  // width: "150px",
+                  opacity: 1,
+                }}
+                transition={{
+                  duration: 1,
+                  delay: 0.5,
+                  type: "spring",
+                  stiffness: 100,
+                }}
+                style={{
+                  zIndex: 100,
+                  paddingTop: "2px",
+                  fontSize: "16px",
+                  color: "black",
+                }}
+              >
+                SignIn with Google
               </motion.div>
             </div>
           </div>
