@@ -41,34 +41,32 @@ const CaRegister = () => {
   const isMobile = width <= 786;
 
   const submitHandler = () => {
-    // submit the values
+
+
     console.log(name, contact_info, email, institute_name, course, year, LinkedIn, instagram, Facebook, College_ID_card, Aadhar_card);
-    let formData = new FormData()
-    formData.append('name',name);
-    formData.append('contact_info',contact_info);
-    formData.append('email',email);
-    formData.append('institute_name',institute_name);
-    formData.append('course',course);
-    formData.append('year',year);
-    formData.append('linkedIn',LinkedIn);
-    formData.append('instagram',instagram);
-    formData.append('Facebook',Facebook);
-    formData.append('Aadhar_card',Aadhar_card);
-    formData.append('College_ID_card',College_ID_card);
+
     fetch('https://sparsh-auth-production.up.railway.app/api/campus_ambassador/register', {
       method: 'POST',
-      body: formData,
-      // headers: {
-      //   'Content-type': 'multipart/form-data',
-      // },
+      body: JSON.stringify({
+        "name": name,
+      "contact_info": contact_info,
+      "email": email,
+        "institute_name": institute_name,
+        "course": course,
+        "year": year,
+        "linkedIn": LinkedIn,
+        "instagram": instagram,
+        "Facebook": Facebook,
+      "Aadhar_card": Aadhar_card,
+      "College_ID_card": College_ID_card,
+      }),
+      headers: {
+        'Content-type': 'multipart/form-data',
+      },
     })
-    .then(res => {
-      console.log('sucess')
-    })
-    .catch(err => {
-      console.log(err)
-      window.alert('Error in submitting the form')
-    })
+    .then(res => (console.log(res)))
+    .catch(err => (console.log(err)))
+
 
   };
   const handleCollegeId = (e)=>{
@@ -128,7 +126,11 @@ const CaRegister = () => {
               component="label"
             >
               UPLOAD COLLEGE ID
+
               <input type="file" hidden onChange={handleCollegeId} />
+
+              <input type="file" onChange={(e) => setCollege_ID_card(e.target.value)} hidden />
+
             </Button>
 
             <Button
@@ -137,12 +139,20 @@ const CaRegister = () => {
               component="label"
             >
               UPLOAD AADHAAR
+
               <input type="file" hidden onChange={handleAadhar} />
+
+              <input type="file" onChange={(e) => setAadhar_card(e.target.value)} hidden />
+
             </Button>
           </Stack>
         </Stack>
         <Stack direction="row" justifyContent="center">
+
           <Button sx={{ fontSize: "2rem", px: "2rem" }} variant="contained" onClick={submitHandler}>
+
+          <Button sx={{ fontSize: "2rem", px: "2rem" }} onClick={submitHandler} variant="contained">
+
             SUBMIT
           </Button>
         </Stack>
