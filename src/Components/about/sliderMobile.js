@@ -377,7 +377,7 @@ export default function SliderMobile() {
                 position: "relative",
              
               }}
-              onClick={() => setOpen(true)}
+              // onClick={() => setOpen(true)}
             >
               {sliderArray
                 ?.filter((sA) => {
