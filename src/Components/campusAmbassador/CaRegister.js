@@ -67,22 +67,8 @@ const CaRegister = () => {
     })
     .catch(err => {
       console.log(err)
-      // window.alert('Error in submitting the form')
+      window.alert('Error in submitting the form')
     })
-
-    // setName(null);
-    // setcontact_info(null);
-    // setemail(null);
-    // setinstitute_name(null);
-    // setcourse(null);
-    // setyear(null);
-    // setLinkedIn(null);
-    // setinstagram(null);
-    // setFacebook(null);
-    // setCollege_ID_card(null);
-    // setAadhar_card(null);
-    
-
 
   };
   const handleCollegeId = (e)=>{
