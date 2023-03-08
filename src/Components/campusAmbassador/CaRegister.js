@@ -62,12 +62,13 @@ const CaRegister = () => {
     })
     .then(res => {
       console.log('sucess')
+      window.alert('Registration done')
+      window.location.reload(true);
     })
     .catch(err => {
       console.log(err)
       window.alert('Error in submitting the form')
     })
-
 
   };
   const handleCollegeId = (e)=>{
@@ -106,12 +107,12 @@ const CaRegister = () => {
             sx={{ width: isMobile ? "80%" : "30%" }}
             spacing={2}
           >
-            <TextField fullWidth id="" label="Name" onChange={(e) => setName(e.target.value)} variant="filled" />
-            <TextField id="" label="Contact Number" onChange={(e) => setcontact_info(e.target.value)} variant="filled" />
-            <TextField id="" label="E-Mail" onChange={(e) => setemail(e.target.value)} variant="filled" />
-            <TextField id="" label="Institute Name" onChange={(e) => setinstitute_name(e.target.value)} variant="filled" />
-            <TextField id="" label="Course" onChange={(e) => setcourse(e.target.value)} variant="filled" />
-            <TextField id="" label="Year of Graduation" onChange={(e) => setyear(e.target.value)} variant="filled" />
+            <TextField fullWidth id="" label="Name" onChange={(e) => setName(e.target.value)} variant="filled" required={true}/>
+            <TextField id="" label="Contact Number" onChange={(e) => setcontact_info(e.target.value)} variant="filled" required={true}/>
+            <TextField id="" label="E-Mail" onChange={(e) => setemail(e.target.value)} variant="filled" required={true}/>
+            <TextField id="" label="Institute Name" onChange={(e) => setinstitute_name(e.target.value)} variant="filled" required={true}/>
+            <TextField id="" label="Course" onChange={(e) => setcourse(e.target.value)} variant="filled" required={true}/>
+            <TextField id="" label="Year of Graduation" onChange={(e) => setyear(e.target.value)} variant="filled" required={true}/>
           </Stack>
           <Stack
             direction="column"
@@ -128,7 +129,7 @@ const CaRegister = () => {
             >
               UPLOAD COLLEGE ID
 
-              <input type="file" hidden onChange={handleCollegeId} />
+              <input type="file" hidden onChange={handleCollegeId} required={true}/>
 
 
             </Button>
@@ -140,7 +141,7 @@ const CaRegister = () => {
             >
               UPLOAD AADHAAR
 
-              <input type="file" hidden onChange={handleAadhar} />
+              <input type="file" hidden onChange={handleAadhar} required={true}/>
 
 
             </Button>
