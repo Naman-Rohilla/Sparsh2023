@@ -80,7 +80,7 @@ export default function Footer(data) {
                     textDecoration: "none",
                     color: "white",
                   }}
-                  to="https://www.sparshsvnit.in/"
+                  to="https://2022.sparshsvnit.in/"
                 >
                   Sparsh2K22
                 </Link>
