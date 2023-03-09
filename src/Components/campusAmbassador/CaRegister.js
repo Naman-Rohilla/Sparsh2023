@@ -67,7 +67,7 @@ const CaRegister = () => {
     })
     .catch(err => {
       console.log(err)
-      window.alert('Error in submitting the form')
+      window.alert('Please fill all the required fields (* marked)')
     })
 
   };
