@@ -165,6 +165,15 @@ const Sidebar = () => {
                 COORDINATORS
               </a>
             </li>
+            <li class="nav__item">
+              <a class="nav__link neon-button" href="#Co_Coordinators">
+              <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                CO-COORDINATORS
+              </a>
+            </li>
           </ul>
         </div>
       </Drawer>
