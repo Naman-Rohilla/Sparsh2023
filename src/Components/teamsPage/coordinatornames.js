@@ -4,8 +4,8 @@ const coordinator = [
     name : "Web Development",
     text : [['Dev yadav' , 'C B Sri Ranga' , 'Jaswanth reddy' , 'Pragnesh Barik'
     ,'Bhumi' , 'Saksham Gera' , 'Anubhuti' , 'Vedant Surti'],
-    [ 'Abhinav Gupta' ,'Divyashree Rao' , 'Tejo Kaushal' , 'Kris Mandanka'
-    ,'Solanki Tirth' , 'Priyanshu Parikh' , 'Abhishek Kumar' , 'Anushka Kundu']]
+    [ 'Divyashree Rao' , 'Tejo Kaushal' , 'Kris Mandanka'
+    ,'Solanki Tirth' ,'Abhinav Gupta', 'Priyanshu Parikh' , 'Abhishek Kumar' , 'Anushka Kundu']]
   },
   // {
   //   id : 1,

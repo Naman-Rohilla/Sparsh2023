@@ -52,6 +52,7 @@ import {
   CinematographyCoHeads,
 } from "./TeamMember";
 import { coordinator } from "./coordinatornames";
+import { co_coordinator } from "./co_coordinatornames";
 import { LeftArrow, RightArrow } from "./utilities";
 import Row from "./row";
 import RowC from "./rowcoordinator";
@@ -580,6 +581,12 @@ const Container = () => {
           </h1>
 
           <RowC array={coordinator} i={0} e={12} />
+
+          <h1 id="Co_Coordinators" className="heading">
+            CO-COORDINATORS
+          </h1>
+
+          <RowC array={co_coordinator} i={0} e={14} />
         </div>
       </>
     </div>
