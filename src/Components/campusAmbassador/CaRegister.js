@@ -127,7 +127,7 @@ const CaRegister = () => {
               variant="contained"
               component="label"
             >
-              UPLOAD COLLEGE ID
+              UPLOAD COLLEGE ID* (under 200kb)
 
               <input type="file" hidden onChange={handleCollegeId} required={true}/>
 
@@ -139,7 +139,7 @@ const CaRegister = () => {
               variant="contained"
               component="label"
             >
-              UPLOAD AADHAAR
+              UPLOAD AADHAAR* (under 200kb)
 
               <input type="file" hidden onChange={handleAadhar} required={true}/>
 
