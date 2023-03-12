@@ -51,7 +51,7 @@ const CaRegister = () => {
     formData.append('institute_name',institute_name);
     formData.append('course',course);
     formData.append('year',year);
-    formData.append('linkedIn',LinkedIn);
+    formData.append('LinkedIn',LinkedIn);
     formData.append('instagram',instagram);
     formData.append('Facebook',Facebook);
     formData.append('Aadhar_card',Aadhar_card);
