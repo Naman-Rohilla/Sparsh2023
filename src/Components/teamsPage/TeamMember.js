@@ -414,11 +414,10 @@ const WebCoHeads = [
   },
   {
     id: 1,
-    name: "Gundeti Sai Reddy",
-    position: "CoHead",
-    img: "images/missing",
+    name: "Pragnesh Barik",
+    position: "CoHeads",
+    img: "images/pragnesh.jpg",
     classSpecial: " profile__card cardSpecial",
-    
   },
   {
     id: 2,
@@ -517,6 +516,14 @@ const WebCoHeads = [
     position: "CoHead",
     img: "images/Web_dev_Co-head_Dhrumi.jpg",
     classSpecial: " profile__card cardSpecial",
+  },
+  {
+    id: 16,
+    name: "Gundeti Sai Reddy",
+    position: "CoHead",
+    img: "images/missing",
+    classSpecial: " profile__card cardSpecial",
+    
   },
 ];
 
