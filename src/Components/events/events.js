@@ -8,48 +8,49 @@ import Music from "./components/music/music";
 import Searchbar from "./components/SearchBar/searchbar";
 import LabTabs from "./components/tab";
 
-const Events = () => {
+const Events = (data) => {
+  console.log(data, "data")
   const Dummy_event_dance = [
     {
-      name: "navratri",
+      name: "Dance",
       date: "01-01-2001",
       shadowColor: "orange",
     },
-    {
-      name: "navratri",
-      date: "01-01-2001",
-      shadowColor: "cyan",
-    },
-    {
-      name: "navratri",
-      date: "01-01-2001",
-      shadowColor: "red",
-    },
-    {
-      name: "navratri",
-      date: "01-01-2001",
-      shadowColor: "pink",
-    },
-    {
-      name: "navratri",
-      date: "01-01-2001",
-      shadowColor: "green",
-    },
-    {
-      name: "navratri",
-      date: "01-01-2001",
-      shadowColor: "teal",
-    },
-    {
-      name: "navratri",
-      date: "01-01-2001",
-      shadowColor: "purple",
-    },
-    {
-      name: "navratri",
-      date: "01-01-2001",
-      shadowColor: "yellow",
-    },
+    // {
+    //   name: "Duet",
+    //   date: "01-01-2001",
+    //   shadowColor: "cyan",
+    // },
+    // {
+    //   name: "Group",
+    //   date: "01-01-2001",
+    //   shadowColor: "red",
+    // },
+    // {
+    //   name: "Departmental",
+    //   date: "01-01-2001",
+    //   shadowColor: "pink",
+    // },
+    // {
+    //   name: "Street Dance",
+    //   date: "01-01-2001",
+    //   shadowColor: "green",
+    // },
+    // {
+    //   name: "navratri",
+    //   date: "01-01-2001",
+    //   shadowColor: "teal",
+    // },
+    // {
+    //   name: "navratri",
+    //   date: "01-01-2001",
+    //   shadowColor: "purple",
+    // },
+    // {
+    //   name: "navratri",
+    //   date: "01-01-2001",
+    //   shadowColor: "yellow",
+    // },
   ];
 
   const Dummy_event_music = [
@@ -192,23 +193,6 @@ const Events = () => {
     <div>
       <div
         style={{
-          position: "fixed",
-          height: "100vh",
-          width: "100%",
-          background: "black",
-          zIndex: 90,
-          display: "flex",
-          justifyContent: "center",
-          fontSize: "xx-large",
-          alignItems: "center",
-          opacity: 0.95,
-          color: "white"
-        }}
-      >
-        RELEASING SOON
-      </div>
-      <div
-        style={{
           display: "flex",
           zIndex: 10,
           position: "absolute",
@@ -235,10 +219,11 @@ const Events = () => {
       </div>
       {/* <button onClick={handleClick} style={{'height': '20px', 'width':'20px'}}/> */}
       <div id="d1" style={{ paddingTop: "124px" }}>
-        <Dance events={eventsD1} styles={styles[0]} />
+        <Dance events={eventsD1} styles={styles[0]} data={data} />
       </div>
 
       <div id="d2">
+        
         <Music events={eventsD2} styles={styles[0]} />
       </div>
 

@@ -3,8 +3,7 @@ import { useEffect } from 'react';
 import Images from './images';
 
 const GComp=(props)=>{
-
-
+    // console.log(props, "propsNam")
 
     const [matches,setMatches]=useState(
         window.matchMedia("(min-width: 1075px)").matches
@@ -38,7 +37,7 @@ const GComp=(props)=>{
             
         }
         } onMouseOver={onHoverHandler} onMouseOut={oneOutHandler}>
-            <Images tag={props.styles.tag} color={props.event.shadowColor}/>
+            <Images tag={props.styles.tag} data={props.data} color={props.event.shadowColor}/>
         </div>
     )
 }

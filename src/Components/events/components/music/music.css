@@ -10,4 +10,5 @@
 .music{
     width: 100%;
     background-color: transparent;
+    position: relative;
 }

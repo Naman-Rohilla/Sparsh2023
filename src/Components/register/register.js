@@ -3,32 +3,6 @@ import "./register.css";
 export default function Register() {
   return (
     <>
-    <div
-        style={{
-          backgroundColor: "black",
-          position: "fixed",
-          width: "100%",
-          height: "100vh",
-          opacity: 0.95,
-          zIndex: 90,
-        }}
-      ></div>
-      <div
-        style={{
-          backgroundColor: "transparent",
-          position: "fixed",
-          width: "100%",
-          height: "100vh",
-          zIndex: 95,
-          color: "white",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          fontSize: "40px",
-        }}
-      >
-        RELEASING SOON
-      </div>
       <div id="main-register">
         <form name="Form" id="part-1">
           <fieldset className="fieldset">
@@ -55,7 +29,9 @@ export default function Register() {
                   <select name="" id="cat">
                     <option value="1">Single</option>
                     <option value="2">Duo</option>
-                    <option value="3">Team</option>
+                    <option value="3">Group</option>
+                    <option value="4">Departmental</option>
+                    <option value="5">Street Dance</option>
                   </select>
                 </div>
               </div>
@@ -182,7 +158,7 @@ export default function Register() {
                                     <label htmlFor="Other">Other </label> */}
                 </div>
               </div>
-              <div className="flex-2">
+              {/* <div className="flex-2">
                 <div>
                   <label htmlFor="photo">Payment proof</label>
                 </div>
@@ -190,7 +166,7 @@ export default function Register() {
                 <div>
                   <input type="file" name="photo" id="photo" className="in" />
                 </div>
-              </div>
+              </div> */}
               {/* <div className='flex-2'>
                                 <div>
                                     <label htmlFor="cid">College ID</label>
