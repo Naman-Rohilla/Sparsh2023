@@ -4,7 +4,7 @@ export default function Register() {
   return (
     <>
       <div id="main-register">
-        <form name="Form" id="part-1" method="post" action="http://localhost:5000/api/events/register">
+        <form name="Form" id="part-1" method="post" action="https://sparsh-auth-production.up.railway.app/api/events/register">
           <fieldset className="fieldset">
             <legend> Team Information </legend>
             <div className="flex-container">

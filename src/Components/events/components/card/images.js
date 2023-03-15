@@ -28,7 +28,7 @@ const Images = (props) => {
         {props.tag && (
           <div id="layer" className={isActive}>
             <div id="heading" className={isActive}>
-              KING'S NIGHT
+              FOOTLOOSE SHOWDOWN
             </div>
             <div id="line" className={isActive} />
             <div id="text" className={isActive}>
@@ -69,7 +69,7 @@ const Images = (props) => {
             style={{ backgroundColor: props.color }}
             className={isActive}
           >
-            KING'S NIGHT
+            FOOTLOOSE SHOWDOWN
           </div>
         )}
         <div id="upper" className={isActive}></div>
