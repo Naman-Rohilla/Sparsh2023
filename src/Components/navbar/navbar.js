@@ -33,7 +33,7 @@ export default function NavBar(data) {
         </div>
         <div className="right-container">
           <div className="right-container-child">
-            {data.activeUrl == "/" ? (
+            {data.activeUrl == "/" || window.location.pathname == "/" ? (
               <div className="nav-item-active">
                 <span></span>
                 <span></span>

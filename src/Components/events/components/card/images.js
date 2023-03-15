@@ -24,7 +24,7 @@ const Images = (props) => {
         id="som"
         className={isActive}
       >
-        <img id="image" src={img_1} className={isActive} />
+        <img id="image" src="./event_dance.png" className={isActive} />
         {props.tag && (
           <div id="layer" className={isActive}>
             <div id="heading" className={isActive}>
@@ -32,8 +32,8 @@ const Images = (props) => {
             </div>
             <div id="line" className={isActive} />
             <div id="text" className={isActive}>
-              Open your stylesheet (what name you have), it doesn't matter, just
-              open stylesheet and paste this code
+              Sparsh presents dancing events, a dazzling demonstration of artistic innovation with a dynamic
+              ensemble of dancers whose skillful performances will captivate you.
             </div>
 
             <div
@@ -54,7 +54,10 @@ const Images = (props) => {
               >
                 <button className="regBtn">Register</button>
               </a>
-              <a>
+              <a
+                target="_blank"
+                href="https://drive.google.com/file/d/1yTB3IGH0BivqexrEk5AvK_plqgKZ9Jhi/view"
+              >
                 <button className="RLBook">RuleBook</button>
               </a>
             </div>

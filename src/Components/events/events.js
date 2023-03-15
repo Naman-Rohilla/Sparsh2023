@@ -14,7 +14,7 @@ const Events = (data) => {
     {
       name: "Dance",
       date: "01-01-2001",
-      shadowColor: "orange",
+      shadowColor: "#db2777",
     },
     // {
     //   name: "Duet",
