@@ -221,9 +221,9 @@ const Events = (data) => {
           flexWrap: "wrap",
         }}
       >
-        <div>
+        {/* <div>
           <LabTabs onScroll={handleClick} />
-        </div>
+        </div> */}
         <div
           style={{
             height: "54px",
@@ -240,10 +240,10 @@ const Events = (data) => {
         <Dance events={eventsD1} styles={styles[0]} loading={loading} setloading={setloading} data={data} />
       </div>
 
-      <div id="d2">
+      {/* <div id="d2">
         
         <Music events={eventsD2} styles={styles[0]} />
-      </div>
+      </div> */}
 
       {/* <div id='d3'>
     <Day3   events={eventsD3} styles={styles[0]}/>

@@ -7,7 +7,7 @@ const Dance=(props)=>{
     // console.log(props.data, "props")
     return(
         <div className="dance">
-            <EventName name="dance" />
+            <EventName name="Dance" />
 
             <div className="dance_events">
             <br/>
