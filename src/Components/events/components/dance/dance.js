@@ -17,7 +17,7 @@ const Dance=(props)=>{
                     return(
 
                     <div key={event.name}>
-                    <GComp event={event} data={props.data}  styles={props.styles} />
+                    <GComp event={event} data={props.data} loading={props.loading} setloading={props.setloading}  styles={props.styles} />
                     </div>
                     )
                 })

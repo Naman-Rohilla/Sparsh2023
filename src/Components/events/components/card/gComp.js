@@ -37,7 +37,7 @@ const GComp=(props)=>{
             
         }
         } onMouseOver={onHoverHandler} onMouseOut={oneOutHandler}>
-            <Images tag={props.styles.tag} data={props.data} color={props.event.shadowColor}/>
+            <Images tag={props.styles.tag} data={props.data} loading={props.loading} setloading={props.setloading} color={props.event.shadowColor}/>
         </div>
     )
 }

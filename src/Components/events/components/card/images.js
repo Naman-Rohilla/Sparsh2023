@@ -1,13 +1,16 @@
 import img_1 from "./img2.jpg";
 import "./images.css";
 // import './borders.js';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
+
 
 const Images = (props) => {
   const [isActive, setIsActive] = useState(null);
 
+  const [count, setcount] = useState(0);
+ 
   const touchHandler = () => {
     setIsActive("active");
   };
@@ -15,16 +18,30 @@ const Images = (props) => {
   const outCursurHandler = () => {
     setIsActive(null);
   };
+  
+
+  useEffect(() => {
+    setTimeout(() => {
+      props.setloading(false);
+    }, 10000);
+  }, []);
 
   return (
     <>
+    
       <div
         onMouseOver={touchHandler}
         onMouseOut={outCursurHandler}
         id="som"
         className={isActive}
       >
-        <img id="image" src="./event_dance.png" className={isActive} />
+        <img id="image" src="./event_dance.png" onLoad={() => {
+          setcount(count + 1)
+          console.log(props.count, "Count");
+          if (props.count >= 1) {
+            props.setloading(false)
+          }
+        }} className={isActive} />
         {props.tag && (
           <div id="layer" className={isActive}>
             <div id="heading" className={isActive}>
