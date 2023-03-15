@@ -4,7 +4,7 @@ export default function Register() {
   return (
     <>
       <div id="main-register">
-        <form name="Form" id="part-1">
+        <form name="Form" id="part-1" method="post" action="http://localhost:5000/api/events/register">
           <fieldset className="fieldset">
             <legend> Team Information </legend>
             <div className="flex-container">
@@ -15,7 +15,7 @@ export default function Register() {
                 <div>
                   <input
                     type="text"
-                    name="tname"
+                    name="user[tname]"
                     placeholder="Eg. Smashers"
                     className="in"
                   />
@@ -26,7 +26,7 @@ export default function Register() {
                   <label htmlFor="cat">Category</label>
                 </div>
                 <div>
-                  <select name="" id="cat">
+                  <select name="user[category]" id="cat">
                     <option value="1">Single</option>
                     <option value="2">Duo</option>
                     <option value="3">Group</option>
@@ -42,7 +42,7 @@ export default function Register() {
                 <div>
                   <input
                     type="text"
-                    name="name"
+                    name="user[name]"
                     placeholder="Eg. Ram Verma"
                     className="in"
                   />
@@ -56,9 +56,9 @@ export default function Register() {
                 <div>
                   <input
                     type="tel"
-                    name="num"
+                    name="user[phone]"
                     placeholder="Eg. 1234567890"
-                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                    // pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                     className="in"
                   />
                 </div>
@@ -71,9 +71,9 @@ export default function Register() {
                 <div>
                   <input
                     type="tel"
-                    name="num"
+                    name="user[phonealt]"
                     placeholder="Eg. 1234567890"
-                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                    // pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                     className="in"
                   />
                 </div>
@@ -86,7 +86,7 @@ export default function Register() {
                 <div>
                   <input
                     type="text"
-                    name="mail"
+                    name="user[email]"
                     placeholder="Eg. u20cs004@coed.svnit.ac.in"
                     className="in"
                   />
@@ -100,7 +100,7 @@ export default function Register() {
                 <div>
                   <input
                     type="text"
-                    name="iname"
+                    name="user[institute]"
                     placeholder="Eg. SVNIT"
                     className="in"
                   />
@@ -121,7 +121,7 @@ export default function Register() {
                 </div>
 
                 <div>
-                  <select name="year">
+                  <select name="user[year]">
                     <option value="1">I</option>
                     <option value="2">II</option>
                     <option value="3">III</option>
@@ -138,7 +138,7 @@ export default function Register() {
                 <div>
                   <input
                     type="radio"
-                    name="gender"
+                    name="user[gender]"
                     id="Male"
                     value="Male"
                     className="in"
@@ -147,7 +147,7 @@ export default function Register() {
 
                   <input
                     type="radio"
-                    name="gender"
+                    name="user[gender]"
                     id="Female"
                     value="Female"
                     className="in"
@@ -201,6 +201,7 @@ export default function Register() {
             </div>
           </div>
           <div className="button">
+            <input type="hidden" value="dancing" name="event[name]" />
             <input type="submit" value="Submit" />
             <input type="reset" value="Reset" />
           </div>
