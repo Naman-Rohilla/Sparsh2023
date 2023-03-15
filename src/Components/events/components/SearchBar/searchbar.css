@@ -2,6 +2,7 @@
   
   .search-box {
     position: absolute;
+    /* right: 0; */
     background: black;
     height: 44px;
     width: 44px;
@@ -11,7 +12,7 @@
     /* padding: 10px; */
     /* transition: all 0.4s; */
     transition-duration: 0.5s;
-    right: 22%;
+    right: 20px;
     animation:led 10s linear infinite;
   }
 

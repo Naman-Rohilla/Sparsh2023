@@ -87,7 +87,18 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/events" element={<EventsPage />} />
+        <Route
+          path="/events"
+          element={
+            <EventsPage
+              activeUrl={activeUrl}
+              setactiveUrl={setactiveUrl}
+              startOnce={startOnce}
+              loading={loading}
+              setloading={setloading}
+            />
+          }
+        />
         <Route path="/register" element={<Register />} />
         <Route path="/CampusAmbassador" element={<Ca />} />
         <Route path="/teams" element={<TeamPage />} />

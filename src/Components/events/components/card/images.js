@@ -45,7 +45,13 @@ const Images = (props) => {
                 width: "100%",
               }}
             >
-              <a>
+              <a
+                href="/register"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  props.data.data.setactiveUrl("/register");
+                }}
+              >
                 <button className="regBtn">Register</button>
               </a>
               <a>
