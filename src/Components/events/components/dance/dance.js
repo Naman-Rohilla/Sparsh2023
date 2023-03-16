@@ -7,7 +7,7 @@ const Dance=(props)=>{
     // console.log(props.data, "props")
     return(
         <div className="dance">
-            <EventName name="dance" />
+            <EventName name="Dance" />
 
             <div className="dance_events">
             <br/>
@@ -17,7 +17,7 @@ const Dance=(props)=>{
                     return(
 
                     <div key={event.name}>
-                    <GComp event={event} data={props.data}  styles={props.styles} />
+                    <GComp event={event} data={props.data} loading={props.loading} setloading={props.setloading}  styles={props.styles} />
                     </div>
                     )
                 })

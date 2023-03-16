@@ -7,14 +7,16 @@ import Dance from "./components/dance/dance";
 import Music from "./components/music/music";
 import Searchbar from "./components/SearchBar/searchbar";
 import LabTabs from "./components/tab";
+import { DotLoader } from "react-spinners";
 
 const Events = (data) => {
+  const [loading, setloading] = useState(true);
   console.log(data, "data")
   const Dummy_event_dance = [
     {
       name: "Dance",
       date: "01-01-2001",
-      shadowColor: "orange",
+      shadowColor: "#db2777",
     },
     // {
     //   name: "Duet",
@@ -191,6 +193,22 @@ const Events = (data) => {
 
   return (
     <div>
+      {loading && (
+        <div
+          style={{
+            backgroundColor: "black",
+            height: "100%",
+            position: "fixed",
+            width: "100%",
+            zIndex: 200,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <DotLoader color="white" />
+        </div>
+      )}
       <div
         style={{
           display: "flex",
@@ -203,9 +221,9 @@ const Events = (data) => {
           flexWrap: "wrap",
         }}
       >
-        <div>
+        {/* <div>
           <LabTabs onScroll={handleClick} />
-        </div>
+        </div> */}
         <div
           style={{
             height: "54px",
@@ -219,13 +237,13 @@ const Events = (data) => {
       </div>
       {/* <button onClick={handleClick} style={{'height': '20px', 'width':'20px'}}/> */}
       <div id="d1" style={{ paddingTop: "124px" }}>
-        <Dance events={eventsD1} styles={styles[0]} data={data} />
+        <Dance events={eventsD1} styles={styles[0]} loading={loading} setloading={setloading} data={data} />
       </div>
 
-      <div id="d2">
+      {/* <div id="d2">
         
         <Music events={eventsD2} styles={styles[0]} />
-      </div>
+      </div> */}
 
       {/* <div id='d3'>
     <Day3   events={eventsD3} styles={styles[0]}/>

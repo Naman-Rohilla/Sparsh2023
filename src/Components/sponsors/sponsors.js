@@ -285,7 +285,7 @@ export default function Sponsors() {
         {matches ? (
           <></>
         ) : (
-          <a href={sparshPdf} download="sparsh" className="download-button">
+          <a target="_blank" href={sparshPdf} download="sparsh" className="download-button">
             <div className="download-button-left">Bouchure</div>
             <div className="download-button-right">
               <SouthIcon

@@ -1,13 +1,16 @@
 import img_1 from "./img2.jpg";
 import "./images.css";
 // import './borders.js';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
+
 
 const Images = (props) => {
   const [isActive, setIsActive] = useState(null);
 
+  const [count, setcount] = useState(0);
+ 
   const touchHandler = () => {
     setIsActive("active");
   };
@@ -15,25 +18,39 @@ const Images = (props) => {
   const outCursurHandler = () => {
     setIsActive(null);
   };
+  
+
+  useEffect(() => {
+    setTimeout(() => {
+      props.setloading(false);
+    }, 10000);
+  }, []);
 
   return (
     <>
+    
       <div
         onMouseOver={touchHandler}
         onMouseOut={outCursurHandler}
         id="som"
         className={isActive}
       >
-        <img id="image" src={img_1} className={isActive} />
+        <img id="image" src="./event_dance.png" onLoad={() => {
+          setcount(count + 1)
+          console.log(props.count, "Count");
+          if (props.count >= 1) {
+            props.setloading(false)
+          }
+        }} className={isActive} />
         {props.tag && (
           <div id="layer" className={isActive}>
             <div id="heading" className={isActive}>
-              KING'S NIGHT
+              FOOTLOOSE SHOWDOWN
             </div>
             <div id="line" className={isActive} />
             <div id="text" className={isActive}>
-              Open your stylesheet (what name you have), it doesn't matter, just
-              open stylesheet and paste this code
+              Sparsh presents dancing events, a dazzling demonstration of artistic innovation with a dynamic
+              ensemble of dancers whose skillful performances will captivate you.
             </div>
 
             <div
@@ -54,7 +71,10 @@ const Images = (props) => {
               >
                 <button className="regBtn">Register</button>
               </a>
-              <a>
+              <a
+                target="_blank"
+                href="https://drive.google.com/file/d/1yTB3IGH0BivqexrEk5AvK_plqgKZ9Jhi/view"
+              >
                 <button className="RLBook">RuleBook</button>
               </a>
             </div>
@@ -66,7 +86,7 @@ const Images = (props) => {
             style={{ backgroundColor: props.color }}
             className={isActive}
           >
-            KING'S NIGHT
+            FOOTLOOSE SHOWDOWN
           </div>
         )}
         <div id="upper" className={isActive}></div>
