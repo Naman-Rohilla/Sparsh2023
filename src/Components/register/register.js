@@ -29,13 +29,17 @@ export default function Register() {
         body: JSON.stringify({user,event})
       })
       .then(res => {
-        console.log(res);
-        window.alert('Registration done');
+        console.log(res.body.getReader());
+        if(res.status=='201') {
+          window.alert('Registration done');
+        } else {
+          window.alert('Some error occured')
+        }
         // window.location.reload(true);
       })
       .catch(err => {
         console.log(err)
-        window.alert('Please fill all the required fields')
+        window.alert('Some error occured')
       })
     } else {
       window.alert('Please fill all the required fields')
