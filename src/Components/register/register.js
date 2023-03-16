@@ -1,10 +1,54 @@
+import { useState } from "react";
 import "./register.css";
 
 export default function Register() {
+  const [tname, setTname] = useState("");
+  const [name, setName] = useState("");
+  const [category, setCategory] = useState("1");
+  const [year, setYear] = useState("1");
+  const [phone, setPhone] = useState("");
+  const [phonealt, setPhonealt] = useState("")
+  const [email, setEmail] = useState("");
+  const [institute, setInstitute] = useState("");
+  const [gender, setGender] = useState("");
+
+
+  const handleSubmit = async (evt) => {
+    evt.preventDefault();
+    console.log({tname,name,category,year,phone,phonealt,email,institute,gender})
+
+    if(tname && name && category && year && phone && phonealt && email && institute && gender) {
+      let user = {tname,name,category,year,phone,phonealt,email,institute,gender};
+      let event = {name: 'dancing'}
+      console.log({user,event})
+      fetch('https://sparsh-auth-production.up.railway.app/api/events/register', {
+        headers: {
+          'Content-Type':'application/json'
+        },
+        method: 'POST',
+        body: JSON.stringify({user,event})
+      })
+      .then(res => {
+        console.log(res.body.getReader());
+        if(res.status=='201') {
+          window.alert('Registration done');
+        } else {
+          window.alert('Some error occured')
+        }
+        // window.location.reload(true);
+      })
+      .catch(err => {
+        console.log(err)
+        window.alert('Some error occured')
+      })
+    } else {
+      window.alert('Please fill all the required fields')
+    }
+  }
   return (
     <>
       <div id="main-register">
-        <form name="Form" id="part-1" method="post" action="https://sparsh-auth-production.up.railway.app/api/events/register">
+        <form name="Form" id="part-1" method="post" onSubmit={handleSubmit}>
           <fieldset className="fieldset">
             <legend> Team Information </legend>
             <div className="flex-container">
@@ -16,6 +60,7 @@ export default function Register() {
                   <input
                     type="text"
                     name="user[tname]"
+                    onChange={(e) => setTname(e.target.value)}
                     placeholder="Eg. Smashers"
                     className="in"
                   />
@@ -26,7 +71,7 @@ export default function Register() {
                   <label htmlFor="cat">Category</label>
                 </div>
                 <div>
-                  <select name="user[category]" id="cat">
+                  <select name="user[category]" onChange={(e) => setCategory(e.target.value)} value={category} id="cat">
                     <option value="1">Single</option>
                     <option value="2">Duo</option>
                     <option value="3">Group</option>
@@ -43,6 +88,7 @@ export default function Register() {
                   <input
                     type="text"
                     name="user[name]"
+                    onChange={(e) => setName(e.target.value)}
                     placeholder="Eg. Ram Verma"
                     className="in"
                   />
@@ -57,6 +103,7 @@ export default function Register() {
                   <input
                     type="tel"
                     name="user[phone]"
+                    onChange={(e) => setPhone(e.target.value)}
                     placeholder="Eg. 1234567890"
                     // pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                     className="in"
@@ -72,6 +119,7 @@ export default function Register() {
                   <input
                     type="tel"
                     name="user[phonealt]"
+                    onChange={(e) => setPhonealt(e.target.value)}
                     placeholder="Eg. 1234567890"
                     // pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                     className="in"
@@ -87,6 +135,7 @@ export default function Register() {
                   <input
                     type="text"
                     name="user[email]"
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="Eg. u20cs004@coed.svnit.ac.in"
                     className="in"
                   />
@@ -101,6 +150,7 @@ export default function Register() {
                   <input
                     type="text"
                     name="user[institute]"
+                    onChange={(e) => setInstitute(e.target.value)}
                     placeholder="Eg. SVNIT"
                     className="in"
                   />
@@ -121,7 +171,7 @@ export default function Register() {
                 </div>
 
                 <div>
-                  <select name="user[year]">
+                  <select name="user[year]" onChange={(e) => setYear(e.target.value)}>
                     <option value="1">I</option>
                     <option value="2">II</option>
                     <option value="3">III</option>
@@ -139,6 +189,7 @@ export default function Register() {
                   <input
                     type="radio"
                     name="user[gender]"
+                    onChange={(e) => setGender(e.target.value)}
                     id="Male"
                     value="Male"
                     className="in"
@@ -148,6 +199,7 @@ export default function Register() {
                   <input
                     type="radio"
                     name="user[gender]"
+                    onChange={(e) => setGender(e.target.value)}
                     id="Female"
                     value="Female"
                     className="in"
