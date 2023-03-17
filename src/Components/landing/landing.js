@@ -190,7 +190,7 @@ export default function Landing(data) {
                     style={{
                       textDecoration: "none",
                     }}
-                    to="/register"
+                    to="/events"
                   >
                     <button
                       onClick={() => {
