@@ -230,11 +230,11 @@ const Events = (data) => {
       </div>
       {/* <button onClick={handleClick} style={{'height': '20px', 'width':'20px'}}/> */}
       <div id="d1" style={{ paddingTop: "150px" }}  >
-        <Dance events={eventsD1} styles={styles[0]} loading={loading} setloading={setloading} data={data} />
+        <Dance events={eventsD1} styles={styles[0]} loading={loading} setloading={setloading} data={data} type="dance" />
        
       </div>
       <div id="d2" style={{ paddingTop: "150px" }} >
-      <Music events={eventsD2} styles={styles[0]} loading={loading} setloading={setloading} data={data}/>
+      <Music events={eventsD2} styles={styles[0]} loading={loading} setloading={setloading} data={data} type="music" />
       </div>
 
       {/* <div id="d2">

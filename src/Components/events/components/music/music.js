@@ -31,7 +31,7 @@ const Music = (props) => {
           console.log(event.name);
           return (
             <div key={event.name}>
-              <GComp event={event} data={props.data} loading={props.loading} setloading={props.setloading}  styles={props.styles} />
+              <GComp event={event} data={props.data} loading={props.loading} setloading={props.setloading}  styles={props.styles} type={props.type} />
             </div>
           );
         })}

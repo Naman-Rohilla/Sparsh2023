@@ -1,5 +1,13 @@
 import { useState } from "react";
 import "./register.css";
+import {
+  BrowserRouter as Router,
+  generatePath,
+  Switch,
+  Route,
+  useHistory,
+  useParams
+} from "react-router-dom";
 
 export default function Register() {
   const [tname, setTname] = useState("");
@@ -12,14 +20,14 @@ export default function Register() {
   const [institute, setInstitute] = useState("");
   const [gender, setGender] = useState("");
 
-
   const handleSubmit = async (evt) => {
     evt.preventDefault();
+    
     console.log({tname,name,category,year,phone,phonealt,email,institute,gender})
 
     if(tname && name && category && year && phone && phonealt && email && institute && gender) {
       let user = {tname,name,category,year,phone,phonealt,email,institute,gender};
-      let event = {name: 'dancing'}
+      let event = {name: window.location.href.split("=")[1]}
       console.log({user,event})
       fetch('https://sparsh-auth-production.up.railway.app/api/events/register', {
         headers: {
@@ -261,7 +269,7 @@ export default function Register() {
         <div id="part-2">
           <img
             className="poster"
-            src="./event_dance.png"
+            src={window.location.href.split("=")[2]}
             alt="Sample"
           />
         </div>

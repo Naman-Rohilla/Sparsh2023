@@ -10,6 +10,8 @@ const Images = (props) => {
   const [isActive, setIsActive] = useState(null);
 
   const [count, setcount] = useState(0);
+
+  console.log(props, "pp")
  
   const touchHandler = () => {
     setIsActive("active");
@@ -64,7 +66,7 @@ const Images = (props) => {
               }}
             >
               <a
-                href="/register"
+                href={`/register?id=${props.type}=${props.event.img}`}
                 onClick={() => {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                   props.data.data.setactiveUrl("/register");
