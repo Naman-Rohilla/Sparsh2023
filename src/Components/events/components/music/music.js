@@ -6,7 +6,7 @@ import "./music.css";
 const Music = (props) => {
   return (
     <div className="music">
-      <div
+      {/* <div
         style={{
           position: "absolute",
           height: "100%",
@@ -22,8 +22,8 @@ const Music = (props) => {
         }}
       >
         RELEASING SOON
-      </div>
-      <EventName name="music" />
+      </div> */}
+      <EventName name="Music" />
 
       <div className="music_events">
         <br />
@@ -31,7 +31,7 @@ const Music = (props) => {
           console.log(event.name);
           return (
             <div key={event.name}>
-              <GComp event={event} styles={props.styles} />
+              <GComp event={event} data={props.data} loading={props.loading} setloading={props.setloading}  styles={props.styles} />
             </div>
           );
         })}

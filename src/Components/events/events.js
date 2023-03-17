@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Dance from "./components/dance/dance";
 // import Day2 from "./components/day2.js/day2"
 // import Day3 from "./components/day3.js/day3"
@@ -8,15 +8,21 @@ import Music from "./components/music/music";
 import Searchbar from "./components/SearchBar/searchbar";
 import LabTabs from "./components/tab";
 import { DotLoader } from "react-spinners";
+import { debounce } from "@mui/material";
+// import img_1 from "./img2.jpg";
+// import img_2 from "./Vocal_voyage.jpg"
 
 const Events = (data) => {
   const [loading, setloading] = useState(true);
   console.log(data, "data")
   const Dummy_event_dance = [
     {
-      name: "Dance",
+      name: "FOOTLOOSE SLOWDOWN",
       date: "01-01-2001",
       shadowColor: "#db2777",
+      disc:"Sparsh presents dancing events, a dazzling demonstration of artistic innovation with a dynamic ensemble of dancers whose skillful performances will captivate you.",
+      img:"/event_dance.png",
+      ruleBook:"https://drive.google.com/file/d/1yTB3IGH0BivqexrEk5AvK_plqgKZ9Jhi/view",
     },
     // {
     //   name: "Duet",
@@ -57,30 +63,14 @@ const Events = (data) => {
 
   const Dummy_event_music = [
     {
-      name: "navratri",
+      name: "VOCAL VOYAGE",
       date: "01-01-2001",
-      shadowColor: "rgb(236,222,110)",
+      shadowColor: "rgb(101 222 165)",
+      disc:`With every verse,We unfold the story. Sparsh 2K23, presents "Soloist Wizards",the solo singing competition Where the lyrics guide us, the rhytym inspires us, Where we might uncover chroniclers among us`,
+      img:"./Vocal_voyage.png",
+      ruleBook:"https://drive.google.com/file/d/1yTB3IGH0BivqexrEk5AvK_plqgKZ9Jhi/view",
     },
-    {
-      name: "navratri",
-      date: "01-01-2001",
-      shadowColor: "orange",
-    },
-    {
-      name: "navratri",
-      date: "01-01-2001",
-      shadowColor: "orange",
-    },
-    {
-      name: "navratri",
-      date: "01-01-2001",
-      shadowColor: "orange",
-    },
-    {
-      name: "navratri",
-      date: "01-01-2001",
-      shadowColor: "orange",
-    },
+    
   ];
 
   const Dummy_event_day3 = [
@@ -156,7 +146,7 @@ const Events = (data) => {
 
   const styles = [
     {
-      height: "263px",
+      height: "293px",
       width: "283px",
       margin: "20px 20px",
       margin2: "20px 20px",
@@ -179,17 +169,19 @@ const Events = (data) => {
     // console.log(value);
 
     setEventsD1(
-      Dummy_event_dance.filter((event) => event.name.includes(value))
+      Dummy_event_dance.filter((event) => event.name.toLowerCase().includes(value.toLowerCase()))
     );
 
     setEventsD2(
-      Dummy_event_music.filter((event) => event.name.includes(value))
+      Dummy_event_music.filter((event) => event.name.toLowerCase().includes(value.toLowerCase()))
     );
 
-    setEventsD3(Dummy_event_day3.filter((event) => event.name.includes(value)));
+    setEventsD3(Dummy_event_day3.filter((event) => event.name.toLowerCase().includes(value.toLowerCase())));
 
-    setEventsD4(Dummy_event_day4.filter((event) => event.name.includes(value)));
+    setEventsD4(Dummy_event_day4.filter((event) => event.name.toLowerCase().includes(value.toLowerCase())));
   };
+
+   
 
   return (
     <div>
@@ -219,14 +211,15 @@ const Events = (data) => {
           width: "100%",
           alignItems: "centre",
           flexWrap: "wrap",
+          position:'fixed',
         }}
       >
-        {/* <div>
+        <div>
           <LabTabs onScroll={handleClick} />
-        </div> */}
+        </div>
         <div
           style={{
-            height: "54px",
+            height: "62px",
             width: "400px",
             display: "flex",
             alignItems: "center",
@@ -236,8 +229,12 @@ const Events = (data) => {
         </div>
       </div>
       {/* <button onClick={handleClick} style={{'height': '20px', 'width':'20px'}}/> */}
-      <div id="d1" style={{ paddingTop: "124px" }}>
+      <div id="d1" style={{ paddingTop: "150px" }}  >
         <Dance events={eventsD1} styles={styles[0]} loading={loading} setloading={setloading} data={data} />
+       
+      </div>
+      <div id="d2" style={{ paddingTop: "150px" }} >
+      <Music events={eventsD2} styles={styles[0]} loading={loading} setloading={setloading} data={data}/>
       </div>
 
       {/* <div id="d2">

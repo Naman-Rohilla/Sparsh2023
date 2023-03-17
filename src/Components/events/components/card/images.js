@@ -1,10 +1,10 @@
-import img_1 from "./img2.jpg";
+
 import "./images.css";
 // import './borders.js';
 import { useEffect, useState } from "react";
 // import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
-
+// import image from './Vocal_voyage.jpg'
 
 const Images = (props) => {
   const [isActive, setIsActive] = useState(null);
@@ -35,7 +35,7 @@ const Images = (props) => {
         id="som"
         className={isActive}
       >
-        <img id="image" src="./event_dance.png" onLoad={() => {
+        <img id="image" src={props.event.img} onLoad={() => {
           setcount(count + 1)
           console.log(props.count, "Count");
           if (props.count >= 1) {
@@ -45,12 +45,12 @@ const Images = (props) => {
         {props.tag && (
           <div id="layer" className={isActive}>
             <div id="heading" className={isActive}>
-              FOOTLOOSE SHOWDOWN
+              {props.event.name}
             </div>
             <div id="line" className={isActive} />
             <div id="text" className={isActive}>
-              Sparsh presents dancing events, a dazzling demonstration of artistic innovation with a dynamic
-              ensemble of dancers whose skillful performances will captivate you.
+              {props.event.disc}
+              
             </div>
 
             <div
@@ -60,6 +60,7 @@ const Images = (props) => {
                 height: "20px",
                 justifyContent: "center",
                 width: "100%",
+                bottom:"40px"
               }}
             >
               <a
@@ -73,14 +74,14 @@ const Images = (props) => {
               </a>
               <a
                 target="_blank"
-                href="https://drive.google.com/file/d/1yTB3IGH0BivqexrEk5AvK_plqgKZ9Jhi/view"
+                href={props.event.ruleBook}
               >
                 <button className="RLBook">RuleBook</button>
               </a>
             </div>
           </div>
         )}
-        {props.tag && (
+        {/* {props.tag && (
           <div
             id="namePlate"
             style={{ backgroundColor: props.color }}
@@ -88,7 +89,7 @@ const Images = (props) => {
           >
             FOOTLOOSE SHOWDOWN
           </div>
-        )}
+        )} */}
         <div id="upper" className={isActive}></div>
         <div id="midl">
           <div id="left" className={isActive}></div>

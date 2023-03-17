@@ -73,8 +73,8 @@ export default function LabTabs(props) {
         >
           <Tab label="Dance" {...a11yProps(0)} onClick={()=>props.onScroll('d1')}/>
           <Tab label="Music" {...a11yProps(1)} onClick={()=>props.onScroll('d2')}/>
-          <Tab label="Day 3" {...a11yProps(2)} onClick={()=>props.onScroll('d3')}/>
-          <Tab label="Day 4" {...a11yProps(1)} onClick={()=>props.onScroll('d4')}/>
+          {/* <Tab label="Day 3" {...a11yProps(2)} onClick={()=>props.onScroll('d3')}/>
+          <Tab label="Day 4" {...a11yProps(1)} onClick={()=>props.onScroll('d4')}/> */}
         </Tabs>
       </AppBar>
       

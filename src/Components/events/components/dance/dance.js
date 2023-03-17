@@ -5,6 +5,8 @@ import './dance.css'
 
 const Dance=(props)=>{
     // console.log(props.data, "props")
+
+    
     return(
         <div className="dance">
             <EventName name="Dance" />

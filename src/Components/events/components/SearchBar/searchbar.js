@@ -30,7 +30,7 @@ const Searchbar=(props)=>{
     //     />
 
         <div class="search-box">
-  <input class="search-input" type="text" name="" placeholder="Pesquise" onChange={(e) => props.onSearchHandler(e.target.value)}/>
+  <input class="search-input" type="text" name="" placeholder="Event Name" onChange={(e) => props.onSearchHandler(e.target.value)}/>
   <a href="#" class="search-btn">
     <SearchIcon/>
   </a>     
