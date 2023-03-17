@@ -190,12 +190,13 @@ export default function Landing(data) {
                     style={{
                       textDecoration: "none",
                     }}
+                    onClick={() => {
+                      data.data.setactiveUrl("/events");
+                    }}
                     to="/events"
                   >
                     <button
-                      onClick={() => {
-                        data.data.setactiveUrl("/register");
-                      }}
+                      
                       class="custom-btn btn-3"
                     >
                       <span>Register for Event</span>
