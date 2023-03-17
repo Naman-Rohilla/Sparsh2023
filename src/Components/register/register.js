@@ -56,7 +56,8 @@ export default function Register() {
   return (
     <>
       <div id="main-register">
-        <form name="Form" id="part-1" method="post" onSubmit={handleSubmit}>
+        {window.location.href.split("=")[1] == "dance" || window.location.href.split("=")[1] == "music" ? (
+          <><form name="Form" id="part-1" method="post" onSubmit={handleSubmit}>
           <fieldset className="fieldset">
             <legend> Team Information </legend>
             <div className="flex-container">
@@ -272,7 +273,22 @@ export default function Register() {
             src={window.location.href.split("=")[2]}
             alt="Sample"
           />
-        </div>
+        </div></>
+        ) : (
+          <div style={{
+            display: "flex",
+            height: "100vh",
+            width: "100vw",
+            zIndex: 100,
+            position: "fixed",
+            background: "black",
+            justifyContent: "center",
+            alignItems: "center",
+          }}>
+            Error 404
+          </div>
+        ) }
+        
       </div>
     </>
   );

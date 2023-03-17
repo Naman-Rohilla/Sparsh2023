@@ -68,8 +68,9 @@ const Images = (props) => {
               <a
                 href={`/register?id=${props.type}=${props.event.img}`}
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  
                   props.data.data.setactiveUrl("/register");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
                 <button className="regBtn">Register</button>
