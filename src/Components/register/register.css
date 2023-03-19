@@ -110,6 +110,11 @@ select {
     display: flex;
 }
 
+.button input:hover {
+    background-color: #006bad;
+    color: white;    
+}
+
 .button input {
     width: 15vw;
     color: #adcee8;
