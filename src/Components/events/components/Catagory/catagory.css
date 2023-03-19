@@ -1,4 +1,4 @@
-.day4_events{
+.catagory_events{
     width: 90%;
     display: flex;
     flex-wrap: wrap;
@@ -7,7 +7,7 @@
     margin-left: 5%;
 }
 
-.day4{
+.catagory{
     width: 100%;
     background-color: transparent;
 }

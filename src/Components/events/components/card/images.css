@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Karla&family=Nunito+Sans:ital,wght@1,200&family=Permanent+Marker&family=Quicksand:wght@300&family=Raleway&display=swap');
 #som {
     width: 100%;
     height: 100%;
@@ -96,7 +97,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 10% 10%;
+    padding: 4% 10%;
     font-family:  'Quicksand', sans-serif;
     font-Size: 14px;
 }
@@ -110,104 +111,38 @@
 }
 
 .regBtn{
-    width: 91px;
-    margin-right: 13px;
-    color: white;
+    width: 111px;
+    margin-right: 0px;
+
     background: black;
-    box-shadow: 0px 0px 3px 1px #626262;
     padding: 0px 0px;
-    height: 35px
+    height: 35px;
+    margin: 11px 18px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+  
+    FONT-WEIGHT: 100;
+    box-shadow: 0px 0px 0px 1px #35b788;
+    color: cyan;
+    font-family: 'Karla', sans-serif;
 }
 
 .RLBook{
-    height: 20px;
-    width: 91px;
-    margin-left: 40px;
-    color: white;
+    width: 120px;
+    margin-left: 0px;
     background: black;
-    box-shadow: 0px 0px 3px 1px #626262;
+    
     padding: 0px 0px;
-    height: 35px
+    height: 27px;
+    border: none;
+    border-radius: 5px 5px 0px 0px;
+   
+    font-family:  'Quicksand', sans-serif;
 }
 
-/* #midl {
+.rgbtns{
     display: flex;
-    height: 95px;
-}
-
-#upper {
-    left: 0;
-    top: 0;
-    position: absolute;
-    width: 0px;
-    height: 0px;
-    background-color: blue;
-    transition: all 0.1s;
-
-}
-
-#upper.active {
     width: 100%;
-    height: 0px;
-    box-shadow: rgb(94 211 207) 0px -4px 9px 1px;
+    justify-content: center;
+
 }
-
-#lower {
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    background-color: blue;
-    width: 0px;
-    height: 0px;
-    transition: all 0.1s;
-    transition-delay: 0.2s;
-}
-
-#lower.active {
-    width: 100%;
-    height: 0px;
-     box-shadow: rgb(94 211 207) 0px 4px 9px 1px;
-}
-
-#left {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: blue;
-    width: 0px;
-    height: 0px;
-    transition: all 0.1s;
-    transition-delay: 0.3s;
-}
-
-#left.active {
-    width: 0px;
-    height: 100%;
-    box-shadow: rgb(94 211 207) -4px 0px 9px 1px;
-}
-
-#right {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: blue;
-    width: 0px;
-    height: 0px;
-    transition: all 0.1s;
-    transition-delay: 0.1s;
-}
-
-#right.active {
-
-    width: 0px;
-    height: 100%;
-    box-shadow: rgb(94 211 207) 4px 0px 9px 1px;
-} */
-
-
-
-
-
-/* #som:hover .text {
-    display: none;
-} */

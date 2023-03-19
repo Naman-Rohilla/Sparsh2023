@@ -37,10 +37,12 @@ export default function Register() {
         body: JSON.stringify({user,event})
       })
       .then(res => {
+        console.log(res, "res");
         console.log(res.body.getReader());
         if(res.status=='201') {
           window.alert('Registration done');
         } else {
+          console.log(res);
           window.alert('Some error occured')
         }
         // window.location.reload(true);

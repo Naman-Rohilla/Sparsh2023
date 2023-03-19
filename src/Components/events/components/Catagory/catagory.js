@@ -1,17 +1,17 @@
-import Card from "../Card"
+
 import GComp from "../card/gComp"
 import EventName from "../eventName"
-import './dance.css'
+import './catagory.css'
 
-const Dance=(props)=>{
+const Catagory=(props)=>{
     // console.log(props.data, "props")
 
     
     return(
-        <div className="dance">
-            <EventName name="Dance" />
+        <div className="catagory">
+            <EventName name={props.eventCatagory} />
 
-            <div className="dance_events">
+            <div className="catagory_events">
             <br/>
             {
                 props.events.map(event=>{
@@ -19,7 +19,7 @@ const Dance=(props)=>{
                     return(
 
                     <div key={event.name}>
-                    <GComp event={event} data={props.data} loading={props.loading} setloading={props.setloading}  styles={props.styles} type={props.type} />
+                    <GComp event={event} data={props.data} loading={props.loading} setloading={props.setloading}  styles={props.styles} />
                     </div>
                     )
                 })
@@ -31,4 +31,4 @@ const Dance=(props)=>{
     )
 }
 
-export default Dance
+export default Catagory

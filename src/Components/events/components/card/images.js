@@ -4,14 +4,13 @@ import "./images.css";
 import { useEffect, useState } from "react";
 // import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import RLBook from "../rlBoookBtn";
 // import image from './Vocal_voyage.jpg'
 
 const Images = (props) => {
   const [isActive, setIsActive] = useState(null);
 
   const [count, setcount] = useState(0);
-
-  console.log(props, "pp")
  
   const touchHandler = () => {
     setIsActive("active");
@@ -58,47 +57,50 @@ const Images = (props) => {
             <div
               style={{
                 position: "absolute",
-                display: "flex",
-                height: "20px",
-                justifyContent: "center",
+                display:"flex",
                 width: "100%",
-                bottom:"40px"
+                bottom:"0px",
+                flexDirection:"column",
+                justifyContent:"center",
+                alignItems:"center"
               }}
             >
+              <div className="rgbtns">
               <a
-                href={`/register?id=${props.type}=${props.event.img}`}
+                href={props.event.regSvnit}
                 onClick={() => {
-                  
-                  props.data.data.setactiveUrl("/register");
                   window.scrollTo({ top: 0, behavior: "smooth" });
+                  props.data.data.setactiveUrl("/register");
                 }}
               >
-                <button className="regBtn">Register</button>
+                <button style={{color:props.event.shadowColor, boxShadow:`0px 0px 0px 1px ${props.event.shadowColor}`}} class="regBtn" id="rgSvnit" role="button">Register Svnitian</button>
+ 
               </a>
+
+              <a
+                href={props.event.regNSvnit}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  props.data.data.setactiveUrl("/register");
+                }}
+              >
+                <button style={{color:props.event.shadowColor, boxShadow:`0px 0px 0px 1px ${props.event.shadowColor}`}} class="regBtn" id="rgnSvnit" role="button">Register Outsider</button>
+                
+              </a>
+
+              </div>
+
+
               <a
                 target="_blank"
                 href={props.event.ruleBook}
               >
-                <button className="RLBook">RuleBook</button>
+                <button style={{color:props.event.shadowColor, boxShadow:`0px 0px 4px 1px ${props.event.shadowColor}` }} class="RLBook" id="rgnSvnit" role="button">ROOLBOOK</button>
               </a>
             </div>
           </div>
         )}
-        {/* {props.tag && (
-          <div
-            id="namePlate"
-            style={{ backgroundColor: props.color }}
-            className={isActive}
-          >
-            FOOTLOOSE SHOWDOWN
-          </div>
-        )} */}
-        <div id="upper" className={isActive}></div>
-        <div id="midl">
-          <div id="left" className={isActive}></div>
-          <div id="right" className={isActive}></div>
-        </div>
-        <div id="lower" className={isActive}></div>
+        
       </div>
     </>
   );
