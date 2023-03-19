@@ -110,7 +110,7 @@ select {
     display: flex;
 }
 
-.button:hover {
+.button input:hover {
     background-color: #006bad;
     color: white;    
 }
