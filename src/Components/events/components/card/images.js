@@ -65,10 +65,7 @@ const Images = (props) => {
               <div className="rgbtns">
                 <a
                   href={props.event.regSvnit}
-                  onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                    props.data.data.setactiveUrl("/register");
-                  }}
+                  target="_blank"
                 >
                   <button
                     style={{
@@ -85,10 +82,7 @@ const Images = (props) => {
 
                 <a
                   href={props.event.regNSvnit}
-                  onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                    props.data.data.setactiveUrl("/register");
-                  }}
+                  target="_blank"
                 >
                   <button
                     style={{
@@ -108,7 +102,8 @@ const Images = (props) => {
                 <button
                   style={{
                     color: props.event.shadowColor,
-                    boxShadow: `0px 0px 4px 1px ${props.event.shadowColor}`,
+                    boxShadow: `0px 0px 0px 1px ${props.event.shadowColor}`,
+                    marginBottom: "10px",
                   }}
                   class="RLBook"
                   id="rgnSvnit"

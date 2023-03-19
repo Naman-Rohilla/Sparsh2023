@@ -77,7 +77,7 @@ const Events = (data) => {
       name: "The Fantacy Fiesta",
       date: "01-01-2001",
       shadowColor: "orange",
-      disc:`Discover the Rich Tapestry of Culture Through cultural walk🕺and Transform yourself into a hero, a villain, or something in between with the power of cosplay!" And don't forget, we're also searching for the best Mr. and Mrs. Sparsh 👑 👑`,
+      disc:`Discover the Rich Tapestry of Culture Through cultural walk🕺and Transform yourself into a hero, a villain, or something in between with the power of cosplay!" And don't forget, we're also searching for the best Mr. and Mrs. Sparsh 👑`,
       img:"./fashion_fiesta.png",
       ruleBook:"https://drive.google.com/file/d/1zYkBtlE7qhBPNw2HhZh1OJoPj6PD2X3_/view",
       regSvnit:"https://forms.gle/zKenzaeaCcTxXGBh9",
@@ -118,8 +118,7 @@ const Events = (data) => {
       name: "The Fantacy Fiesta",
       date: "01-01-2001",
       shadowColor: "orange",
-      disc:`Discover the Rich Tapestry of Culture Through cultural walk🕺and Transform yourself into a hero, a villain, or something in between with the power of cosplay!" And don't forget, we're also searching for the best Mr. and Mrs. Sparsh 👑 👑
-      `,
+      disc:`Discover the Rich Tapestry of Culture Through cultural walk🕺and Transform yourself into a hero, a villain, or something in between with the power of cosplay!" And don't forget, we're also searching for the best Mr. and Mrs. Sparsh 👑 👑`,
       img:"./fashion_fiesta.png",
       ruleBook:"https://drive.google.com/file/d/1zYkBtlE7qhBPNw2HhZh1OJoPj6PD2X3_/view",
       regSvnit:"https://forms.gle/zKenzaeaCcTxXGBh9",
