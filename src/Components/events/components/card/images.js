@@ -109,7 +109,7 @@ const Images = (props) => {
                   id="rgnSvnit"
                   role="button"
                 >
-                  ROOLBOOK
+                  RULEBOOK
                 </button>
               </a>
             </div>

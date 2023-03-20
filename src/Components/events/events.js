@@ -65,7 +65,7 @@ const Events = (data) => {
       shadowColor: "rgb(101 222 165)",
       disc:`With every verse,We unfold the story. Sparsh 2K23, presents "Soloist Wizards",the solo singing competition Where the lyrics guide us, the rhytym inspires us, Where we might uncover chroniclers among us`,
       img:"./Vocal_voyage.png",
-      ruleBook:"https://drive.google.com/file/d/1yTB3IGH0BivqexrEk5AvK_plqgKZ9Jhi/view",
+      ruleBook:"https://drive.google.com/file/d/1yWas1ioNcJoOI_1VJT73s488XOfSCXm2/view?usp=drivesdk",
       regSvnit:" https://forms.gle/6eL1sNezv6q1BF8n9",
       regNSvnit:"https://forms.gle/k6JsFDVzr5x4PJvs6"
     },
