@@ -29,6 +29,7 @@ function EventsAdmin() {
   const id = process.env.REACT_APP_ID;
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(e.target.event_name.value, "target");
     let data_event = {
       color: color,
       description: desc,
@@ -55,8 +56,11 @@ function EventsAdmin() {
     // console.log(data, "data")
     setStatus(true);
     const res = await axios.post(
-      `https://effervescent-tanuki-6b3512.netlify.app/events-admin`,
+      `https://sparsh-auth-production.up.railway.app/api/events-admin/add-events`,
       data_event,
+      {
+        headers: { "content-type": "multipart/form-data" },
+      }
     );
     setStatus(false);
     window.alert(res.data.message);
