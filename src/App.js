@@ -16,6 +16,7 @@ import TeamPage from "./pages/teamPage";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Analytics } from "@vercel/analytics/react";
+import EventsAdmin_ from "./pages/admin";
 // import Parallax from "./Components/intro/Components/Parallax";
 
 function App() {
@@ -85,6 +86,8 @@ function App() {
           }
         />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/admin" element={<EventsAdmin_  />} />
+        
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/sign-in" element={<SignIn />} />
         <Route
