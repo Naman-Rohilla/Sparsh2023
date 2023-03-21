@@ -69,6 +69,26 @@ const Events = (data) => {
       regSvnit:" https://forms.gle/6eL1sNezv6q1BF8n9",
       regNSvnit:"https://forms.gle/k6JsFDVzr5x4PJvs6"
     },
+    {
+      name: "SOUND SMACKDOWN",
+      date: "01-01-2001",
+      shadowColor: "rgb(101 222 165)",
+      disc:`⚡Get ready  for a musical mashup like no other!!! Unleash your inner  music 🎶 warrior at the ultimate showdown of  sound 🔊!!Its time to turn up the volume and let the music take over and DJs shine ⭐✨!..`,
+      img:"./Sound_smakeDown.png",
+      ruleBook:"https://drive.google.com/file/d/132z_AqMu9xAT_uK5jSDj13jp6aXCSVGc/view?usp=drivesdk",
+      regSvnit:" https://forms.gle/mFwKejpDZbD9qNBN7",
+      regNSvnit:"https://forms.gle/BrTUeWvqKqskrPTJ7 "
+    },
+    {
+      name: "METALLIC MAYHEM",
+      date: "01-01-2001",
+      shadowColor: "rgb(101 222 165)",
+      disc:`🤟✨Get ready to make some unforgettable memories!!✨Unleash your inner  music 🎶 warrior at the ultimate showdown of  sound 🔊!!The beats are about to drop From classical rock 🤘 to modern pop , ..`,
+      img:"./Metallic_Mayhem.png",
+      ruleBook:"https://drive.google.com/file/d/13BghGvtseIMw71C59TogCq2ZNWAu47xW/view?usp=drivesdk ",
+      regSvnit:"https://forms.gle/opxfUpQAYtu6GJ6z9 ",
+      regNSvnit:"https://forms.gle/5ffa7JeU2b81ZWAt9"
+    },
     
   ];
   
