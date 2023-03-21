@@ -42,22 +42,22 @@ function EventsAdmin() {
       image: img,
     };
     console.log({ data_event });
-    // const data = new FormData();
-    // // http: //localhost:3000/admin?id=sparsh2k23=[20]?pd=lquska191$%*12#
-    // data.append("name", e.target?.event_name.value);
-    // data.append("description", e.target?.event_desc.value);
-    // data.append("date", e.target?.event_date.value);
-    // data.append("image", e.target?.event_image.files[0]);
-    // data.append("rulebook", e.target?.event_rulebook.value);
-    // data.append("color", e.target?.color.value);
-    // data.append("categories", e.target?.categories.value);
-    // data.append("googleFormSvnitian", e.target?.categories.value);
-    // data.append("googleFormNonSvnitian", e.target?.participants.value);
-    // console.log(data, "data")
+    const data = new FormData();
+    // http: //localhost:3000/admin?id=sparsh2k23=[20]?pd=lquska191$%*12#
+    data.append("name", event_name);
+    data.append("description", desc);
+    data.append("date", date);
+    data.append("image", img);
+    data.append("rulebook", rulebook);
+    data.append("color", color);
+    data.append("categories", event_type);
+    data.append("googleFormSvnitian", googleformsvnitian);
+    data.append("googleFormNonSvnitian", googleFormNonSvnitian);
+    console.log(data, "data");
     setStatus(true);
     const res = await axios.post(
       `https://sparsh-auth-production.up.railway.app/api/events-admin/add-events`,
-      data_event,
+      data,
       {
         headers: { "content-type": "multipart/form-data" },
       }
@@ -65,7 +65,6 @@ function EventsAdmin() {
     setStatus(false);
     window.alert(res.data.message);
   };
-
   return (
     <>
       {window.location.href.split("=")[1] === String(id) &&
