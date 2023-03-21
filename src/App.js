@@ -89,7 +89,7 @@ function App() {
         <Route path="/admin" element={<EventsAdmin_  />} />
         
         <Route path="/sponsors" element={<Sponsors />} />
-        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/news" element={<SignIn />} />
         <Route
           path="/events"
           element={

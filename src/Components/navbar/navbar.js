@@ -154,25 +154,25 @@ export default function NavBar(data) {
                 Teams
               </Link>
             )}
-            {data.activeUrl == "/sign-in" ? (
+            {data.activeUrl == "/news" ? (
               <div className="nav-item-active">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
-                Sign In
+                News
               </div>
             ) : (
               <Link
-                onClick={() => data.setactiveUrl("/sign-in")}
-                to="/sign-in"
+                onClick={() => data.setactiveUrl("/news")}
+                to="/news"
                 className="nav-item"
               >
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
-                Sign In
+                News
               </Link>
             )}
           </div>
@@ -341,7 +341,7 @@ export default function NavBar(data) {
                     Sponsors
                   </Link>
                 )}
-                {data.activeUrl == "/sign-in" ? (
+                {data.activeUrl == "/news" ? (
                   <div className="nav-item-active">
                     {" "}
                     <AccountBalanceIcon
@@ -349,15 +349,15 @@ export default function NavBar(data) {
                         paddingRight: "10px",
                       }}
                     />
-                    Sign In
+                    News
                   </div>
                 ) : (
                   <Link
                     onClick={() => {
                       setState(false);
-                      data.setactiveUrl("/sign-in");
+                      data.setactiveUrl("/news");
                     }}
-                    to="/sign-in"
+                    to="/news"
                     className="nav-item"
                   >
                     <PersonIcon
@@ -365,7 +365,7 @@ export default function NavBar(data) {
                         paddingRight: "10px",
                       }}
                     />
-                    Sign In
+                    News
                   </Link>
                 )}
               </div>

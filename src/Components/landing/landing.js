@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 import { display } from "@mui/system";
 import PlayArrowOutlinedIcon from "@mui/icons-material/PlayArrowOutlined";
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, m } from "framer-motion";
 import Slider from "../about/slider";
 import SliderMobile from "../about/sliderMobile";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -43,7 +43,7 @@ const sliderArray1 = [
 
 export default function Landing(data) {
   const [sliderIndex1, setsliderIndex1] = React.useState(0);
-  
+  const [items, setitems] = React.useState([]);
 
   console.log(data, "date");
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
@@ -75,6 +75,30 @@ export default function Landing(data) {
     }
   };
   const mainRef = React.useRef(null);
+
+  React.useEffect(() => {
+    fetch("https://sparsh-auth-production.up.railway.app/api/news-api/get-news")
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          // setIsLoaded(true);
+          result = result?.data?.reverse()
+          setitems(result);
+          console.log(result.data[0]);
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          // setIsLoaded(true);
+          // setError(error);
+        }
+      );
+  }, []);
+
+  console.log(items, "items");
+  let text =
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry";
 
   React.useEffect(() => {
     setTimeout(() => {
@@ -120,7 +144,7 @@ export default function Landing(data) {
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
               class="bi bi-chevron-double-down svg"
-              viewBox="0 0 16 16"
+              // viewBox="0 0 20 20"
               onClick={() => {
                 window.scrollTo({
                   top: mainRef.current.offsetTop,
@@ -142,6 +166,30 @@ export default function Landing(data) {
           </div>
           <Parallax startOnce={data.data.startOnce} />
           <div ref={mainRef} id="main-landing">
+            <Link
+              className="news-container"
+              onClick={() => data.data.setactiveUrl("/news")}
+              to="/news"
+            >
+              <img src={items[0]?.imageURL} className="news-img"></img>
+              <span
+                style={{
+                  fontSize: "20px",
+                  color: "#14532d",
+                }}
+              >
+                {items[0]?.title}
+              </span>
+              <span
+                style={{
+                  fontSize: "12px",
+                  textAlign: "center",
+                  color: "black",
+                }}
+              >
+                {items[0]?.content?.substring(0, 80)}
+              </span>
+            </Link>
             <div
               style={{
                 position: "absolute",
@@ -157,7 +205,6 @@ export default function Landing(data) {
                 style={{
                   objectFit: "cover",
                 }}
-                
                 height="100%"
                 width="100%"
               ></img>
@@ -195,10 +242,7 @@ export default function Landing(data) {
                     }}
                     to="/events"
                   >
-                    <button
-                      
-                      class="custom-btn btn-3"
-                    >
+                    <button class="custom-btn btn-3">
                       <span>Register for Event</span>
                     </button>
                   </Link>
