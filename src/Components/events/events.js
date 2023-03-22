@@ -106,32 +106,18 @@ const Events = (data) => {
     
   ];
 
-  const Dummy_event_day4 = [
+  const Dummy_event_Drama = [
     {
-      name: "navratri",
-      date: "01-01-2001",
-      shadowColor: "rgb(236,222,110)",
-    },
-    {
-      name: "navratri",
+      name: "Abhinay Junction",
       date: "01-01-2001",
       shadowColor: "orange",
+      disc:`Brace yourself for a theatrical extravaganza like never before!🤩 The streets will come alive with Nukkad Natak🤯 and Mime while the Stage Play sets the scene for a breathtaking performance. 💃Get ready to be swept away by the drama! ⚡`,
+      img:"./abhinay_junction.png",
+      ruleBook:"https://drive.google.com/file/d/17W8rfJeSRh9iSs39bWGigqfn_3F6n1Pr/view?usp=drivesdk",
+      regSvnit:"https://forms.gle/5eVamvLCnzYybLwz5",
+      regNSvnit:"https://forms.gle/5eVamvLCnzYybLwz5"
     },
-    {
-      name: "navratri",
-      date: "01-01-2001",
-      shadowColor: "orange",
-    },
-    {
-      name: "navratri",
-      date: "01-01-2001",
-      shadowColor: "orange",
-    },
-    {
-      name: "navratri",
-      date: "01-01-2001",
-      shadowColor: "orange",
-    },
+    
   ];
   const Dummy_event_day5 = [
     {
@@ -160,7 +146,7 @@ const Events = (data) => {
   const [eventsD1, setEventsD1] = useState(Dummy_event_dance);
   const [eventsD2, setEventsD2] = useState(Dummy_event_music);
   const [eventsD3, setEventsD3] = useState(Dummy_event_Fashion_LifeStyle);
-  const [eventsD4, setEventsD4] = useState(Dummy_event_day4);
+  const [eventsD4, setEventsD4] = useState(Dummy_event_Drama);
   const [eventsD5, setEventsD5] = useState(Dummy_event_day5);
 
   const ref = useRef(null);
@@ -182,7 +168,7 @@ const Events = (data) => {
 
     setEventsD3(Dummy_event_Fashion_LifeStyle.filter((event) => event.name.toLowerCase().includes(value.toLowerCase())));
 
-    setEventsD4(Dummy_event_day4.filter((event) => event.name.toLowerCase().includes(value.toLowerCase())));
+    setEventsD4(Dummy_event_Drama.filter((event) => event.name.toLowerCase().includes(value.toLowerCase())));
   };
 
 
@@ -251,7 +237,9 @@ const Events = (data) => {
       <Catagory eventCatagory="Fashion&Lifystyle" events={eventsD3} styles={styles[0]} loading={loading} setloading={setloading} data={data}/>
       </div>
 
-      
+      <div id="d4" style={{ paddingTop: "150px" }} >
+      <Catagory eventCatagory="Drama" events={eventsD4} styles={styles[0]} loading={loading} setloading={setloading} data={data}/>
+      </div>
 
     
     </div>
