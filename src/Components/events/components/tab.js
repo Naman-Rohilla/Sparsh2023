@@ -71,10 +71,10 @@ export default function LabTabs(props) {
         style={{ color: 'white'}}
         TabIndicatorProps={{style: {background:'linear-gradient(220.94deg, #3D80FF 20%, #903BF5 50%)'}}}
         >
-          <Tab label="Dance" {...a11yProps(0)} onClick={()=>props.onScroll('d1')}/>
-          <Tab label="Music" {...a11yProps(0)} onClick={()=>props.onScroll('d2')}/>
-          <Tab label="Fashion" {...a11yProps(0)} onClick={()=>props.onScroll('d3')}/>
           <Tab label="Drama" {...a11yProps(0)} onClick={()=>props.onScroll('d4')}/>
+          <Tab label="Fashion" {...a11yProps(0)} onClick={()=>props.onScroll('d3')}/>
+          <Tab label="Music" {...a11yProps(0)} onClick={()=>props.onScroll('d2')}/>
+          <Tab label="Dance" {...a11yProps(0)} onClick={()=>props.onScroll('d1')}/>
         </Tabs>
       </AppBar>
       
