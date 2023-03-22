@@ -3,8 +3,14 @@
     width: 500px;
     height: fit-content;
     animation: something 5s linear infinite;
-    /* overflow:scroll; */
+    overflow:scroll;
     height: 50px;
+}
+
+.parent{
+   height: 50px;
+    width:500px;
+    overflow: hidden;
 }
 
 @keyframes something {
