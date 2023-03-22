@@ -166,7 +166,7 @@ export default function Landing(data) {
           </div>
           <Parallax startOnce={data.data.startOnce} />
           <div ref={mainRef} id="main-landing">
-            <Link
+            {/* <Link
               className="news-container"
               onClick={() => data.data.setactiveUrl("/news")}
               to="/news"
@@ -189,7 +189,7 @@ export default function Landing(data) {
               >
                 {items[0]?.content?.substring(0, 80)}
               </span>
-            </Link>
+            </Link> */}
             <div
               style={{
                 position: "absolute",
