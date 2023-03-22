@@ -58,7 +58,7 @@ export default function LabTabs(props) {
 
   return (
     <div className="tabsBorder">
-    <Box style={{backgroundColor:'black'}} sx={{ backgroundColor:'black', width: 400 }}>
+    <Box style={{backgroundColor:'black'}} sx={{ backgroundColor:'black', width: 500 }}>
       <AppBar position="static" style={{backgroundColor: 'transparent'}}>
         <Tabs
           
