@@ -3,6 +3,7 @@
     width: 400px;
     height: fit-content;
     animation: something 5s linear infinite;
+    overflow:scroll;
 }
 
 @keyframes something {
