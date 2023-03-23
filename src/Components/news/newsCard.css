@@ -26,9 +26,15 @@
   margin-bottom: 20px;
 }
 
-.heading {
-  font-weight: bold;
-  font-size: 2rem;
+.heading-news {
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #064e3b;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  
 }
 
 .text {

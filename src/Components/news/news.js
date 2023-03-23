@@ -12,12 +12,25 @@ const News = () => {
   // this useEffect will run once
   // similar to componentDidMount()
   useEffect(() => {
-    fetch("https://sparsh-auth-production.up.railway.app/api/news-api/get-news")
+    fetch(
+      "https://sparsh-auth-production-5f74.up.railway.app/api/news-api/get-news"
+    )
       .then((res) => res.json())
       .then(
         (result) => {
           setIsLoaded(true);
-          result = result?.data?.reverse()
+          var flags = [],
+            output = [],
+            l = result?.data?.length,
+            i;
+          for (i = 0; i < l; i++) {
+            if (flags[result?.data[i]?.title]) continue;
+            flags[result?.data[i]?.title] = true;
+            output.push(result?.data[i]);
+          }
+          console.log(output, "output");
+          result = output;
+          console.log(result)
           setItems(result);
           console.log(result);
           console.log(result.data[0]);

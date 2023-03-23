@@ -77,12 +77,24 @@ export default function Landing(data) {
   const mainRef = React.useRef(null);
 
   React.useEffect(() => {
-    fetch("https://sparsh-auth-production.up.railway.app/api/news-api/get-news")
+    fetch(
+      "https://sparsh-auth-production-5f74.up.railway.app/api/news-api/get-news"
+    )
       .then((res) => res.json())
       .then(
         (result) => {
           // setIsLoaded(true);
-          result = result?.data?.reverse()
+          var flags = [],
+            output = [],
+            l = result?.data?.length,
+            i;
+          for (i = 0; i < l; i++) {
+            if (flags[result?.data[i]?.title]) continue;
+            flags[result?.data[i]?.title] = true;
+            output.push(result?.data[i]);
+          }
+          console.log(output, "output");
+          result = output;
           setitems(result);
           console.log(result.data[0]);
         },
@@ -166,30 +178,61 @@ export default function Landing(data) {
           </div>
           <Parallax startOnce={data.data.startOnce} />
           <div ref={mainRef} id="main-landing">
-            {/* <Link
+            <Link
               className="news-container"
-              onClick={() => data.data.setactiveUrl("/news")}
-              to="/news"
+              onClick={() => data.data.setactiveUrl("/events")}
+              to="/events"
             >
-              <img src={items[0]?.imageURL} className="news-img"></img>
-              <span
-                style={{
-                  fontSize: "20px",
-                  color: "#14532d",
-                }}
-              >
-                {items[0]?.title}
-              </span>
-              <span
-                style={{
-                  fontSize: "12px",
-                  textAlign: "center",
-                  color: "black",
-                }}
-              >
-                {items[0]?.content?.substring(0, 80)}
-              </span>
-            </Link> */}
+              {items
+                ?.filter((items, index) => {
+                  if (index < 2) {
+                    return items;
+                  }
+                })
+                ?.map((items, ind) => (
+                  <motion.div
+                    initial="hidden"
+                    variants={{
+                      hidden: {
+                        default: "easeIn",
+                        width: 0,
+                        opacity: 0,
+                      },
+                      visible: {
+                        default: "easeIn",
+                        width: 300,
+                        opacity: 1,
+                      },
+                    }}
+                    transition={{
+                      duration: 0.5,
+                    }}
+                    whileInView="visible"
+                    className="news-container-chlid"
+                  >
+                    <img src={items?.imageURL} className="news-img"></img>
+                    <span
+                      style={{
+                        fontSize: "20px",
+                        color: "#14532d",
+                        fontWeight: 700,
+                      }}
+                    >
+                      {items?.title}
+                    </span>
+                    <span
+                      style={{
+                        fontSize: "12px",
+                        textAlign: "center",
+                        color: "black",
+                        fontWeight: 490,
+                      }}
+                    >
+                      {items?.content?.substring(0, 80)}
+                    </span>
+                  </motion.div>
+                ))}
+            </Link>
             <div
               style={{
                 position: "absolute",
