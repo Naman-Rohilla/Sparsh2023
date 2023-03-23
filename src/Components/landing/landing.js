@@ -210,24 +210,12 @@ export default function Landing(data) {
                     whileInView="visible"
                     className="news-container-chlid"
                   >
-                    <img src={items?.imageURL} className="news-img"></img>
-                    <span
-                      style={{
-                        fontSize: "20px",
-                        color: "#14532d",
-                        fontWeight: 700,
-                      }}
-                    >
-                      {items?.title}
-                    </span>
-                    <span
-                      style={{
-                        fontSize: "12px",
-                        textAlign: "center",
-                        color: "black",
-                        fontWeight: 490,
-                      }}
-                    >
+                    <img style={{
+                      opacity: 0.4,
+                      zIndex: 1,
+                    }} src={items?.imageURL} className="news-img"></img>
+                    <span className="news-container-title">{items?.title}</span>
+                    <span className="news-container-content">
                       {items?.content?.substring(0, 80)}
                     </span>
                   </motion.div>
