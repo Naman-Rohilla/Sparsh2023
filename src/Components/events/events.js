@@ -293,7 +293,6 @@ const Events = (data) => {
           data={data}
         />
       </div>
- </div>
       <div id="d5" style={{ paddingTop: "150px" }}>
         <Catagory
           eventCatagory="Dance"
