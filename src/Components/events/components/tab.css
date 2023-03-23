@@ -1,17 +1,27 @@
 .tabsBorder{
     /* box-shadow:0px 0px 3px 1px rgb(228, 30, 30); */
-    width: 400px;
+    width: 600px;
     height: fit-content;
-    
-    overflow: scroll;
+    animation: something 5s linear infinite;
+    /* overflow:scroll; */
+    height: 50px;
+    /* margin-bottom: 10px; */
 }
 
-.parent{
-    height: 48px;
-    /* border: 2px solid white; */
-    width: 383px;
-    overflow: hidden;
-    animation: something 5s linear infinite;
+.tabsBorder .tabs {
+    font-size: 11px;
+}
+
+@media screen and (max-width: 720px) {
+    .tabsBorder{
+        /* box-shadow:0px 0px 3px 1px rgb(228, 30, 30); */
+        display: none;
+        /* margin-bottom: 10px; */
+    }
+
+    /* .tabsBorder .tabs {
+        font-size: 2px;
+    } */
 }
 
 @keyframes something {

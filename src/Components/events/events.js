@@ -8,17 +8,17 @@ import { debounce } from "@mui/material";
 const Events = (data) => {
   const [loading, setloading] = useState(true);
   console.log(data, "data");
-  const Dummy_event_dance = [
+  const Dummy_speaking_art = [
     {
-      name: "FOOTLOOSE SLOWDOWN",
+      name: "WORD WISELY",
       date: "01-01-2001",
-      shadowColor: "#db2777",
-      disc: "Sparsh presents dancing events, a dazzling demonstration of artistic innovation with a dynamic ensemble of dancers whose skillful performances will captivate you.",
-      img: "/event_dance.png",
+      shadowColor: "rgb(42, 194, 208)",
+      disc: `We're calling all writers,poets, artists and lovers of literature to come together and show your talent..in our OPEN MIC event..🎙🎤✨And if music is your thing🎶💃🏻Bring your instruments,Your Voice,Your Passion and...`,
+      img: "./Word_wisely.jpg",
       ruleBook:
-        "https://drive.google.com/file/d/1yTB3IGH0BivqexrEk5AvK_plqgKZ9Jhi/view",
-      regSvnit: "https://forms.gle/frZAV81RP4m5vQTe8",
-      regNSvnit: "https://forms.gle/kTchdQfc6dVihHLB6",
+        "",
+      regSvnit: "https://forms.gle/zTRCBrbjfg6g954s7",
+      regNSvnit: "https://forms.gle/VzngbKZTntN4Y6LaA",
     },
     // {
     //   name: "Duet",
@@ -59,16 +59,17 @@ const Events = (data) => {
 
   const Dummy_event_music = [
     {
-      name: "WORD WISELY",
+      name: "FOOTLOOSE SLOWDOWN",
       date: "01-01-2001",
-      shadowColor: "rgb(42, 194, 208)",
-      disc: `We're calling all writers,poets, artists and lovers of literature to come together and show your talent..in our OPEN MIC event..🎙🎤✨And if music is your thing🎶💃🏻Bring your instruments,Your Voice,Your Passion and...`,
-      img: "./Word_wisely.png",
+      shadowColor: "#db2777",
+      disc: "Sparsh presents dancing events, a dazzling demonstration of artistic innovation with a dynamic ensemble of dancers whose skillful performances will captivate you.",
+      img: "/event_dance.png",
       ruleBook:
-        "",
-      regSvnit: "https://forms.gle/zTRCBrbjfg6g954s7",
-      regNSvnit: "https://forms.gle/zTRCBrbjfg6g954s7",
+        "https://drive.google.com/file/d/1yTB3IGH0BivqexrEk5AvK_plqgKZ9Jhi/view",
+      regSvnit: "https://forms.gle/frZAV81RP4m5vQTe8",
+      regNSvnit: "https://forms.gle/kTchdQfc6dVihHLB6",
     },
+   
     {
       name: "VOCAL VOYAGE",
       date: "01-01-2001",
@@ -137,11 +138,11 @@ const Events = (data) => {
       date: "01-01-2001",
       shadowColor: "orange",
       disc: `Step into a world of imagination and inspiration with our art 🎨 category events!! From intricate rangoli designs to bold temporary tattoos, there's something for everyone in our art category lineup. Come explore the beauty of rangoli...`,
-      img: "./art_of_color.png",
+      img: "./art_of_color.jpg",
       ruleBook:
         "",
       regSvnit: "https://forms.gle/9oUyYzPUip84NkSP7",
-      regNSvnit: "https://forms.gle/9oUyYzPUip84NkSP7",
+      regNSvnit: "https://forms.gle/fYdGQkhDLk15JdzJ9",
     },
   ];
 
@@ -155,7 +156,7 @@ const Events = (data) => {
     },
   ];
 
-  const [eventsD1, setEventsD1] = useState(Dummy_event_dance);
+  const [eventsD1, setEventsD1] = useState(Dummy_speaking_art);
   const [eventsD2, setEventsD2] = useState(Dummy_event_music);
   const [eventsD3, setEventsD3] = useState(Dummy_event_Fashion_LifeStyle);
   const [eventsD4, setEventsD4] = useState(Dummy_event_Drama);
@@ -171,7 +172,7 @@ const Events = (data) => {
     // console.log(value);
 
     setEventsD1(
-      Dummy_event_dance.filter((event) =>
+      Dummy_speaking_art.filter((event) =>
         event.name.toLowerCase().includes(value.toLowerCase())
       )
     );
@@ -253,6 +254,16 @@ const Events = (data) => {
         </div>
       </div>
       {/* <button onClick={handleClick} style={{'height': '20px', 'width':'20px'}}/> */}
+      <div id="d5" style={{ paddingTop: "150px" }}>
+        <Catagory
+          eventCatagory="Art of Color"
+          events={eventsD5}
+          styles={styles[0]}
+          loading={loading}
+          setloading={setloading}
+          data={data}
+        />
+      </div>
       <div id="d4" style={{ paddingTop: "150px" }}>
         <Catagory
           eventCatagory="Drama"
@@ -275,7 +286,7 @@ const Events = (data) => {
       </div>
       <div id="d2" style={{ paddingTop: "150px" }}>
         <Catagory
-          eventCatagory="Music"
+          eventCatagory="Singing/Dancing"
           events={eventsD2}
           styles={styles[0]}
           loading={loading}
@@ -285,18 +296,8 @@ const Events = (data) => {
       </div>
       <div id="d1" style={{ paddingTop: "150px" }}>
         <Catagory
-          eventCatagory="Dance"
+          eventCatagory="Speaking Art"
           events={eventsD1}
-          styles={styles[0]}
-          loading={loading}
-          setloading={setloading}
-          data={data}
-        />
-      </div>
-      <div id="d5" style={{ paddingTop: "150px" }}>
-        <Catagory
-          eventCatagory="Dance"
-          events={eventsD5}
           styles={styles[0]}
           loading={loading}
           setloading={setloading}
