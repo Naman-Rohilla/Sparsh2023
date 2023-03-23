@@ -59,6 +59,17 @@ const Events = (data) => {
 
   const Dummy_event_music = [
     {
+      name: "WORD WISELY",
+      date: "01-01-2001",
+      shadowColor: "rgb(42, 194, 208)",
+      disc: `We're calling all writers,poets, artists and lovers of literature to come together and show your talent..in our OPEN MIC event..🎙🎤✨And if music is your thing🎶💃🏻Bring your instruments,Your Voice,Your Passion and...`,
+      img: "./Word_wisely.png",
+      ruleBook:
+        "",
+      regSvnit: "https://forms.gle/zTRCBrbjfg6g954s7",
+      regNSvnit: "https://forms.gle/zTRCBrbjfg6g954s7",
+    },
+    {
       name: "VOCAL VOYAGE",
       date: "01-01-2001",
       shadowColor: "rgb(101 222 165)",
@@ -111,7 +122,7 @@ const Events = (data) => {
     {
       name: "Abhinay Junction",
       date: "01-01-2001",
-      shadowColor: "orange",
+      shadowColor: "rgb(42, 194, 208)",
       disc: `Brace yourself for a theatrical extravaganza like never before!🤩 The streets will come alive with Nukkad Natak🤯 and Mime while the Stage Play sets the scene for a breathtaking performance. 💃Get ready to be swept away by the drama! ⚡`,
       img: "./abhinay_junction.jpg",
       ruleBook:
@@ -120,17 +131,17 @@ const Events = (data) => {
       regNSvnit: "https://forms.gle/5eVamvLCnzYybLwz5",
     },
   ];
-  const Dummy_event_day5 = [
+  const Dummy_event_Art_of_color = [
     {
-      name: "The Fantacy Fiesta",
+      name: "The Art of Colour",
       date: "01-01-2001",
       shadowColor: "orange",
-      disc: `Discover the Rich Tapestry of Culture Through cultural walk🕺and Transform yourself into a hero, a villain, or something in between with the power of cosplay!" And don't forget, we're also searching for the best Mr. and Mrs. Sparsh 👑 👑`,
-      img: "./fashion_fiesta.png",
+      disc: `Step into a world of imagination and inspiration with our art 🎨 category events!! From intricate rangoli designs to bold temporary tattoos, there's something for everyone in our art category lineup. Come explore the beauty of rangoli...`,
+      img: "./art_of_color.png",
       ruleBook:
-        "https://drive.google.com/file/d/1zYkBtlE7qhBPNw2HhZh1OJoPj6PD2X3_/view",
-      regSvnit: "https://forms.gle/zKenzaeaCcTxXGBh9",
-      regNSvnit: "https://forms.gle/gcdK4nsZpsgK7oDk9",
+        "",
+      regSvnit: "https://forms.gle/9oUyYzPUip84NkSP7",
+      regNSvnit: "https://forms.gle/9oUyYzPUip84NkSP7",
     },
   ];
 
@@ -148,7 +159,7 @@ const Events = (data) => {
   const [eventsD2, setEventsD2] = useState(Dummy_event_music);
   const [eventsD3, setEventsD3] = useState(Dummy_event_Fashion_LifeStyle);
   const [eventsD4, setEventsD4] = useState(Dummy_event_Drama);
-  const [eventsD5, setEventsD5] = useState(Dummy_event_day5);
+  const [eventsD5, setEventsD5] = useState(Dummy_event_Art_of_color);
 
   const ref = useRef(null);
 
@@ -178,6 +189,12 @@ const Events = (data) => {
     );
 
     setEventsD4(
+      Dummy_event_Drama.filter((event) =>
+        event.name.toLowerCase().includes(value.toLowerCase())
+      )
+    );
+    
+    setEventsD5(
       Dummy_event_Drama.filter((event) =>
         event.name.toLowerCase().includes(value.toLowerCase())
       )
@@ -270,6 +287,17 @@ const Events = (data) => {
         <Catagory
           eventCatagory="Dance"
           events={eventsD1}
+          styles={styles[0]}
+          loading={loading}
+          setloading={setloading}
+          data={data}
+        />
+      </div>
+ </div>
+      <div id="d5" style={{ paddingTop: "150px" }}>
+        <Catagory
+          eventCatagory="Dance"
+          events={eventsD5}
           styles={styles[0]}
           loading={loading}
           setloading={setloading}
