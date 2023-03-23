@@ -208,14 +208,7 @@ export default function Landing(data) {
                     whileInView="visible"
                     className="news-container-chlid"
                   >
-                    <img
-                      style={{
-                        opacity: 0.4,
-                        zIndex: 1,
-                      }}
-                      src={items?.imageURL}
-                      className="news-img"
-                    ></img>
+                    
                     <span className="news-container-title">{items?.title}</span>
                     <span className="news-container-content">
                       {items?.content?.substring(0, 80)}
