@@ -59,7 +59,7 @@ export default function LabTabs(props) {
   return (
   <div className="parent">
     <div className="tabsBorder">
-    <Box style={{backgroundColor:'black'}} sx={{ backgroundColor:'black', width: 500 }}>
+    <Box style={{backgroundColor:'black'}} sx={{ backgroundColor:'black', width: 600 }}>
       <AppBar position="static" style={{backgroundColor: 'transparent'}}>
         <Tabs
           
@@ -76,6 +76,7 @@ export default function LabTabs(props) {
           <Tab label="Fashion" {...a11yProps(0)} onClick={()=>props.onScroll('d3')}/>
           <Tab label="Music" {...a11yProps(0)} onClick={()=>props.onScroll('d2')}/>
           <Tab label="Dance" {...a11yProps(0)} onClick={()=>props.onScroll('d1')}/>
+          <Tab label="Art of Colour" {...a11yProps(0)} onClick={()=>props.onScroll('d1')}/>
         </Tabs>
       </AppBar>
       
