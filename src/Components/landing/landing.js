@@ -178,11 +178,7 @@ export default function Landing(data) {
           </div>
           <Parallax startOnce={data.data.startOnce} />
           <div ref={mainRef} id="main-landing">
-            <Link
-              className="news-container"
-              onClick={() => data.data.setactiveUrl("/events")}
-              to="/events"
-            >
+            <div className="news-container">
               {items
                 ?.filter((items, index) => {
                   if (index < 2) {
@@ -190,7 +186,9 @@ export default function Landing(data) {
                   }
                 })
                 ?.map((items, ind) => (
-                  <motion.div
+                  <motion.a
+                    onClick={() => data.data.setactiveUrl("/events")}
+                    href="/events"
                     initial="hidden"
                     variants={{
                       hidden: {
@@ -210,17 +208,21 @@ export default function Landing(data) {
                     whileInView="visible"
                     className="news-container-chlid"
                   >
-                    <img style={{
-                      opacity: 0.4,
-                      zIndex: 1,
-                    }} src={items?.imageURL} className="news-img"></img>
+                    <img
+                      style={{
+                        opacity: 0.4,
+                        zIndex: 1,
+                      }}
+                      src={items?.imageURL}
+                      className="news-img"
+                    ></img>
                     <span className="news-container-title">{items?.title}</span>
                     <span className="news-container-content">
                       {items?.content?.substring(0, 80)}
                     </span>
-                  </motion.div>
+                  </motion.a>
                 ))}
-            </Link>
+            </div>
             <div
               style={{
                 position: "absolute",
