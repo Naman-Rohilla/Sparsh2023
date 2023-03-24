@@ -63,10 +63,7 @@ const Images = (props) => {
               }}
             >
               <div className="rgbtns">
-                <a
-                  href={props.event.regSvnit}
-                  target="_blank"
-                >
+                <a href={props.event.regSvnit} target="_blank">
                   <button
                     style={{
                       color: props.event.shadowColor,
@@ -80,10 +77,7 @@ const Images = (props) => {
                   </button>
                 </a>
 
-                <a
-                  href={props.event.regNSvnit}
-                  target="_blank"
-                >
+                <a href={props.event.regNSvnit} target="_blank">
                   <button
                     style={{
                       color: props.event.shadowColor,
@@ -97,21 +91,42 @@ const Images = (props) => {
                   </button>
                 </a>
               </div>
-
-              <a target="_blank" href={props.event.ruleBook}>
-                <button
-                  style={{
-                    color: props.event.shadowColor,
-                    boxShadow: `0px 0px 0px 1px ${props.event.shadowColor}`,
-                    marginBottom: "10px",
-                  }}
-                  class="RLBook"
-                  id="rgnSvnit"
-                  role="button"
-                >
-                  RULEBOOK
-                </button>
-              </a>
+              {props.event.ruleBook.length > 0 ? (
+                <>
+                  <a target="_blank" href={props.event.ruleBook}>
+                    <button
+                      style={{
+                        color: props.event.shadowColor,
+                        boxShadow: `0px 0px 0px 1px ${props.event.shadowColor}`,
+                        marginBottom: "10px",
+                      }}
+                      class="RLBook"
+                      id="rgnSvnit"
+                      role="button"
+                    >
+                      RULEBOOK
+                    </button>{" "}
+                  </a>
+                </>
+              ) : (
+                <>
+                  <span>
+                    <button
+                      style={{
+                        color: props.event.shadowColor,
+                        boxShadow: `0px 0px 0px 1px ${props.event.shadowColor}`,
+                        marginBottom: "10px",
+                        width: "200px",
+                      }}
+                      class="RLBook"
+                      id="rgnSvnit"
+                      role="button"
+                    >
+                      Rulebook Releasing Soon
+                    </button>{" "}
+                  </span>
+                </>
+              )}
             </div>
           </div>
         )}

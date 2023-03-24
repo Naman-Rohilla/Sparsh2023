@@ -15,8 +15,7 @@ const Events = (data) => {
       shadowColor: "rgb(42, 194, 208)",
       disc: `We're calling all writers,poets, artists and lovers of literature to come together and show your talent..in our OPEN MIC event..🎙🎤✨And if music is your thing🎶💃🏻Bring your instruments,Your Voice,Your Passion and...`,
       img: "./Word_wisely.jpg",
-      ruleBook:
-        "",
+      ruleBook: "",
       regSvnit: "https://forms.gle/zTRCBrbjfg6g954s7",
       regNSvnit: "https://forms.gle/VzngbKZTntN4Y6LaA",
     },
@@ -69,7 +68,7 @@ const Events = (data) => {
       regSvnit: "https://forms.gle/frZAV81RP4m5vQTe8",
       regNSvnit: "https://forms.gle/kTchdQfc6dVihHLB6",
     },
-   
+
     {
       name: "VOCAL VOYAGE",
       date: "01-01-2001",
@@ -139,10 +138,68 @@ const Events = (data) => {
       shadowColor: "orange",
       disc: `Step into a world of imagination and inspiration with our art 🎨 category events!! From intricate rangoli designs to bold temporary tattoos, there's something for everyone in our art category lineup. Come explore the beauty of rangoli...`,
       img: "./art_of_color.jpg",
-      ruleBook:
-        "",
+      ruleBook: "",
       regSvnit: "https://forms.gle/9oUyYzPUip84NkSP7",
       regNSvnit: "https://forms.gle/fYdGQkhDLk15JdzJ9",
+    },
+  ];
+
+  const Dummy_event_design = [
+    {
+      name: "Doodling",
+      date: "01-01-2001",
+      shadowColor: "gray",
+      disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
+We take pictures of the world around us with cameras in our hands, freezing unforgettable moments.`,
+      img: "./Doodling.png",
+      ruleBook: "",
+      regSvnit: "https://forms.gle/KVcWW8Au7Dnm1NjA9",
+      regNSvnit: "https://forms.gle/yjCBKV6wPJrhLwpk9",
+    },
+    {
+      name: "Photography Contect",
+      date: "01-01-2001",
+      shadowColor: "gray",
+      disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
+We take pictures of the world around us with cameras in our hands, freezing unforgettable moments.`,
+      img: "./Photography Contect.png",
+      ruleBook: "",
+      regSvnit: "https://forms.gle/KVcWW8Au7Dnm1NjA9",
+      regNSvnit: "https://forms.gle/yjCBKV6wPJrhLwpk9",
+    },
+    {
+      name: "Short Film",
+      date: "01-01-2001",
+      shadowColor: "gray",
+      disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
+We take pictures of the world around us with cameras in our hands, freezing unforgettable moments.`,
+      img: "./Short Film.png",
+      ruleBook: "",
+      regSvnit: "https://forms.gle/KVcWW8Au7Dnm1NjA9",
+      regNSvnit: "https://forms.gle/yjCBKV6wPJrhLwpk9",
+    },
+    {
+      name: "Sparsh After Movie",
+      date: "01-01-2001",
+      shadowColor: "gray",
+      disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
+We take pictures of the world around us with cameras in our hands, freezing unforgettable moments.`,
+      img: "./Sparsh After Movie.png",
+      ruleBook: "",
+      regSvnit: "https://forms.gle/KVcWW8Au7Dnm1NjA9",
+      regNSvnit: "https://forms.gle/yjCBKV6wPJrhLwpk9",
+    },
+    {
+      name: "Sparsh through My Lens",
+      date: "01-01-2001",
+      shadowColor: "gray",
+      disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
+      We take pictures of the world around us with cameras in our hands, freezing unforgettable moments.
+      `,
+      img: "./Sparsh through My Lens.png",
+      ruleBook: "",
+      regSvnit: "https://forms.gle/KVcWW8Au7Dnm1NjA9",
+      regNSvnit: "https://forms.gle/yjCBKV6wPJrhLwpk9",
     },
   ];
 
@@ -161,6 +218,7 @@ const Events = (data) => {
   const [eventsD3, setEventsD3] = useState(Dummy_event_Fashion_LifeStyle);
   const [eventsD4, setEventsD4] = useState(Dummy_event_Drama);
   const [eventsD5, setEventsD5] = useState(Dummy_event_Art_of_color);
+  const [eventsD6, setEventsD6] = useState(Dummy_event_design);
 
   const ref = useRef(null);
 
@@ -194,7 +252,7 @@ const Events = (data) => {
         event.name.toLowerCase().includes(value.toLowerCase())
       )
     );
-    
+
     setEventsD5(
       Dummy_event_Drama.filter((event) =>
         event.name.toLowerCase().includes(value.toLowerCase())
@@ -254,6 +312,16 @@ const Events = (data) => {
         </div>
       </div>
       {/* <button onClick={handleClick} style={{'height': '20px', 'width':'20px'}}/> */}
+      <div id="d6" style={{ paddingTop: "150px" }}>
+        <Catagory
+          eventCatagory="Design & Arts"
+          events={eventsD6}
+          styles={styles[0]}
+          loading={loading}
+          setloading={setloading}
+          data={data}
+        />
+      </div>
       <div id="d5" style={{ paddingTop: "150px" }}>
         <Catagory
           eventCatagory="Art of Color"
