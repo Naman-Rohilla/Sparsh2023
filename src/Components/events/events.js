@@ -157,7 +157,7 @@ We take pictures of the world around us with cameras in our hands, freezing unfo
       regNSvnit: "https://forms.gle/yjCBKV6wPJrhLwpk9",
     },
     {
-      name: "Photography Contect",
+      name: "Photography Contest",
       date: "01-01-2001",
       shadowColor: "gray",
       disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
@@ -203,6 +203,65 @@ We take pictures of the world around us with cameras in our hands, freezing unfo
     },
   ];
 
+  const Dummy_event_school = [
+    {
+      name: "Bag of Words",
+      date: "01-01-2001",
+      shadowColor: "gray",
+      disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
+We take pictures of the world around us with cameras in our hands, freezing unforgettable moments.`,
+      img: "./BoW.png",
+      ruleBook: "",
+      regSvnit: "",
+      regNSvnit: "",
+    },
+    {
+      name: "extempore",
+      date: "01-01-2001",
+      shadowColor: "gray",
+      disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
+We take pictures of the world around us with cameras in our hands, freezing unforgettable moments.`,
+      img: "./extempore.png",
+      ruleBook: "",
+      regSvnit: "",
+      regNSvnit: "",
+    },
+    {
+      name: "gk",
+      date: "01-01-2001",
+      shadowColor: "gray",
+      disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
+We take pictures of the world around us with cameras in our hands, freezing unforgettable moments.`,
+      img: "./gk.png",
+      ruleBook: "",
+      regSvnit: "",
+      regNSvnit: "",
+    },
+    {
+      name: "pm",
+      date: "01-01-2001",
+      shadowColor: "gray",
+      disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
+We take pictures of the world around us with cameras in our hands, freezing unforgettable moments.`,
+      img: "./pm.png",
+      ruleBook: "",
+      regSvnit: "",
+      regNSvnit: "",
+    },
+    {
+      name: "sd",
+      date: "01-01-2001",
+      shadowColor: "gray",
+      disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
+      We take pictures of the world around us with cameras in our hands, freezing unforgettable moments.
+      `,
+      img: "./sd.png",
+      ruleBook: "",
+      regSvnit: "",
+      regNSvnit: "",
+    },
+  ];
+
   const styles = [
     {
       height: "293px",
@@ -212,7 +271,8 @@ We take pictures of the world around us with cameras in our hands, freezing unfo
       tag: 1,
     },
   ];
-
+  
+  const [eventsD0, setEventsD0] = useState(Dummy_event_school);
   const [eventsD1, setEventsD1] = useState(Dummy_speaking_art);
   const [eventsD2, setEventsD2] = useState(Dummy_event_music);
   const [eventsD3, setEventsD3] = useState(Dummy_event_Fashion_LifeStyle);
@@ -228,6 +288,12 @@ We take pictures of the world around us with cameras in our hands, freezing unfo
 
   const onSearchHandler = (value) => {
     // console.log(value);
+
+    setEventsD0(
+      Dummy_event_school.filter((event) =>
+        event.name.toLowerCase().includes(value.toLowerCase())
+      )
+    );
 
     setEventsD1(
       Dummy_speaking_art.filter((event) =>
@@ -255,6 +321,11 @@ We take pictures of the world around us with cameras in our hands, freezing unfo
 
     setEventsD5(
       Dummy_event_Drama.filter((event) =>
+        event.name.toLowerCase().includes(value.toLowerCase())
+      )
+    );
+    setEventsD6(
+      Dummy_event_design.filter((event) =>
         event.name.toLowerCase().includes(value.toLowerCase())
       )
     );
@@ -366,6 +437,16 @@ We take pictures of the world around us with cameras in our hands, freezing unfo
         <Catagory
           eventCatagory="Speaking Art"
           events={eventsD1}
+          styles={styles[0]}
+          loading={loading}
+          setloading={setloading}
+          data={data}
+        />
+      </div>
+      <div id="d0" style={{ paddingTop: "150px" }}>
+        <Catagory
+          eventCatagory="School Events"
+          events={eventsD0}
           styles={styles[0]}
           loading={loading}
           setloading={setloading}
