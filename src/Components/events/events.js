@@ -10,6 +10,46 @@ const Events = (data) => {
   console.log(data, "data");
   const Dummy_speaking_art = [
     {
+      name: "Orators On-Board",
+      date: "01-01-2001",
+      shadowColor: "rgb(42, 194, 208)",
+      disc: `We're calling all writers,poets, artists and lovers of literature to come together and show your talent..in our OPEN MIC event..🎙🎤✨And if music is your thing🎶💃🏻Bring your instruments,Your Voice,Your Passion and...`,
+      img: "./Orators On-Board.jpg",
+      ruleBook: "",
+      regSvnit: "https://forms.gle/zTRCBrbjfg6g954s7",
+      regNSvnit: "https://forms.gle/VzngbKZTntN4Y6LaA",
+    },
+    {
+      name: "SHU CHE",
+      date: "01-01-2001",
+      shadowColor: "rgb(42, 194, 208)",
+      disc: `We're calling all writers,poets, artists and lovers of literature to come together and show your talent..in our OPEN MIC event..🎙🎤✨And if music is your thing🎶💃🏻Bring your instruments,Your Voice,Your Passion and...`,
+      img: "./SHU CHE.jpg",
+      ruleBook: "",
+      regSvnit: "https://forms.gle/zTRCBrbjfg6g954s7",
+      regNSvnit: "https://forms.gle/VzngbKZTntN4Y6LaA",
+    },
+    {
+      name: "Story Telling",
+      date: "01-01-2001",
+      shadowColor: "rgb(42, 194, 208)",
+      disc: `We're calling all writers,poets, artists and lovers of literature to come together and show your talent..in our OPEN MIC event..🎙🎤✨And if music is your thing🎶💃🏻Bring your instruments,Your Voice,Your Passion and...`,
+      img: "./Story Telling.jpg",
+      ruleBook: "",
+      regSvnit: "https://forms.gle/zTRCBrbjfg6g954s7",
+      regNSvnit: "https://forms.gle/VzngbKZTntN4Y6LaA",
+    },
+    {
+      name: "Creative Writing",
+      date: "01-01-2001",
+      shadowColor: "rgb(42, 194, 208)",
+      disc: `We're calling all writers,poets, artists and lovers of literature to come together and show your talent..in our OPEN MIC event..🎙🎤✨And if music is your thing🎶💃🏻Bring your instruments,Your Voice,Your Passion and...`,
+      img: "./Creative Writing.jpg",
+      ruleBook: "",
+      regSvnit: "https://forms.gle/zTRCBrbjfg6g954s7",
+      regNSvnit: "https://forms.gle/VzngbKZTntN4Y6LaA",
+    },
+    {
       name: "WORD WISELY",
       date: "01-01-2001",
       shadowColor: "rgb(42, 194, 208)",
@@ -58,11 +98,55 @@ const Events = (data) => {
 
   const Dummy_event_music = [
     {
-      name: "FOOTLOOSE SLOWDOWN",
+      name: "Rythm",
       date: "01-01-2001",
       shadowColor: "#db2777",
       disc: "Sparsh presents dancing events, a dazzling demonstration of artistic innovation with a dynamic ensemble of dancers whose skillful performances will captivate you.",
-      img: "/event_dance.png",
+      img: "/rythm.png",
+      ruleBook:
+        "https://drive.google.com/file/d/1yTB3IGH0BivqexrEk5AvK_plqgKZ9Jhi/view",
+      regSvnit: "https://forms.gle/frZAV81RP4m5vQTe8",
+      regNSvnit: "https://forms.gle/kTchdQfc6dVihHLB6",
+    },
+    {
+      name: "Just Duo",
+      date: "01-01-2001",
+      shadowColor: "#db2777",
+      disc: "Sparsh presents dancing events, a dazzling demonstration of artistic innovation with a dynamic ensemble of dancers whose skillful performances will captivate you.",
+      img: "/Just Duo.png",
+      ruleBook:
+        "https://drive.google.com/file/d/1yTB3IGH0BivqexrEk5AvK_plqgKZ9Jhi/view",
+      regSvnit: "https://forms.gle/frZAV81RP4m5vQTe8",
+      regNSvnit: "https://forms.gle/kTchdQfc6dVihHLB6",
+    },
+    {
+      name: "Choreo Clash",
+      date: "01-01-2001",
+      shadowColor: "#db2777",
+      disc: "Sparsh presents dancing events, a dazzling demonstration of artistic innovation with a dynamic ensemble of dancers whose skillful performances will captivate you.",
+      img: "/Choreo Clash.png",
+      ruleBook:
+        "https://drive.google.com/file/d/1yTB3IGH0BivqexrEk5AvK_plqgKZ9Jhi/view",
+      regSvnit: "https://forms.gle/frZAV81RP4m5vQTe8",
+      regNSvnit: "https://forms.gle/kTchdQfc6dVihHLB6",
+    },
+    {
+      name: "Break The Floor",
+      date: "01-01-2001",
+      shadowColor: "#db2777",
+      disc: "Sparsh presents dancing events, a dazzling demonstration of artistic innovation with a dynamic ensemble of dancers whose skillful performances will captivate you.",
+      img: "/Break The Floor.png",
+      ruleBook:
+        "https://drive.google.com/file/d/1yTB3IGH0BivqexrEk5AvK_plqgKZ9Jhi/view",
+      regSvnit: "https://forms.gle/frZAV81RP4m5vQTe8",
+      regNSvnit: "https://forms.gle/kTchdQfc6dVihHLB6",
+    },
+    {
+      name: "Engineer's Groove",
+      date: "01-01-2001",
+      shadowColor: "#db2777",
+      disc: "Sparsh presents dancing events, a dazzling demonstration of artistic innovation with a dynamic ensemble of dancers whose skillful performances will captivate you.",
+      img: "/Engineer's Groove.png",
       ruleBook:
         "https://drive.google.com/file/d/1yTB3IGH0BivqexrEk5AvK_plqgKZ9Jhi/view",
       regSvnit: "https://forms.gle/frZAV81RP4m5vQTe8",
@@ -120,24 +204,88 @@ const Events = (data) => {
 
   const Dummy_event_Drama = [
     {
-      name: "Abhinay Junction",
+      name: "Meri Aawaz",
       date: "01-01-2001",
       shadowColor: "rgb(42, 194, 208)",
       disc: `Brace yourself for a theatrical extravaganza like never before!🤩 The streets will come alive with Nukkad Natak🤯 and Mime while the Stage Play sets the scene for a breathtaking performance. 💃Get ready to be swept away by the drama! ⚡`,
-      img: "./abhinay_junction.jpg",
+      img: "Meri Aawaz.jpg",
       ruleBook:
         "https://drive.google.com/file/d/17W8rfJeSRh9iSs39bWGigqfn_3F6n1Pr/view?usp=drivesdk",
       regSvnit: "https://forms.gle/5eVamvLCnzYybLwz5",
       regNSvnit: "https://forms.gle/5eVamvLCnzYybLwz5",
     },
+    {
+      name: "Abhivyaki - The Expression",
+      date: "01-01-2001",
+      shadowColor: "rgb(42, 194, 208)",
+      disc: `Brace yourself for a theatrical extravaganza like never before!🤩 The streets will come alive with Nukkad Natak🤯 and Mime while the Stage Play sets the scene for a breathtaking performance. 💃Get ready to be swept away by the drama! ⚡`,
+      img: "./Abhivyaki.jpg",
+      ruleBook:
+        "https://drive.google.com/file/d/17W8rfJeSRh9iSs39bWGigqfn_3F6n1Pr/view?usp=drivesdk",
+      regSvnit: "https://forms.gle/5eVamvLCnzYybLwz5",
+      regNSvnit: "https://forms.gle/5eVamvLCnzYybLwz5",
+    },
+    {
+      name: "Antardhwani - The Inner Voice",
+      date: "01-01-2001",
+      shadowColor: "rgb(42, 194, 208)",
+      disc: `Brace yourself for a theatrical extravaganza like never before!🤩 The streets will come alive with Nukkad Natak🤯 and Mime while the Stage Play sets the scene for a breathtaking performance. 💃Get ready to be swept away by the drama! ⚡`,
+      img: "./Antardhwani.jpg",
+      ruleBook:
+        "https://drive.google.com/file/d/17W8rfJeSRh9iSs39bWGigqfn_3F6n1Pr/view?usp=drivesdk",
+      regSvnit: "https://forms.gle/5eVamvLCnzYybLwz5",
+      regNSvnit: "https://forms.gle/5eVamvLCnzYybLwz5",
+    },
+
   ];
   const Dummy_event_Art_of_color = [
     {
-      name: "The Art of Colour",
+      name: "Face painting",
       date: "01-01-2001",
       shadowColor: "orange",
       disc: `Step into a world of imagination and inspiration with our art 🎨 category events!! From intricate rangoli designs to bold temporary tattoos, there's something for everyone in our art category lineup. Come explore the beauty of rangoli...`,
-      img: "./art_of_color.jpg",
+      img: "./Face painting.png",
+      ruleBook: "",
+      regSvnit: "https://forms.gle/9oUyYzPUip84NkSP7",
+      regNSvnit: "https://forms.gle/fYdGQkhDLk15JdzJ9",
+    },
+    {
+      name: "Art Walk",
+      date: "01-01-2001",
+      shadowColor: "orange",
+      disc: `Step into a world of imagination and inspiration with our art 🎨 category events!! From intricate rangoli designs to bold temporary tattoos, there's something for everyone in our art category lineup. Come explore the beauty of rangoli...`,
+      img: "./Art Walk.png",
+      ruleBook: "",
+      regSvnit: "https://forms.gle/9oUyYzPUip84NkSP7",
+      regNSvnit: "https://forms.gle/fYdGQkhDLk15JdzJ9",
+    },
+    {
+      name: "Paint Without Brush",
+      date: "01-01-2001",
+      shadowColor: "orange",
+      disc: `Step into a world of imagination and inspiration with our art 🎨 category events!! From intricate rangoli designs to bold temporary tattoos, there's something for everyone in our art category lineup. Come explore the beauty of rangoli...`,
+      img: "./Paint Without Brush.png",
+      ruleBook: "",
+      regSvnit: "https://forms.gle/9oUyYzPUip84NkSP7",
+      regNSvnit: "https://forms.gle/fYdGQkhDLk15JdzJ9",
+    },
+    {
+      name: "Temporary Tattoo Tale",
+      date: "01-01-2001",
+      shadowColor: "orange",
+      disc: `Step into a world of imagination and inspiration with our art 🎨 category events!! From intricate rangoli designs to bold temporary tattoos, there's something for everyone in our art category lineup. Come explore the beauty of rangoli...`,
+      img: "./Temporary Tattoo Tale.png",
+      ruleBook: "",
+      regSvnit: "https://forms.gle/9oUyYzPUip84NkSP7",
+      regNSvnit: "https://forms.gle/fYdGQkhDLk15JdzJ9",
+    },
+
+    {
+      name: "Rangoli Making",
+      date: "01-01-2001",
+      shadowColor: "orange",
+      disc: `Step into a world of imagination and inspiration with our art 🎨 category events!! From intricate rangoli designs to bold temporary tattoos, there's something for everyone in our art category lineup. Come explore the beauty of rangoli...`,
+      img: "./Rangoli.jpg",
       ruleBook: "",
       regSvnit: "https://forms.gle/9oUyYzPUip84NkSP7",
       regNSvnit: "https://forms.gle/fYdGQkhDLk15JdzJ9",

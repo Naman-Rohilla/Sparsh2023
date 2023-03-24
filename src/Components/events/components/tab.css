@@ -1,3 +1,4 @@
+
 .tabsBorder{
     /* box-shadow:0px 0px 3px 1px rgb(228, 30, 30); */
     width: 750px;
@@ -12,16 +13,8 @@
     font-size: 11px;
 }
 
-@media screen and (max-width: 720px) {
-    .tabsBorder{
-        /* box-shadow:0px 0px 3px 1px rgb(228, 30, 30); */
-        display: none;
-        /* margin-bottom: 10px; */
-    }
-
-    /* .tabsBorder .tabs {
-        font-size: 2px;
-    } */
+.tabs2 {
+    paddingLeft: "10px"
 }
 
 @keyframes something {
