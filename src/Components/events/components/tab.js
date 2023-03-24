@@ -111,8 +111,8 @@ export default function LabTabs(props) {
               label="Design & Arts"
               {...a11yProps(0)}
               onClick={() => {
-                props.onScroll("d6");
-                setState(false);
+                props.onScroll("d6")
+                setState(false)
               }}
             />
             <Tab
@@ -120,8 +120,8 @@ export default function LabTabs(props) {
               label="Art of Colour"
               {...a11yProps(0)}
               onClick={() => {
-                props.onScroll("d5");
-                setState(false);
+                props.onScroll("d5")
+                setState(false)
               }}
             />
             <Tab
@@ -129,8 +129,8 @@ export default function LabTabs(props) {
               label="Drama"
               {...a11yProps(0)}
               onClick={() => {
-                props.onScroll("d4");
-                setState(false);
+                props.onScroll("d4")
+                setState(false)
               }}
             />
             <Tab
@@ -138,8 +138,8 @@ export default function LabTabs(props) {
               label="Fashion"
               {...a11yProps(0)}
               onClick={() => {
-                props.onScroll("d3");
-                setState(false);
+                props.onScroll("d3")
+                setState(false)
               }}
             />
             <Tab
@@ -147,8 +147,8 @@ export default function LabTabs(props) {
               label="Singing/Dancing"
               {...a11yProps(0)}
               onClick={() => {
-                props.onScroll("d2");
-                setState(false);
+                props.onScroll("d2")
+                setState(false)
               }}
             />
             <Tab
@@ -156,8 +156,8 @@ export default function LabTabs(props) {
               label="Speaking Art"
               {...a11yProps(0)}
               onClick={() => {
-                props.onScroll("d1");
-                setState(false);
+                props.onScroll("d1")
+                setState(false)
               }}
             />
           </div>
