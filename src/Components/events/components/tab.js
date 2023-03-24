@@ -96,6 +96,7 @@ export default function LabTabs(props) {
               backgroundColor: "#080402",
               color: "white",
               alignItems: "flex-start",
+              zIndex: 100,
             }}
           >
             <span
@@ -110,55 +111,37 @@ export default function LabTabs(props) {
               className="tabs"
               label="Design & Arts"
               {...a11yProps(0)}
-              onClick={() => {
-                props.onScroll("d6")
-                setState(false)
-              }}
+              onClick={() => props.onScroll("d6")}
             />
             <Tab
               className="tabs"
               label="Art of Colour"
               {...a11yProps(0)}
-              onClick={() => {
-                props.onScroll("d5")
-                setState(false)
-              }}
+              onClick={() => props.onScroll("d5")}
             />
             <Tab
               className="tabs"
               label="Drama"
               {...a11yProps(0)}
-              onClick={() => {
-                props.onScroll("d4")
-                setState(false)
-              }}
+              onClick={() => props.onScroll("d4")}
             />
             <Tab
               className="tabs"
               label="Fashion"
               {...a11yProps(0)}
-              onClick={() => {
-                props.onScroll("d3")
-                setState(false)
-              }}
+              onClick={() => props.onScroll("d3")}
             />
             <Tab
               className="tabs"
               label="Singing/Dancing"
               {...a11yProps(0)}
-              onClick={() => {
-                props.onScroll("d2")
-                setState(false)
-              }}
+              onClick={() => props.onScroll("d2")}
             />
             <Tab
               className="tabs"
               label="Speaking Art"
               {...a11yProps(0)}
-              onClick={() => {
-                props.onScroll("d1")
-                setState(false)
-              }}
+              onClick={() => props.onScroll("d1")}
             />
           </div>
         </Drawer>
