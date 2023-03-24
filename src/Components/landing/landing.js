@@ -94,7 +94,7 @@ export default function Landing(data) {
             output.push(result?.data[i]);
           }
           console.log(output, "output");
-          result = output;
+          result = output?.reverse();
           setitems(result);
           console.log(result.data[0]);
         },
@@ -104,6 +104,7 @@ export default function Landing(data) {
         (error) => {
           // setIsLoaded(true);
           // setError(error);
+          console.log(error, "error")
         }
       );
   }, []);

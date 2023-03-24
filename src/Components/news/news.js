@@ -29,7 +29,7 @@ const News = () => {
             output.push(result?.data[i]);
           }
           console.log(output, "output");
-          result = output;
+          result = output?.reverse();
           console.log(result)
           setItems(result);
           console.log(result);

@@ -33,6 +33,7 @@
   display: flex;
   justify-content: center;
   margin-top: 5px;
+  object-fit: contain;
   margin-bottom: 10px;
   
 }
