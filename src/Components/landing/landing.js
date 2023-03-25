@@ -94,7 +94,7 @@ export default function Landing(data) {
             output.push(result?.data[i]);
           }
           console.log(output, "output");
-          result = output?.reverse();
+          result = output;
           setitems(result);
           console.log(result.data[0]);
         },
@@ -182,37 +182,39 @@ export default function Landing(data) {
             <div className="news-container">
               {items
                 ?.filter((items, index) => {
-                  if (index < 2) {
+                  if (items.title == "Flash Mob 6.3" || items.title == "Sparsh T-Shirt 2nd Slot") {
                     return items;
                   }
                 })
                 ?.map((items, ind) => (
                   <motion.a
-                    onClick={() => data.data.setactiveUrl("/events")}
-                    href="/events"
+                    // onClick={() => {
+                    //   if(ind == 0){
+                    //     data.data.setactiveUrl("/events")
+                    //   }
+                    //   }}
                     initial="hidden"
                     variants={{
                       hidden: {
                         default: "easeIn",
-                        width: 0,
                         opacity: 0,
                       },
                       visible: {
                         default: "easeIn",
-                        width: 300,
                         opacity: 1,
                       },
                     }}
                     transition={{
                       duration: 0.5,
                     }}
+                    href = {items?.title == "Sparsh T-Shirt 2nd Slot" ? "https://forms.gle/chQHeSbGnhTn6wA67" : "https://www.instagram.com/reel/CqNqzHXppp_/?igshid=YmMyMTA2M2Y="}
                     whileInView="visible"
                     className="news-container-chlid"
                   >
                     
                     <span className="news-container-title">{items?.title}</span>
                     <span className="news-container-content">
-                      {items?.content?.substring(0, 80)}
+                      {items?.content?.length > 80 ? items?.content?.substring(0, 80) + "..." : items?.content}
                     </span>
                   </motion.a>
                 ))}
