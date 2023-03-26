@@ -532,6 +532,16 @@ We take pictures of the world around us with cameras in our hands, freezing unfo
         </div>
       </div>
       {/* <button onClick={handleClick} style={{'height': '20px', 'width':'20px'}}/> */}
+      <div id="d0" style={{ paddingTop: "150px" }}>
+        <Catagory
+          eventCatagory="School Events"
+          events={eventsD0}
+          styles={styles[0]}
+          loading={loading}
+          setloading={setloading}
+          data={data}
+        />
+      </div>
       <div id="d6" style={{ paddingTop: "150px" }}>
         <Catagory
           eventCatagory="Design & Arts"
@@ -586,16 +596,6 @@ We take pictures of the world around us with cameras in our hands, freezing unfo
         <Catagory
           eventCatagory="Speaking Art"
           events={eventsD1}
-          styles={styles[0]}
-          loading={loading}
-          setloading={setloading}
-          data={data}
-        />
-      </div>
-      <div id="d0" style={{ paddingTop: "150px" }}>
-        <Catagory
-          eventCatagory="School Events"
-          events={eventsD0}
           styles={styles[0]}
           loading={loading}
           setloading={setloading}

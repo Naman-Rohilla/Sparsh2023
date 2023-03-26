@@ -109,6 +109,12 @@ export default function LabTabs(props) {
             ></span>
             <Tab
               className="tabs"
+              label="School Events"
+              {...a11yProps(0)}
+              onClick={() => props.onScroll("d0")}
+            />
+            <Tab
+              className="tabs"
               label="Design & Arts"
               {...a11yProps(0)}
               onClick={() => props.onScroll("d6")}
@@ -170,6 +176,12 @@ export default function LabTabs(props) {
                   },
                 }}
               >
+                <Tab
+                  className="tabs"
+                  label="School Events"
+                  {...a11yProps(0)}
+                  onClick={() => props.onScroll("d0")}
+                />
                 <Tab
                   className="tabs"
                   label="Design & Arts"
