@@ -236,7 +236,6 @@ const Events = (data) => {
       regSvnit: "https://forms.gle/5eVamvLCnzYybLwz5",
       regNSvnit: "https://forms.gle/5eVamvLCnzYybLwz5",
     },
-
   ];
   const Dummy_event_Art_of_color = [
     {
@@ -245,7 +244,8 @@ const Events = (data) => {
       shadowColor: "orange",
       disc: `Step into a world of imagination and inspiration with our art 🎨 category events!! From intricate rangoli designs to bold temporary tattoos, there's something for everyone in our art category lineup. Come explore the beauty of rangoli...`,
       img: "./Face painting.png",
-      ruleBook: "https://drive.google.com/file/d/1-bthXixmp_iimNZh057-1JIQeANtc_d2/view?usp=drivesdk",
+      ruleBook:
+        "https://drive.google.com/file/d/1-bthXixmp_iimNZh057-1JIQeANtc_d2/view?usp=drivesdk",
       regSvnit: "https://forms.gle/9oUyYzPUip84NkSP7",
       regNSvnit: "https://forms.gle/fYdGQkhDLk15JdzJ9",
     },
@@ -255,7 +255,8 @@ const Events = (data) => {
       shadowColor: "orange",
       disc: `Step into a world of imagination and inspiration with our art 🎨 category events!! From intricate rangoli designs to bold temporary tattoos, there's something for everyone in our art category lineup. Come explore the beauty of rangoli...`,
       img: "./Art Walk.png",
-      ruleBook: "https://drive.google.com/file/d/1-bthXixmp_iimNZh057-1JIQeANtc_d2/view?usp=drivesdk",
+      ruleBook:
+        "https://drive.google.com/file/d/1-bthXixmp_iimNZh057-1JIQeANtc_d2/view?usp=drivesdk",
       regSvnit: "https://forms.gle/9oUyYzPUip84NkSP7",
       regNSvnit: "https://forms.gle/fYdGQkhDLk15JdzJ9",
     },
@@ -265,7 +266,8 @@ const Events = (data) => {
       shadowColor: "orange",
       disc: `Step into a world of imagination and inspiration with our art 🎨 category events!! From intricate rangoli designs to bold temporary tattoos, there's something for everyone in our art category lineup. Come explore the beauty of rangoli...`,
       img: "./Paint Without Brush.png",
-      ruleBook: "https://drive.google.com/file/d/1-bthXixmp_iimNZh057-1JIQeANtc_d2/view?usp=drivesdk",
+      ruleBook:
+        "https://drive.google.com/file/d/1-bthXixmp_iimNZh057-1JIQeANtc_d2/view?usp=drivesdk",
       regSvnit: "https://forms.gle/9oUyYzPUip84NkSP7",
       regNSvnit: "https://forms.gle/fYdGQkhDLk15JdzJ9",
     },
@@ -275,7 +277,8 @@ const Events = (data) => {
       shadowColor: "orange",
       disc: `Step into a world of imagination and inspiration with our art 🎨 category events!! From intricate rangoli designs to bold temporary tattoos, there's something for everyone in our art category lineup. Come explore the beauty of rangoli...`,
       img: "./Temporary Tattoo Tale.png",
-      ruleBook: "https://drive.google.com/file/d/1-bthXixmp_iimNZh057-1JIQeANtc_d2/view?usp=drivesdk",
+      ruleBook:
+        "https://drive.google.com/file/d/1-bthXixmp_iimNZh057-1JIQeANtc_d2/view?usp=drivesdk",
       regSvnit: "https://forms.gle/9oUyYzPUip84NkSP7",
       regNSvnit: "https://forms.gle/fYdGQkhDLk15JdzJ9",
     },
@@ -286,7 +289,8 @@ const Events = (data) => {
       shadowColor: "orange",
       disc: `Step into a world of imagination and inspiration with our art 🎨 category events!! From intricate rangoli designs to bold temporary tattoos, there's something for everyone in our art category lineup. Come explore the beauty of rangoli...`,
       img: "./Rangoli.jpg",
-      ruleBook: "https://drive.google.com/file/d/1-bthXixmp_iimNZh057-1JIQeANtc_d2/view?usp=drivesdk",
+      ruleBook:
+        "https://drive.google.com/file/d/1-bthXixmp_iimNZh057-1JIQeANtc_d2/view?usp=drivesdk",
       regSvnit: "https://forms.gle/9oUyYzPUip84NkSP7",
       regNSvnit: "https://forms.gle/fYdGQkhDLk15JdzJ9",
     },
@@ -300,7 +304,8 @@ const Events = (data) => {
       disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
 We take pictures of the world around us with cameras in our hands, freezing unforgettable moments.`,
       img: "./Doodling.png",
-      ruleBook: "https://drive.google.com/file/d/1-obOO-J_9HBPE-h60dCLZyBmGWRZHriU/view?usp=drivesdk",
+      ruleBook:
+        "https://drive.google.com/file/d/1-obOO-J_9HBPE-h60dCLZyBmGWRZHriU/view?usp=drivesdk",
       regSvnit: "https://forms.gle/KVcWW8Au7Dnm1NjA9",
       regNSvnit: "https://forms.gle/yjCBKV6wPJrhLwpk9",
     },
@@ -311,7 +316,8 @@ We take pictures of the world around us with cameras in our hands, freezing unfo
       disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
 We take pictures of the world around us with cameras in our hands, freezing unforgettable moments.`,
       img: "./Photography Contect.png",
-      ruleBook: "https://drive.google.com/file/d/1-obOO-J_9HBPE-h60dCLZyBmGWRZHriU/view?usp=drivesdk",
+      ruleBook:
+        "https://drive.google.com/file/d/1-obOO-J_9HBPE-h60dCLZyBmGWRZHriU/view?usp=drivesdk",
       regSvnit: "https://forms.gle/KVcWW8Au7Dnm1NjA9",
       regNSvnit: "https://forms.gle/yjCBKV6wPJrhLwpk9",
     },
@@ -322,7 +328,8 @@ We take pictures of the world around us with cameras in our hands, freezing unfo
       disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
 We take pictures of the world around us with cameras in our hands, freezing unforgettable moments.`,
       img: "./Short Film.png",
-      ruleBook: "https://drive.google.com/file/d/1-obOO-J_9HBPE-h60dCLZyBmGWRZHriU/view?usp=drivesdk",
+      ruleBook:
+        "https://drive.google.com/file/d/1-obOO-J_9HBPE-h60dCLZyBmGWRZHriU/view?usp=drivesdk",
       regSvnit: "https://forms.gle/KVcWW8Au7Dnm1NjA9",
       regNSvnit: "https://forms.gle/yjCBKV6wPJrhLwpk9",
     },
@@ -333,7 +340,8 @@ We take pictures of the world around us with cameras in our hands, freezing unfo
       disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
 We take pictures of the world around us with cameras in our hands, freezing unforgettable moments.`,
       img: "./Sparsh After Movie.png",
-      ruleBook: "https://drive.google.com/file/d/1-obOO-J_9HBPE-h60dCLZyBmGWRZHriU/view?usp=drivesdk",
+      ruleBook:
+        "https://drive.google.com/file/d/1-obOO-J_9HBPE-h60dCLZyBmGWRZHriU/view?usp=drivesdk",
       regSvnit: "https://forms.gle/KVcWW8Au7Dnm1NjA9",
       regNSvnit: "https://forms.gle/yjCBKV6wPJrhLwpk9",
     },
@@ -341,11 +349,10 @@ We take pictures of the world around us with cameras in our hands, freezing unfo
       name: "Sparsh through My Lens",
       date: "01-01-2001",
       shadowColor: "gray",
-      disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
-      We take pictures of the world around us with cameras in our hands, freezing unforgettable moments.
-      `,
+      disc: `We are excited to invite you to Sparsh, our Annual Cultural fest at the Sardar Vallabhbhai National Institute of Technology. This is a celebration of diverse cultures and talents from across the country, and we want you to be a part of it.`,
       img: "./Sparsh through My Lens.png",
-      ruleBook: "https://drive.google.com/file/d/1-obOO-J_9HBPE-h60dCLZyBmGWRZHriU/view?usp=drivesdk",
+      ruleBook:
+        "https://drive.google.com/file/d/1-obOO-J_9HBPE-h60dCLZyBmGWRZHriU/view?usp=drivesdk",
       regSvnit: "https://forms.gle/KVcWW8Au7Dnm1NjA9",
       regNSvnit: "https://forms.gle/yjCBKV6wPJrhLwpk9",
     },
@@ -356,56 +363,50 @@ We take pictures of the world around us with cameras in our hands, freezing unfo
       name: "Bag of Words",
       date: "01-01-2001",
       shadowColor: "gray",
-      disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
-We take pictures of the world around us with cameras in our hands, freezing unforgettable moments.`,
+      disc: `We are excited to invite you to Sparsh, our Annual Cultural fest at the Sardar Vallabhbhai National Institute of Technology. This is a celebration of diverse cultures and talents from across the country, and we want you to be a part of it.`,
       img: "./BoW.png",
       ruleBook: "",
-      regSvnit: "",
+      regSvnit: "https://forms.gle/awX34KWeZezHokA16",
       regNSvnit: "",
     },
     {
-      name: "extempore",
+      name: "Extempore",
       date: "01-01-2001",
       shadowColor: "gray",
-      disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
-We take pictures of the world around us with cameras in our hands, freezing unforgettable moments.`,
+      disc: `We are excited to invite you to Sparsh, our Annual Cultural fest at the Sardar Vallabhbhai National Institute of Technology. This is a celebration of diverse cultures and talents from across the country, and we want you to be a part of it.`,
       img: "./extempore.png",
       ruleBook: "",
-      regSvnit: "",
+      regSvnit: "https://forms.gle/awX34KWeZezHokA16",
       regNSvnit: "",
     },
     {
-      name: "gk",
+      name: "GK Quiz",
       date: "01-01-2001",
       shadowColor: "gray",
-      disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
-We take pictures of the world around us with cameras in our hands, freezing unforgettable moments.`,
+      disc: `We are excited to invite you to Sparsh, our Annual Cultural fest at the Sardar Vallabhbhai National Institute of Technology. This is a celebration of diverse cultures and talents from across the country, and we want you to be a part of it.`,
       img: "./gk.png",
       ruleBook: "",
-      regSvnit: "",
+      regSvnit: "https://forms.gle/awX34KWeZezHokA16",
       regNSvnit: "",
     },
     {
-      name: "pm",
+      name: "Poster Making",
       date: "01-01-2001",
       shadowColor: "gray",
-      disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
-We take pictures of the world around us with cameras in our hands, freezing unforgettable moments.`,
+      disc: `We are excited to invite you to Sparsh, our Annual Cultural fest at the Sardar Vallabhbhai National Institute of Technology. This is a celebration of diverse cultures and talents from across the country, and we want you to be a part of it.`,
       img: "./pm.png",
       ruleBook: "",
-      regSvnit: "",
+      regSvnit: "https://forms.gle/awX34KWeZezHokA16",
       regNSvnit: "",
     },
     {
-      name: "sd",
+      name: "School Debate",
       date: "01-01-2001",
       shadowColor: "gray",
-      disc: `From preserving moments in time to producing comics that sparkle, Doodling our dreams, and producing visual stories that rhyme.
-      We take pictures of the world around us with cameras in our hands, freezing unforgettable moments.
-      `,
+      disc: `We are excited to invite you to Sparsh, our Annual Cultural fest at the Sardar Vallabhbhai National Institute of Technology. This is a celebration of diverse cultures and talents from across the country, and we want you to be a part of it.`,
       img: "./sd.png",
       ruleBook: "",
-      regSvnit: "",
+      regSvnit: "https://forms.gle/awX34KWeZezHokA16",
       regNSvnit: "",
     },
   ];
@@ -419,7 +420,7 @@ We take pictures of the world around us with cameras in our hands, freezing unfo
       tag: 1,
     },
   ];
-  
+
   const [eventsD0, setEventsD0] = useState(Dummy_event_school);
   const [eventsD1, setEventsD1] = useState(Dummy_speaking_art);
   const [eventsD2, setEventsD2] = useState(Dummy_event_music);
