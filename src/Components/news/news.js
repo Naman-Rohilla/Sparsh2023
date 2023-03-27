@@ -88,12 +88,14 @@ const News = () => {
           }}
         ></div>
         {items?.map((item) => (
-          // <li key={item.id}>
+          // <li key={item.id}
+          <a href={items.title == "Flash Mob 6.3" || items.title == "Sparsh T-Shirt 2nd Slot" ? "" : "/events"} >
           <NewsCard
             image={item.imageURL}
             heading={item.title}
             text={item.content}
           />
+          </a>
           // </li>
         ))}
       </div>
