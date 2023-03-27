@@ -69,9 +69,10 @@ const News = (data) => {
       <div id="news">
         <img
           style={{
-            position: "absolute",
+            position: "fixed",
             width: "100%",
             height: "100%",
+            zIndex: -1,
           }}
           // onLoad={() => {
           //   setloading(false);
@@ -80,24 +81,29 @@ const News = (data) => {
         ></img>
         <div
           style={{
-            position: "absolute",
+            position: "fixed",
             width: "100%",
             height: "100%",
             backgroundColor: "black",
             opacity: 0.6,
+            zIndex: -1,
           }}
         ></div>
         {items?.map((item) => (
           // <li key={item.id}
           <>
-            {items.title == "Flash Mob 6.3" ||
-            items.title == "Sparsh T-Shirt 2nd Slot" ? (
+            {item.title == "Flash Mob 6.3" ||
+            item.title == "Sparsh T-Shirt 2nd Slot" ? (
               <a
                 href={
-                  items.title == "Sparsh T-Shirt 2nd Slot"
+                  item.title == "Sparsh T-Shirt 2nd Slot"
                     ? "https://forms.gle/chQHeSbGnhTn6wA67"
                     : "https://www.instagram.com/reel/CqNqzHXppp_/?igshid=YmMyMTA2M2Y="
                 }
+                style={{
+                  textDecoration: "none",
+                  color: "green"
+                }}
               >
                 <NewsCard
                   image={item.imageURL}
@@ -107,8 +113,12 @@ const News = (data) => {
               </a>
             ) : (
               <a
-                onCLiick={() => data.data.setactiveUrl("/events")}
+                onClick={() => data.data.setactiveUrl("/events")}
                 href="/events"
+                style={{
+                  textDecoration: "none",
+                  color: "green"
+                }}
               >
                 <NewsCard
                   image={item.imageURL}

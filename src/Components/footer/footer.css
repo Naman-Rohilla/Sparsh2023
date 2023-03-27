@@ -12,7 +12,8 @@
   width: 100%;
   background-color: black;
   display: flex;
-  z-index: 200;
+  z-index: 100;
+  backgound: black;
 }
 
 .footer-left-container .sparsh {
@@ -30,6 +31,7 @@
   align-items: center;
   color: white;
   font-size: 10rem;
+  z-index: 100,
 }
 
 .footer-right-container {
@@ -38,7 +40,8 @@
   width: 60%;
   height: 100%;
   align-items: center;
-  
+  z-index: 100;
+  /* backgound: black; */
 }
 
 .footer-right-container .footer-right-container-child {
