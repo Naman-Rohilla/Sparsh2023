@@ -3,7 +3,7 @@ import NewsCard from "./newsCard";
 import "./news.css";
 import { DotLoader } from "react-spinners";
 
-const News = () => {
+const News = (data) => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
@@ -30,7 +30,7 @@ const News = () => {
           }
           console.log(output, "output");
           result = output?.reverse();
-          console.log(result)
+          console.log(result);
           setItems(result);
           console.log(result);
           console.log(result.data[0]);
@@ -89,13 +89,36 @@ const News = () => {
         ></div>
         {items?.map((item) => (
           // <li key={item.id}
-          <a href={items.title == "Flash Mob 6.3" || items.title == "Sparsh T-Shirt 2nd Slot" ? "" : "/events"} >
-          <NewsCard
-            image={item.imageURL}
-            heading={item.title}
-            text={item.content}
-          />
-          </a>
+          <>
+            {items.title == "Flash Mob 6.3" ||
+            items.title == "Sparsh T-Shirt 2nd Slot" ? (
+              <a
+                href={
+                  items.title == "Sparsh T-Shirt 2nd Slot"
+                    ? "https://forms.gle/chQHeSbGnhTn6wA67"
+                    : "https://www.instagram.com/reel/CqNqzHXppp_/?igshid=YmMyMTA2M2Y="
+                }
+              >
+                <NewsCard
+                  image={item.imageURL}
+                  heading={item.title}
+                  text={item.content}
+                />
+              </a>
+            ) : (
+              <a
+                onCLiick={() => data.data.setactiveUrl("/events")}
+                href="/events"
+              >
+                <NewsCard
+                  image={item.imageURL}
+                  heading={item.title}
+                  text={item.content}
+                />
+              </a>
+            )}
+          </>
+
           // </li>
         ))}
       </div>

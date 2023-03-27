@@ -86,10 +86,21 @@ function App() {
           }
         />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/admin" element={<EventsAdmin_  />} />
-        
+        <Route path="/admin" element={<EventsAdmin_ />} />
+
         <Route path="/sponsors" element={<Sponsors />} />
-        <Route path="/news" element={<SignIn />} />
+        <Route
+          path="/news"
+          element={
+            <SignIn
+              activeUrl={activeUrl}
+              setactiveUrl={setactiveUrl}
+              startOnce={startOnce}
+              loading={loading}
+              setloading={setloading}
+            />
+          }
+        />
         <Route
           path="/events"
           element={

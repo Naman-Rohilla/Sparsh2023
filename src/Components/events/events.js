@@ -298,6 +298,17 @@ const Events = (data) => {
 
   const Dummy_event_design = [
     {
+      name: "Comic Making",
+      date: "01-01-2001",
+      shadowColor: "gray",
+      disc: `We are excited to invite you to Sparsh, our Annual Cultural fest at the Sardar Vallabhbhai National Institute of Technology. This is a celebration of diverse cultures and talents from across the country, and we want you to be a part of it.`,
+      img: "./Comic Making.png",
+      ruleBook:
+        "https://drive.google.com/file/d/1-obOO-J_9HBPE-h60dCLZyBmGWRZHriU/view?usp=drivesdk",
+      regSvnit: "https://forms.gle/KVcWW8Au7Dnm1NjA9",
+      regNSvnit: "https://forms.gle/yjCBKV6wPJrhLwpk9",
+    },
+    {
       name: "Doodling",
       date: "01-01-2001",
       shadowColor: "gray",
