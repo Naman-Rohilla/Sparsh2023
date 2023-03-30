@@ -212,7 +212,7 @@ const Events = (data) => {
       ruleBook:
         "https://drive.google.com/file/d/17W8rfJeSRh9iSs39bWGigqfn_3F6n1Pr/view?usp=drivesdk",
       regSvnit: "https://forms.gle/5eVamvLCnzYybLwz5",
-      regNSvnit: "https://forms.gle/5eVamvLCnzYybLwz5",
+      regNSvnit: "https://forms.gle/4WVs9qszJoKL7pu17",
     },
     {
       name: "Abhivyaki - The Expression",
@@ -223,7 +223,7 @@ const Events = (data) => {
       ruleBook:
         "https://drive.google.com/file/d/17W8rfJeSRh9iSs39bWGigqfn_3F6n1Pr/view?usp=drivesdk",
       regSvnit: "https://forms.gle/5eVamvLCnzYybLwz5",
-      regNSvnit: "https://forms.gle/5eVamvLCnzYybLwz5",
+      regNSvnit: "https://forms.gle/4WVs9qszJoKL7pu17",
     },
     {
       name: "Antardhwani - The Inner Voice",
@@ -234,7 +234,7 @@ const Events = (data) => {
       ruleBook:
         "https://drive.google.com/file/d/17W8rfJeSRh9iSs39bWGigqfn_3F6n1Pr/view?usp=drivesdk",
       regSvnit: "https://forms.gle/5eVamvLCnzYybLwz5",
-      regNSvnit: "https://forms.gle/5eVamvLCnzYybLwz5",
+      regNSvnit: "https://forms.gle/4WVs9qszJoKL7pu17",
     },
   ];
   const Dummy_event_Art_of_color = [
