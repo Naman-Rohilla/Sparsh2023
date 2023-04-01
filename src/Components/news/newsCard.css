@@ -9,6 +9,7 @@
   font-family: "Rubik", sans-serif;
   z-index: 10;
   cursor: pointer;
+  height: auto;
 }
 .card:hover {
   transform: scale(1.05);
@@ -39,4 +40,5 @@
 }
 
 .text {
+  overflow: hidden
 }

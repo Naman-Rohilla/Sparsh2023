@@ -93,16 +93,19 @@ const News = (data) => {
           // <li key={item.id}
           <>
             {item.title == "Flash Mob 6.3" ||
-            item.title == "Sparsh T-Shirt 2nd Slot" ? (
+            item.title == "Sparsh T-Shirt 2nd Slot" ||
+            item.title == "Paint Ball 2K23" ? (
               <a
                 href={
                   item.title == "Sparsh T-Shirt 2nd Slot"
                     ? "https://forms.gle/chQHeSbGnhTn6wA67"
+                    : item.title == "Paint Ball 2K23"
+                    ? "https://forms.gle/74MoZnTYpxHod2tx5"
                     : "https://www.instagram.com/reel/CqNqzHXppp_/?igshid=YmMyMTA2M2Y="
                 }
                 style={{
                   textDecoration: "none",
-                  color: "green"
+                  color: "green",
                 }}
               >
                 <NewsCard
@@ -117,7 +120,7 @@ const News = (data) => {
                 href="/events"
                 style={{
                   textDecoration: "none",
-                  color: "green"
+                  color: "green",
                 }}
               >
                 <NewsCard

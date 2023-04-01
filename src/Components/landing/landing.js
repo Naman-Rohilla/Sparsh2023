@@ -182,7 +182,7 @@ export default function Landing(data) {
             <div className="news-container">
               {items
                 ?.filter((items, index) => {
-                  if (items.title == "Flash Mob 6.3" || items.title == "Sparsh T-Shirt 2nd Slot") {
+                  if (items.title == "Paint Ball 2K23" || items.title == "Sparsh T-Shirt 2nd Slot") {
                     return items;
                   }
                 })
@@ -207,7 +207,7 @@ export default function Landing(data) {
                     transition={{
                       duration: 0.5,
                     }}
-                    href = {items?.title == "Sparsh T-Shirt 2nd Slot" ? "https://forms.gle/chQHeSbGnhTn6wA67" : "https://www.instagram.com/reel/CqNqzHXppp_/?igshid=YmMyMTA2M2Y="}
+                    href = {items?.title == "Paint Ball 2K23" ? "https://forms.gle/74MoZnTYpxHod2tx5" : "https://www.instagram.com/reel/CqNqzHXppp_/?igshid=YmMyMTA2M2Y="}
                     whileInView="visible"
                     className="news-container-chlid"
                   >
