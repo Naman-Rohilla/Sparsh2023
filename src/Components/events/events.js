@@ -65,7 +65,7 @@ const Events = (data) => {
     //   shadowColor: "cyan",
     // },
     // {
-    //   name: "Group",
+    //   name: "Group",s
     //   date: "01-01-2001",
     //   shadowColor: "red",
     // },
@@ -104,7 +104,7 @@ const Events = (data) => {
       disc: "Sparsh presents dancing events, a dazzling demonstration of artistic innovation with a dynamic ensemble of dancers whose skillful performances will captivate you.",
       img: "/rythm.png",
       ruleBook:
-        "https://drive.google.com/file/d/1yTB3IGH0BivqexrEk5AvK_plqgKZ9Jhi/view",
+        "https://drive.google.com/file/d/1Pljp4pp_DC07vwBYxerca4FPi4vj3tE7/view?usp=sharing",
       regSvnit: "https://forms.gle/frZAV81RP4m5vQTe8",
       regNSvnit: "https://forms.gle/kTchdQfc6dVihHLB6",
     },
@@ -115,7 +115,7 @@ const Events = (data) => {
       disc: "Sparsh presents dancing events, a dazzling demonstration of artistic innovation with a dynamic ensemble of dancers whose skillful performances will captivate you.",
       img: "/Just Duo.png",
       ruleBook:
-        "https://drive.google.com/file/d/1yTB3IGH0BivqexrEk5AvK_plqgKZ9Jhi/view",
+        "https://drive.google.com/file/d/1Pljp4pp_DC07vwBYxerca4FPi4vj3tE7/view?usp=sharing",
       regSvnit: "https://forms.gle/frZAV81RP4m5vQTe8",
       regNSvnit: "https://forms.gle/kTchdQfc6dVihHLB6",
     },
@@ -126,7 +126,7 @@ const Events = (data) => {
       disc: "Sparsh presents dancing events, a dazzling demonstration of artistic innovation with a dynamic ensemble of dancers whose skillful performances will captivate you.",
       img: "/Choreo Clash.png",
       ruleBook:
-        "https://drive.google.com/file/d/1yTB3IGH0BivqexrEk5AvK_plqgKZ9Jhi/view",
+        "https://drive.google.com/file/d/1Pljp4pp_DC07vwBYxerca4FPi4vj3tE7/view?usp=sharing",
       regSvnit: "https://forms.gle/frZAV81RP4m5vQTe8",
       regNSvnit: "https://forms.gle/kTchdQfc6dVihHLB6",
     },
@@ -137,7 +137,7 @@ const Events = (data) => {
       disc: "Sparsh presents dancing events, a dazzling demonstration of artistic innovation with a dynamic ensemble of dancers whose skillful performances will captivate you.",
       img: "/Break The Floor.png",
       ruleBook:
-        "https://drive.google.com/file/d/1yTB3IGH0BivqexrEk5AvK_plqgKZ9Jhi/view",
+        "https://drive.google.com/file/d/1Pljp4pp_DC07vwBYxerca4FPi4vj3tE7/view?usp=sharing",
       regSvnit: "https://forms.gle/frZAV81RP4m5vQTe8",
       regNSvnit: "https://forms.gle/kTchdQfc6dVihHLB6",
     },
@@ -148,7 +148,7 @@ const Events = (data) => {
       disc: "Sparsh presents dancing events, a dazzling demonstration of artistic innovation with a dynamic ensemble of dancers whose skillful performances will captivate you.",
       img: "/Engineer's Groove.png",
       ruleBook:
-        "https://drive.google.com/file/d/1yTB3IGH0BivqexrEk5AvK_plqgKZ9Jhi/view",
+        "https://drive.google.com/file/d/1Pljp4pp_DC07vwBYxerca4FPi4vj3tE7/view?usp=sharing",
       regSvnit: "https://forms.gle/frZAV81RP4m5vQTe8",
       regNSvnit: "https://forms.gle/kTchdQfc6dVihHLB6",
     },
@@ -187,6 +187,8 @@ const Events = (data) => {
       regNSvnit: "https://forms.gle/5ffa7JeU2b81ZWAt9",
     },
   ];
+
+  // https://drive.google.com/file/d/1Pljp4pp_DC07vwBYxerca4FPi4vj3tE7/view?usp=sharing
 
   const Dummy_event_Fashion_LifeStyle = [
     {
