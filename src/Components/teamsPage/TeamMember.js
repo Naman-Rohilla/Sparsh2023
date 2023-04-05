@@ -1286,7 +1286,7 @@ const DesignAdvisors = [
     id: 0,
     name: "Mahesh Kumar",
     position: "Advisor",
-    img: "images/Mahesh Kumar Mali.JPG",
+    img: "images/Mahesh Kumar Mali.jpg",
     classSpecial: " profile__card cardSpecial",
   },
   {
