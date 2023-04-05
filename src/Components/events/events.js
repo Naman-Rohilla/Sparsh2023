@@ -182,7 +182,7 @@ const Events = (data) => {
       disc: `🤟✨Get ready to make some unforgettable memories!!✨ The beats are about to drop From classical rock 🤘 to modern pop , The Battle of Bands has it all. Don't miss the chance to be part of the surprise performance and be the part of the moment!!!...`,
       img: "./Metallic_Mayhem.png",
       ruleBook:
-        "https://drive.google.com/file/d/1Pljp4pp_DC07vwBYxerca4FPi4vj3tE7/view?usp=sharing",
+        "https://drive.google.com/file/d/1Pljp4pp_DC07vwBYxerca4FPi4vj3tE7/view",
       regSvnit: "https://forms.gle/opxfUpQAYtu6GJ6z9 ",
       regNSvnit: "https://forms.gle/5ffa7JeU2b81ZWAt9",
     },
